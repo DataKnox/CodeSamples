@@ -14,6 +14,6 @@ $response | ConvertTo-Json | Write-Output
 
 $response.'Cisco-IOS-XE-interfaces-oper:interface'.name
 
-if ($response.'Cisco-IOS-XE-interfaces-oper:interface'.'admin-status' = 'if-state-up') {
+if ($response.'Cisco-IOS-XE-interfaces-oper:interface'.'admin-status' -eq 'if-state-up') {
     Write-Host ($response.'Cisco-IOS-XE-interfaces-oper:interface'.name)'is up'
 }
