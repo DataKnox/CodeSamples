@@ -1,6 +1,5 @@
 import requests
 import json
-from pprint import pprint
 
 url = "https://sbx-nxos-mgmt.cisco.com/ins"
 switchuser = "admin"
