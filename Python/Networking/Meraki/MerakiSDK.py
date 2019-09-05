@@ -1,8 +1,8 @@
 from meraki_sdk.meraki_sdk_client import MerakiSdkClient
 import json
 from pprint import pprint
-import logging
-logging.basicConfig(level=logging.DEBUG)
+# import logging
+# logging.basicConfig(level=logging.DEBUG)
 
 
 # CREATE Connection Object
