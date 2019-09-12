@@ -46,10 +46,10 @@ for score in scores:
         score_values = score['scoreList']
         for score_value in score_values:
             print(
-                f"  {score_value['scoreCategory']['value']} ({score_value['clientCount']})")
+                f"  {score_value['scoreCategory']['value']}: {score_value['clientCount']}")
     elif score['scoreCategory']['value'] == 'WIRELESS':
         print(f"Wireless Clients: {score['clientCount']}")
         score_values = score['scoreList']
         for score_value in score_values:
             print(
-                f"  {score_value['scoreCategory']['value']} ({score_value['clientCount']})")
+                f"  {score_value['scoreCategory']['value']}: {score_value['clientCount']}")
