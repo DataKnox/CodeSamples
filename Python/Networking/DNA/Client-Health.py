@@ -1,12 +1,25 @@
 import requests
 import json
 
+
+################ LOGIN ######################
+url = "https://sandboxdnac2.cisco.com/dna/system/api/v1/auth/token"
+
+user = 'devnetuser'
+pw = 'Cisco123!'
+
+response = requests.post(url, auth=(user, pw)).json()
+# print(response)
+token = response['Token']
+
+############ GET CLIENT HEALTH STATS ################
+
 url = "https://sandboxdnac2.cisco.com/dna/intent/api/v1/client-health"
 
 querystring = {"timestamp": ""}
 
 headers = {
-    'x-auth-token': "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Y2U3MTJiMDhlZTY2MjAyZmEyZWI4ZjgiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViNmNmZGZmNDMwOTkwMDA4OWYwZmYzNyJdLCJ0ZW5hbnRJZCI6IjViNmNmZGZjNDMwOTkwMDA4OWYwZmYzMCIsImV4cCI6MTU2ODMwMzMwNSwidXNlcm5hbWUiOiJkZXZuZXR1c2VyIn0.Tb0o7nO85Inp4RiPnhDqQc3oHiJKsWK5NmXBUBzGGVQ",
+    'x-auth-token': token,
     'User-Agent': "PostmanRuntime/7.16.3",
     'Accept': "*/*",
     'Cache-Control': "no-cache",
@@ -23,6 +36,7 @@ response = requests.get(url, headers=headers, params=querystring).json()
 
 print(
     f"Clients: {response['response'][0]['scoreDetail'][0]['clientCount']}")
+
 
 scores = response['response'][0]['scoreDetail']
 
