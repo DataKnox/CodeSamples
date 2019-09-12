@@ -19,6 +19,8 @@ headers = {
 
 response = requests.get(url, headers=headers, params=querystring).json()
 
+#print(json.dumps(response, indent=2, sort_keys=True))
+
 print(
     f"Clients: {response['response'][0]['scoreDetail'][0]['clientCount']}")
 
