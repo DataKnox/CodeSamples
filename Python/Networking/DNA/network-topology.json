@@ -1,0 +1,59 @@
+{'id': '38296369-aa23-4e40-87b2-a69d3fcc92e8', 'name': 'floor23', 'parentId': 'ba06348e-ee80-4058-bb23-f0c9a5fd728b', 'latitude': '', 'longitude': '', 'locationType': 'floor', 'locationAddress': '177 Pacific Highway, North Sydney New South Wales 2060, Australia', 'locationCountry': '', 'displayName': '1327340', 'groupNameHierarchy': 'Global/AUS/Sydney/SYD1/floor23'
+},
+{'id': 'ba06348e-ee80-4058-bb23-f0c9a5fd728b', 'name': 'SYD1', 'parentId': 'd548ad53-09e5-4369-bd20-836aa85fd7b1', 'latitude': '-33.837053', 'longitude': '151.206266', 'locationType': 'building', 'locationAddress': '177 Pacific Highway, North Sydney New South Wales 2060, Australia', 'locationCountry': 'Australia', 'displayName': '1327335', 'groupNameHierarchy': 'Global/AUS/Sydney/SYD1'
+},
+{'id': 'c1f1c6e9-e78a-474c-b4a0-26df08b49482', 'name': 'floor22', 'parentId': 'ba06348e-ee80-4058-bb23-f0c9a5fd728b', 'latitude': '', 'longitude': '', 'locationType': 'floor', 'locationAddress': '177 Pacific Highway, North Sydney New South Wales 2060, Australia', 'locationCountry': '', 'displayName': '1327339', 'groupNameHierarchy': 'Global/AUS/Sydney/SYD1/floor22'
+},
+{'id': '267d75a9-39b5-497d-b2f5-15fa5b2eb7a4', 'name': 'USA', 'parentId': 'a7cbac22-d82e-42ed-a705-b51829e955fa', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1327332', 'groupNameHierarchy': 'Global/USA'
+},
+{'id': '132f5134-b3fc-4757-aa78-8f4de2f8d8f4', 'name': 'EU', 'parentId': 'a7cbac22-d82e-42ed-a705-b51829e955fa', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1327337', 'groupNameHierarchy': 'Global/EU'
+},
+{'id': '40170253-368a-4b49-8d7e-8df993c6cf50', 'name': 'Barcelona', 'parentId': '132f5134-b3fc-4757-aa78-8f4de2f8d8f4', 'latitude': '41.527247', 'longitude': '1.992160', 'locationType': 'building', 'locationAddress': 'Carrer De Willy Brandt,
+    08191 RubÃ\xad, Barcelona, Spain', 'locationCountry': 'Spain', 'displayName': '1327338', 'groupNameHierarchy': 'Global/EU/Barcelona'
+},
+{'id': 'c62a628d-f95b-45e6-b649-33dbd01c1ed4', 'name': 'India', 'parentId': 'a7cbac22-d82e-42ed-a705-b51829e955fa', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1725732', 'groupNameHierarchy': 'Global/India'
+},
+{'id': '0266c76b-1505-4206-a143-d39814cb31b8', 'name': 'BuildingB', 'parentId': 'd548ad53-09e5-4369-bd20-836aa85fd7b1', 'latitude': '-33.814594', 'longitude': '151.005901', 'locationType': 'building', 'locationAddress': '75 George Street, Parramatta New South Wales 2150, Australia', 'locationCountry': 'Australia', 'displayName': '1725729', 'groupNameHierarchy': 'Global/AUS/Sydney/BuildingB'
+},
+{'id': '4e91d543-9d63-41b4-a4ba-6e0530859216', 'name': 'STL-1', 'parentId': 'd548ad53-09e5-4369-bd20-836aa85fd7b1', 'latitude': '-33.822743', 'longitude': '151.194670', 'locationType': 'building', 'locationAddress': '201 Pacific Highway, St Leonards New South Wales 2065, Australia', 'locationCountry': 'Australia', 'displayName': '1327336', 'groupNameHierarchy': 'Global/AUS/Sydney/STL-1'
+},
+{'id': '668fd540-03f6-4c17-9e8d-7575ca3fa3c2', 'name': 'testArea', 'parentId': 'a7cbac22-d82e-42ed-a705-b51829e955fa', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1725724', 'groupNameHierarchy': 'Global/testArea'
+},
+{'id': '4e7091d4-bb3b-48e5-b960-da6ee2f56857', 'name': 'HSR Building 8', 'parentId': '668fd540-03f6-4c17-9e8d-7575ca3fa3c2', 'latitude': '47.223255', 'longitude': '8.818669', 'locationType': 'building', 'locationAddress': 'Address Unknown', 'locationCountry': 'Switzerland', 'displayName': '1725725', 'groupNameHierarchy': 'Global/testArea/HSR Building 8'
+},
+{'id': '650cd198-8055-4972-804d-a3ef4abba58a', 'name': '2', 'parentId': '4e7091d4-bb3b-48e5-b960-da6ee2f56857', 'latitude': '', 'longitude': '', 'locationType': 'floor', 'locationAddress': 'Address Unknown', 'locationCountry': '', 'displayName': '1725726', 'groupNameHierarchy': 'Global/testArea/HSR Building 8/2'
+},
+{'id': 'c6566682-9eb5-4996-a1a3-378e0c4e7703', 'name': 'Delhi', 'parentId': 'c62a628d-f95b-45e6-b649-33dbd01c1ed4', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1725737', 'groupNameHierarchy': 'Global/India/Delhi'
+},
+{'id': 'bee29f93-e272-452c-97aa-16ef20a27a05', 'name': 'East Delhi', 'parentId': 'c6566682-9eb5-4996-a1a3-378e0c4e7703', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1725738', 'groupNameHierarchy': 'Global/India/Delhi/East Delhi'
+},
+{'id': '21899137-f48e-4296-8e41-cbf78c9ab078', 'name': 'test112', 'parentId': '7e0c9368-97a6-41f8-9e2c-d523e007d295', 'latitude': '34', 'longitude': '56', 'locationType': 'building', 'locationAddress': '', 'locationCountry': 'Iran', 'displayName': '1725782', 'groupNameHierarchy': 'Global/test123/test112'
+},
+{'id': 'd548ad53-09e5-4369-bd20-836aa85fd7b1', 'name': 'Sydney', 'parentId': 'f874200e-8a1e-46e9-8f42-808246232544', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1327331', 'groupNameHierarchy': 'Global/AUS/Sydney'
+},
+{'id': '42245773-78a5-48d2-b876-d44a74762edb', 'name': 'NSYD5', 'parentId': 'd548ad53-09e5-4369-bd20-836aa85fd7b1', 'latitude': '-33.837053', 'longitude': '151.206266', 'locationType': 'building', 'locationAddress': '177 Pacific Highway, North Sydney New South Wales 2060, Australia', 'locationCountry': 'Australia', 'displayName': '1725784', 'groupNameHierarchy': 'Global/AUS/Sydney/NSYD5'
+},
+{'id': 'de328324-500c-4286-90a7-90a3d836d783', 'name': 'Building 1', 'parentId': 'bee29f93-e272-452c-97aa-16ef20a27a05', 'latitude': '28.666670', 'longitude': '77.216670', 'locationType': 'building', 'locationAddress': 'Delhi, India', 'locationCountry': 'India', 'displayName': '1725739', 'groupNameHierarchy': 'Global/India/Delhi/East Delhi/Building 1'
+},
+{'id': '737db32d-66ed-4af6-a66c-e8fcf60d1c50', 'name': '1st floor', 'parentId': 'de328324-500c-4286-90a7-90a3d836d783', 'latitude': '', 'longitude': '', 'locationType': 'floor', 'locationAddress': 'Delhi, India', 'locationCountry': '', 'displayName': '1725740', 'groupNameHierarchy': 'Global/India/Delhi/East Delhi/Building 1/1st floor'
+},
+{'id': '7ee656b3-e306-40fa-bd3d-250e690a1edf', 'name': 'Area1', 'parentId': 'b5c0cb2d-39d0-47e5-afb9-ab8c48799095', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '2302300', 'groupNameHierarchy': 'Global/US-East/Area1'
+},
+{'id': '4e0c9a89-78a2-478b-b18d-06d95aa0c5d0', 'name': 'Chicago', 'parentId': '267d75a9-39b5-497d-b2f5-15fa5b2eb7a4', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '2302303', 'groupNameHierarchy': 'Global/USA/Chicago'
+},
+{'id': '9b9e031b-f7a0-46e4-97cb-1694de97fb4f', 'name': 'CHG5', 'parentId': '4e0c9a89-78a2-478b-b18d-06d95aa0c5d0', 'latitude': '41.974843', 'longitude': '-87.865038', 'locationType': 'building', 'locationAddress': '', 'locationCountry': 'United States', 'displayName': '2302304', 'groupNameHierarchy': 'Global/USA/Chicago/CHG5'
+},
+{'id': '7e0c9368-97a6-41f8-9e2c-d523e007d295', 'name': 'test123', 'parentId': 'a7cbac22-d82e-42ed-a705-b51829e955fa', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1725780', 'groupNameHierarchy': 'Global/test123'
+},
+{'id': 'dbc23db8-e3e8-4159-8df0-f43b78f0c758', 'name': 'Area2', 'parentId': 'b5c0cb2d-39d0-47e5-afb9-ab8c48799095', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '2302301', 'groupNameHierarchy': 'Global/US-East/Area2'
+},
+{'id': 'b5c0cb2d-39d0-47e5-afb9-ab8c48799095', 'name': 'US-East', 'parentId': 'a7cbac22-d82e-42ed-a705-b51829e955fa', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1725783', 'groupNameHierarchy': 'Global/US-East'
+},
+{'id': '5d67b51b-a9e3-4bef-8b37-1f3bdd7f01f0', 'name': 'Area3', 'parentId': 'b5c0cb2d-39d0-47e5-afb9-ab8c48799095', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '2302302', 'groupNameHierarchy': 'Global/US-East/Area3'
+},
+{'id': 'd95b65c7-6842-4556-bce9-4776c308862a', 'name': 'NSYD5', 'parentId': 'f874200e-8a1e-46e9-8f42-808246232544', 'latitude': '-33.837053', 'longitude': '151.206266', 'locationType': 'building', 'locationAddress': '177 Pacific Highway, North Sydney New South Wales 2060, Australia', 'locationCountry': 'Australia', 'displayName': '3040037', 'groupNameHierarchy': 'Global/AUS/NSYD5'
+},
+{'id': 'ea6cafee-38bc-4539-977c-b523b67bbee4', 'name': 'First Floor', 'parentId': '9b9e031b-f7a0-46e4-97cb-1694de97fb4f', 'latitude': '', 'longitude': '', 'locationType': 'floor', 'locationAddress': '', 'locationCountry': '', 'displayName': '2302305', 'groupNameHierarchy': 'Global/USA/Chicago/CHG5/First Floor'
+},
+{'id': 'f874200e-8a1e-46e9-8f42-808246232544', 'name': 'AUS', 'parentId': 'a7cbac22-d82e-42ed-a705-b51829e955fa', 'latitude': '', 'longitude': '', 'locationType': 'area', 'locationAddress': '', 'locationCountry': '', 'displayName': '1327330', 'groupNameHierarchy': 'Global/AUS'
+}
