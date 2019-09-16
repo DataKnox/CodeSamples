@@ -1,4 +1,3 @@
-
 import requests
 import json
 
@@ -13,7 +12,8 @@ response = requests.post(url, auth=(user, pw)).json()
 token = response['Token']
 
 ############ GET CLIENT DETAIL ################
-url = "https://sandboxdnac2.cisco.com/dna/intent/api/v1/client-detail?timestamp=&macAddress=00:00:2A:01:00:2E"
+macAddress = '00:00:2A:01:00:2E'
+url = f"https://sandboxdnac2.cisco.com/dna/intent/api/v1/client-detail?timestamp=&macAddress={macAddress}"
 
 
 headers = {

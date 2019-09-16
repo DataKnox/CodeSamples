@@ -1,7 +1,6 @@
 import requests
 import json
 
-
 ################ LOGIN ######################
 url = "https://sandboxdnac2.cisco.com/dna/system/api/v1/auth/token"
 
