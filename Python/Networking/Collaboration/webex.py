@@ -2,7 +2,7 @@ import requests
 import json
 
 # Get your token here after logging in: https://developer.webex.com/docs/api/getting-started
-token = 'MjgyYzQyYjEtNTNmOS00NTQ0LWEyNjMtZDA5OWU2NjIxYjFkZjdiOGJjMzMtNjQ4_PF84_75e84279-5cba-4094-949a-7133a3be6509'
+token = ''
 
 ### Create a Team ###
 url = 'https://api.ciscospark.com/v1/teams'
