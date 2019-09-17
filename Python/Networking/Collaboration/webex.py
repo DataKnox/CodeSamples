@@ -10,7 +10,7 @@ headers = {'Authorization': f'Bearer {token}',
            'Content-Type': 'application/json'}
 
 body = {
-    "name": "Build Squad"
+    "name": "CBT Team"
 }
 
 post_response = requests.post(
