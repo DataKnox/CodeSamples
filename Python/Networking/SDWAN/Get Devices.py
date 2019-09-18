@@ -27,10 +27,15 @@ else:
 # Get Devices
 url = 'https://sandboxsdwan.cisco.com:8443/dataservice/device'
 
-get_response = session.get(url, verify=False).json()['data']
+device_response = session.get(url, verify=False).json()['data']
 #print(json.dumps(get_response, indent=2, sort_keys=True))
-for device in get_response:
+for device in device_response:
     print(f"Hostname: {device['host-name']}")
     print(f"IP: {device['local-system-ip']}")
     print(f"Model: {device['device-model']}")
     print(' ')
+
+# Get Templates
+# template_url = 'https://sandboxsdwan.cisco.com:8443/dataservice/template/device'
+# template_response = session.get(template_url, verify=False).json()['data']
+# print(template_response)
