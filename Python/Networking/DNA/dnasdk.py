@@ -51,8 +51,10 @@ print(device)
 ############# CLIENTS ##############
 # Get Client Health with Epoch Datetime
 epoch_datetime = calendar.timegm(time.gmtime())
+
 client_health = dna.clients.get_overall_client_health(
     timestamp=str(epoch_datetime))
+
 print(json.dumps(client_health, indent=2, sort_keys=True))
 print(' ')
 # # GET NETWORK HEALTH
