@@ -16,6 +16,7 @@ session = requests.session()
 
 response = session.post(url, data=login_body, verify=False)
 
+# Response returns a 200 OK no matter what
 # IF the response body contains any text then auth failed
 if not response.ok or response.text:
     print('login failure')
