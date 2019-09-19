@@ -1,7 +1,7 @@
 import requests
 import json
 # Knox Hutchinson
-
+requests.packages.urllib3.disable_warnings()
 ####### LOGIN ###########
 url = "https://sandboxapicdc.cisco.com:443/api/aaaLogin.json"
 
