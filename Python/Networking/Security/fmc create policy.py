@@ -21,7 +21,7 @@ token = resp_headers.get('X-auth-access-token', default=None)
 # Set the token in the headers to be used in the next call
 headers['X-auth-access-token'] = token
 
-######## CREATE POLICY #########
+######## CREATE POLICY with Default rule of IPS #########
 pol_url = '/api/fmc_config/v1/domain/e276abec-e0f2-11e3-8169-6d9ed49b625f/policy/accesspolicies'
 
 payload = {
@@ -55,14 +55,14 @@ policyId = pol_response['id']
 
 policy_url = f'/api/fmc_config/v1/domain/e276abec-e0f2-11e3-8169-6d9ed49b625f/policy/accesspolicies/{policyId}'
 
-######## Add Rules #########
+######## Add Rules to monitor files for Malware #########
 rules_url = f'{policy_url}/accessrules'
 rules_payload = {
     "sendEventsToFMC": True,
     "action": "ALLOW",
     "enabled": True,
     "type": "AccessRule",
-    "name": "Deep File Inspect Dst Geos",
+    "name": "CBT DPI Malware Rule",
     "logFiles": True,
     "logBegin": False,
     "logEnd": False,
