@@ -56,6 +56,7 @@ policyId = pol_response['id']
 policy_url = f'/api/fmc_config/v1/domain/e276abec-e0f2-11e3-8169-6d9ed49b625f/policy/accesspolicies/{policyId}'
 
 ######## Add Rules #########
+rules_url = f'{policy_url}/accessrules'
 rules_payload = {
     "sendEventsToFMC": True,
     "action": "ALLOW",
@@ -83,8 +84,6 @@ rules_payload = {
         "type": "FilePolicy"
     }
 }
-
-rules_url = f'{policy_url}/accessrules'
 
 rules_response = requests.post(f'{url}{rules_url}', headers=headers, data=json.dumps(
     rules_payload), verify=False).json()
