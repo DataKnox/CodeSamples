@@ -1,7 +1,8 @@
 import requests
 import xml.dom.minidom
 import xmltodict
-
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 #### For use with the DevNet Sandbox CUCM 11.5 #####
 url = 'https://10.10.20.1/cucm-uds'
 endpoint = 'users'

@@ -12,7 +12,8 @@ $response = Invoke-RestMethod -Uri $url `
     -Credential $Cred `
     -ContentType 'application/json' `
     -Headers $headers `
-    -SkipCertificateCheck
+    -SkipCertificateCheck 
+    
 
 $response | ConvertTo-Json | Write-Output
 $token = $response.token
@@ -32,6 +33,6 @@ $response = Invoke-RestMethod -Uri $url `
     -SkipCertificateCheck
 
 $details = $response.response.scoreDetail 
-ForEach ($score in $details) {
-    Write-Host "Object $($score.scoreCategory.value)"
+ForEach ($detail in $details) {
+    Write-Host "Object $($detail.scoreCategory.value)"
 }

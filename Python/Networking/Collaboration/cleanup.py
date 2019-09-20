@@ -26,7 +26,7 @@ get_response = requests.get(url, headers=headers).json()
 
 teams = get_response['items']
 for team in teams:
-    if team['name'] == 'Build Squad':
+    if team['name'] == 'CBT Team':
         teamId = team['id']
 del_team_url = f'{url}/{teamId}'
 del_team = requests.delete(del_team_url, headers=headers)

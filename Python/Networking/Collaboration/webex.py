@@ -22,7 +22,7 @@ get_response = requests.get(url, headers=headers).json()
 #teamId = get_response['items'][0]['id']
 teams = get_response['items']
 for team in teams:
-    if team['name'] == 'Build Squad':
+    if team['name'] == 'CBT Team':
         teamId = team['id']
 
 ###### CREATE A ROOM ########

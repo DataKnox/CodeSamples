@@ -1,7 +1,7 @@
 import requests
 import json
-
-# requests.packages.urllib3.disable_warnings()
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Set URL and login body
 # Note the body is a python dict - NOT a JSON body
