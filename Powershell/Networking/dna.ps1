@@ -34,5 +34,6 @@ $response = Invoke-RestMethod -Uri $url `
 
 $details = $response.response.scoreDetail 
 ForEach ($detail in $details) {
-    Write-Host "Object $($detail.scoreCategory.value)"
+    Write-Host "Object " -ForegroundColor Blue -NoNewline
+    Write-Host "$($detail.scoreCategory.value)" -ForegroundColor Red
 }
