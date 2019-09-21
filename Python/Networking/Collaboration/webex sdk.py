@@ -1,8 +1,9 @@
 from webexteamssdk import WebexTeamsAPI
 api = WebexTeamsAPI(
-    access_token='OTJlYzdlN2EtNzc5MC00ZmI1LTg2ZmItMWI3ODI1ZDc4ODkyNWMxNmNhZDQtYzU3_PF84_75e84279-5cba-4094-949a-7133a3be6509')
+    access_token='MTYzNjU0NzgtZmUyMi00YThhLWFhNjQtMjhjMDZhZjIzZTcxZTBkNWNmMDAtN2Nl_PF84_75e84279-5cba-4094-949a-7133a3be6509')
 
 #### GET TEAM INFO ###
+
 teams = api.teams.list()
 
 for team in teams:
@@ -17,8 +18,8 @@ for team in teams:
 ###### PEOPLE #####
 print(api.people.me())
 print(api.people.list())
-api.people.create(emails='ben.finkel@cbtnuggets.com', displayName='Ben Finkel', firstName='Ben',
-                  lastName='Finkel', roles='Y2lzY29zcGFyazovL3VzL1JPTEUvaWRfZnVsbF9hZG1pbg')
+api.people.create(emails=['ben.finkel@cbtnuggets.com'], displayName='Ben Finkel', firstName='Ben',
+                  lastName='Finkel', roles=['Y2lzY29zcGFyazovL3VzL1JPTEUvaWRfZnVsbF9hZG1pbg'])
 
 #### ROLES #####
 roles = api.roles.list()
