@@ -1,7 +1,7 @@
 import requests
 import json
 
-url_base = 'http://localhost:8080/api'
+url_base = 'http://10.10.21.32:8080/api'
 auth = ("admin", "admin")
 accept_header = [
     'application/vnd.yang.api+json',
