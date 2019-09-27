@@ -43,7 +43,7 @@ exit
 # Create the base configs for NSO based on the generated router configs
 ncs-setup --netsim-dir ./netsim --dest .
 
-ncs --stop
+ncs
 
 ncs_cli -u admin
 
