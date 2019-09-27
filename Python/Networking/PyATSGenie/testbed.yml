@@ -1,0 +1,26 @@
+# Example
+
+testbed:
+    name: IOS_Testbed
+    tacacs:
+        username: knoxlab
+    passwords:
+        tacacs: 
+        enable: 
+devices:
+    knoxlabCisco: # <----- much match to your device hostname in the prompt
+        os: ios
+        type: ios
+        connections:
+            a:
+                protocol: telnet
+                ip: 10.10.10.2
+                port: 23    
+topology:
+    ios-1:
+        interfaces:
+            Vlan1:
+                ipv4: 10.10.10.2/24
+                ipv6: ''
+                link: link-1
+                type: ethernet
