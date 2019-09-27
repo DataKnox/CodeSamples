@@ -1,7 +1,7 @@
 from ucsmsdk.ucshandle import UcsHandle
 handle = UcsHandle("10.10.20.113", "ucspe", "ucspe")
 handle.login()
-
+# DOCUMENTATION https://github.com/CiscoUcs/ucsmsdk https://ucsmsdk.readthedocs.io/en/latest/
 ######## ORG INFO ###########
 org = handle.query_classid(class_id="orgOrg", hierarchy=True)
 print(org)
