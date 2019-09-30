@@ -17,10 +17,32 @@ headers = {
 
 response = requests.get(url, headers=headers).json()
 
-print(json.dumps(response, indent=2, sort_keys=True))
+#print(json.dumps(response, indent=2, sort_keys=True))
 
 for response_org in response:
     if response_org['name'] == 'DevNet Sandbox':
         orgId = response_org['id']
 
-print(orgId)
+# print(orgId)
+
+net_url = f'{url}/{orgId}/networks'
+
+networks = requests.get(net_url, headers=headers).json()
+print(json.dumps(networks, indent=2, sort_keys=True))
+for network in networks:
+    if network['name'] == 'DNSMB2':
+        netId = network['id']
+
+
+dev_url = f'https://dashboard.meraki.com/api/v0/networks/{netId}/devices'
+devices = requests.get(dev_url, headers=headers).json()
+print('*' * 50)
+print(json.dumps(devices, indent=2, sort_keys=True))
+print('*' * 50)
+print(' ')
+cli_url = f'https://dashboard.meraki.com/api/v0/networks/{netId}/clients'
+clients = requests.get(cli_url, headers=headers).json()
+print('*' * 50)
+print(json.dumps(clients, indent=2, sort_keys=True))
+print('*' * 50)
+print(' ')
