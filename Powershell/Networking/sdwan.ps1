@@ -6,14 +6,15 @@ $login_body = @{
 
 $headers = @{'Accept' = 'application/json' }
 
-$response = Invoke-RestMethod -Uri $url `
+#$response = `
+Invoke-RestMethod -Uri $url `
     -Method post `
     -Body ($login_body) `
     -ContentType 'application/x-www-form-urlencoded' `
     -Headers $headers `
     -SkipCertificateCheck `
     -SessionVariable s
-$response
+#$response
 
 $uri = 'https://sandboxsdwan.cisco.com:8443/dataservice/device'
 $devs = Invoke-RestMethod -Uri $uri `
