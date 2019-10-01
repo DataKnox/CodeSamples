@@ -51,7 +51,12 @@ sudo nano /etc/ansible/hosts
 
 ansible -m ping all
 
-#raw module with the uptime action
+#raw module with the uptime action (-a)
 ansible -m raw -a '/usr/bin/uptime' all
 
 ansible -m shell -a 'python -V' gui
+
+ansible all -a 'whoami'
+#elevate to root with -b for become. Why? Because ansible doesnt elevate to sudo by default
+ansible all -b -a 'whoami'
+#note not specifying a module like above it defaults to command module
