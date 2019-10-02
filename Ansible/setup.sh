@@ -1,6 +1,6 @@
 #1. Have a common username, that also has sudo level access#
 #2. Setup passwordless keys
-#3. Enable SSH on remote hosts (sudo ufw allow 22)
+#3. Enable SSH on remote hosts sudo apt-get install openssh-server
 
 #INSTALL AND CONFIG
 
@@ -17,6 +17,7 @@ sudo apt-get install ansible -y
 #confirm working by running the ping module against localhost:
 ansible localhost -m ping
 
+###### REMOTE HOSTS #######
 #create local hostnames in hosts file
 sudo nano /etc/hosts
 
@@ -40,6 +41,7 @@ knox ALL=(ALL) NOPASSWD: ALL
 
 #then save and exit
 
+###### INVENTORY #######
 sudo nano /etc/ansible/hosts
 #create GUI group like so at bottom of file
 # [gui]
