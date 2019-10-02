@@ -1,0 +1,7 @@
+---
+- hosts: gui
+  tasks:
+    - name: get system status
+      shell: uname -a > /home/knox/Desktop/output.txt
+    - name: print current user
+      shell: whoami >> /home/knox/Desktop/output.txt

@@ -1,0 +1,8 @@
+---
+- hosts: gui
+  vars:
+    - var1: zig
+    - var2: zag
+  tasks:
+    - name: print data
+      shell: echo "{{var1}} when you should {{var2}}" > /home/knox/Desktop/vars.txt
