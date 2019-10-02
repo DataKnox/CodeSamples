@@ -1,0 +1,12 @@
+---
+- hosts: ubuntu1
+  become: yes
+  tasks:
+    - name: Create a file
+      shell: echo 'Begin file' > /home/knox/Desktop/loops.txt
+    - name: install packages
+      shell: echo "{{item}}" >> /home/knox/Desktop/loops.txt
+      with_items:
+        - vim
+        - nano
+        - python
