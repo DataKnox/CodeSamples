@@ -1,0 +1,15 @@
+---
+- name: 9k facts
+  hosts: 172.16.1.68
+  connection: local
+  tasks:
+    - name: Get Nexus9k facts
+      nxos_facts:
+        host: "{{inventory_hostname}}"
+        transport: nxapi
+        use_ssl: yes
+        validate_certs: no
+      register: nxos_data
+
+    - name: Print name to console
+      debug: msg="{{nxos_data}}"

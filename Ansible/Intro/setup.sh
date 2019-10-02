@@ -62,3 +62,7 @@ ansible all -a 'whoami'
 #elevate to root with -b for become. Why? Because ansible doesnt elevate to sudo by default
 ansible all -b -a 'whoami'
 #note not specifying a module like above it defaults to command module
+
+
+##### NETWORKING ######
+# Set environment variables for auth to devices
