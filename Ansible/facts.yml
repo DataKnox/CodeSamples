@@ -1,5 +1,5 @@
 ---
-- hosts: gui
+- hosts: ubuntu1
   # facts demo
   # ansible ubuntu1 -m setup
   # ansible ubuntu1 -m setup -a "filter=*ansible_os_family"
@@ -7,3 +7,11 @@
   tasks:
     - name: print family to file
       shell: echo "The family is {{ansible_os_family}}" > /home/{{ansible_user_id}}/Desktop/family.txt
+    - name: Print Default NIC to console
+      debug: msg="{{ansible_default_ipv4.interface}}"
+    - name: Register routes variable
+      command: "ls"
+      register: dirs
+    - name: Print routes variable from last step to console
+      debug:
+        msg: "{{dirs}}"
