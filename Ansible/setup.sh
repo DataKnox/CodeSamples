@@ -33,10 +33,10 @@ ssh-copy-id -i .ssh/id_rsa.pub ubuntu1
 #sudo apt-get install openssh-server
 
 #Now configure sudo so that it doesnt require a password
-ssh ubuntu1
+ssh ubuntu1 
 sudo visudo
-#very bottom of file add:
-knox ALL=(ALL) NOPASSWD=ALL
+#very bottom of file add this line:
+knox ALL=(ALL) NOPASSWD: ALL
 
 #then save and exit
 
@@ -54,7 +54,7 @@ ansible -m ping all
 #raw module with the uptime action (-a)
 ansible -m raw -a '/usr/bin/uptime' all
 
-ansible -m shell -a 'python -V' gui
+ansible -m shell -a 'python3 -V' gui
 
 ansible all -a 'whoami'
 #elevate to root with -b for become. Why? Because ansible doesnt elevate to sudo by default
