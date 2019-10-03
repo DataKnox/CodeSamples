@@ -1,0 +1,16 @@
+---
+- name: Create loopback payload from template
+  hosts: routers
+  with_items: "{{local_loopback}}"
+  template:
+    src: "templates/ietf_interface.j2"
+    dest: "./{{inventory_hostname}}-{{item.name}}.json"
+
+- name: Create loopbacks with RESTCONF
+  hosts: routers
+  with_items: "{{local_loopback}}"
+  restconf_config:
+    method: post
+    format: json
+    path: /restconf/data/ietf-interfaces:interfaces
+    content: "./{{inventory_hostname}}-{{item.name}}.json"
