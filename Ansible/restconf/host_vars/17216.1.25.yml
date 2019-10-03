@@ -1,6 +1,0 @@
----
-local_loopback:
-  - name: Loopback100
-    desc: Created by Ansible
-    ip_address: 10.99.99.1
-    prefix: 255.255.255.0

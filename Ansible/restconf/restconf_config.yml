@@ -1,0 +1,22 @@
+---
+- name: Create loopback payload from template
+  hosts: 172.16.1.25
+  connection: local
+
+  tasks:
+    - name: Create template
+      with_items: "{{local_loopback}}"
+      template: src="files/ietf_inteface.j2" dest="./output.json"
+
+    - name: Create loopbacks with RESTCONF
+      with_items: "{{local_loopback}}"
+      restconf_config:
+        method: post
+        format: json
+        path: /data/ietf-interfaces:interfaces
+        content: "{{ lookup('file','./output.json') | to_json }}"
+      register: results
+      ignore_errors: true
+
+    - name: print output
+      debug: msg="{{results}}"
