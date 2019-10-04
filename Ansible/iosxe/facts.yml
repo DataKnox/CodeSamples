@@ -20,3 +20,14 @@
     - name: What is the hostname?
       debug:
         var: ansible_net_hostname
+#### OTHER USEFUL VARS
+# ansible_net_config  - this gets the running config
+# ansible_net_model
+# ansible_net_serialnum
+# ansible_net_image
+# ansible_net_all_ipv4_addresses
+# ansible_net_all_ipv6_addresses
+# ansible_net_neighbors
+# ansible_net_interfaces
+# ansible_net_memfree_mb
+# ansible_net_memtotal_mb
