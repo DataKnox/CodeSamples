@@ -66,3 +66,5 @@ ansible all -b -a 'whoami'
 
 ##### NETWORKING ######
 # Set environment variables for auth to devices
+# cd to the directory
+# source .ansible_env
