@@ -14,9 +14,17 @@
         method: post
         format: json
         path: /data/ietf-interfaces:interfaces
-        content: "{{ lookup('file','./output.json') | to_json }}"
+        #content: "{{ new_loop | to_json }}"
+        content: "{{ lookup('file','./output.json') | string }}"
       register: results
       ignore_errors: true
 
     - name: print output
       debug: msg="{{results}}"
+
+    - name: Delete interface
+      with_items: "{{local_loopback}}"
+      restconf_config:
+        method: delete
+        format: json
+        path: "/data/ietf-interfaces:interfaces/interface={{item.name}}"
