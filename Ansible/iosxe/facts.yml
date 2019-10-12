@@ -1,0 +1,33 @@
+---
+- name: Gather IOS-XE Facts
+  hosts: 172.16.1.25
+  connection: local
+  tasks:
+    - name: Gather IOS Facts
+      ios_facts:
+        provider:
+          host: 172.16.1.25
+          port: 22
+          authorize: yes
+          auth_pass: cisco
+          username: cisco
+          password: cisco
+
+    - name: What is the IOS OS ver?
+      debug:
+        var: ansible_net_version
+
+    - name: What is the hostname?
+      debug:
+        var: ansible_net_hostname
+#### OTHER USEFUL VARS
+# ansible_net_config  - this gets the running config
+# ansible_net_model
+# ansible_net_serialnum
+# ansible_net_image
+# ansible_net_all_ipv4_addresses
+# ansible_net_all_ipv6_addresses
+# ansible_net_neighbors
+# ansible_net_interfaces
+# ansible_net_memfree_mb
+# ansible_net_memtotal_mb

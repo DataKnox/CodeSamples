@@ -1,0 +1,14 @@
+---
+- name: Create loopback payload from template
+  hosts: 172.16.1.25
+  connection: local
+  tasks:
+    - name: Get some configs
+      restconf_get:
+        content: config
+        output: json
+        path: /data/ietf-interfaces:interfaces
+      register: dataout
+
+    - name: print output
+      debug: msg="{{dataout}}"

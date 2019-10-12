@@ -1,0 +1,16 @@
+{
+    "interface": {
+        "name": "Loopback100",
+        "description": "Created by Ansible",
+        "type": "iana-if-type:softwareLoopback",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+            "address": [
+                {
+                    "ip": "10.99.99.1",
+                    "netmask": "255.255.255.0"
+                }
+            ]
+        }
+    }
+}

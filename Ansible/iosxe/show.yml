@@ -1,0 +1,21 @@
+---
+- name: Issue show commands
+  hosts: 172.16.1.25
+  connection: local
+  tasks:
+    - name: Show ip int brief
+      ios_command:
+        commands:
+          - show ip int brief
+        provider:
+          host: 172.16.1.25
+          port: 22
+          authorize: yes
+          auth_pass: cisco
+          username: cisco
+          password: cisco
+      register: if_data
+
+    - name: Interfaces output
+      debug:
+        var: if_data['stdout_lines'][0]
