@@ -14,7 +14,7 @@ ForEach ($org in $orgs) {
         $orgId = $org.id
     }
 }
-
+$orgId
 $net_url = "https://dashboard.meraki.com/api/v0/organizations/$($orgId)/networks"
 $networks = Invoke-RestMethod -Uri $net_url `
     -Method get `
@@ -23,7 +23,7 @@ $networks = Invoke-RestMethod -Uri $net_url `
 
 ForEach ($network in $networks) {
     #Write-Host $network.name
-    If ($network.name -eq 'DNSMB2') {
+    If ($network.name -eq 'DNSMB5') {
         $netId = $network.id
     }
 }
