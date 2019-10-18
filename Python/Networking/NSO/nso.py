@@ -25,6 +25,6 @@ for device in devices:
     print(f"Name: {device['name']}")
     print(f"IP: {device['address']}")
     print(f"SSH Port: {device['port']}")
-    print(f"SSH Port: {device['authgroup']}")
+    print(f"Auth Group: {device['authgroup']}")
     # print(device)
     print(" ")
