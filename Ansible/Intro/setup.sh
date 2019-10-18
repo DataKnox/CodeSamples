@@ -29,7 +29,7 @@ ssh-keygen
 ls .ssh
 
 #copy the key to other machines
-ssh-copy-id -i .ssh/id_rsa.pub ubuntu1
+ssh-copy-id -i .ssh/id_rsa.pub ubuntu
 #note if refused, run:
 #sudo apt-get install openssh-server
 
@@ -44,8 +44,8 @@ knox ALL=(ALL) NOPASSWD: ALL
 ###### INVENTORY #######
 sudo nano /etc/ansible/hosts
 #create GUI group like so at bottom of file
-# [gui]
-# ubuntu1
+# [linuxhosts]
+# ubuntu
 # centos
 
 ## can also specify username to use like
@@ -56,7 +56,7 @@ ansible -m ping all
 #raw module with the uptime action (-a)
 ansible -m raw -a '/usr/bin/uptime' all
 
-ansible -m shell -a 'python3 -V' gui
+ansible -m shell -a 'python3 -V' linuxhosts
 
 ansible all -a 'whoami'
 #elevate to root with -b for become. Why? Because ansible doesnt elevate to sudo by default
