@@ -1,5 +1,6 @@
 ---
-- hosts: gui
+- name: Playbook with variables demo
+  hosts: linuxhosts
   vars:
     - var1: zig
     - var2: zag

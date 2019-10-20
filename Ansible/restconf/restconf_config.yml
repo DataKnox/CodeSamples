@@ -22,9 +22,9 @@
     - name: print output
       debug: msg="{{results}}"
 
-    - name: Delete interface
-      with_items: "{{local_loopback}}"
-      restconf_config:
-        method: delete
-        format: json
-        path: "/data/ietf-interfaces:interfaces/interface={{item.name}}"
+    # - name: Delete interface
+    #   with_items: "{{local_loopback}}"
+    #   restconf_config:
+    #     method: delete
+    #     format: json
+    #     path: "/data/ietf-interfaces:interfaces/interface={{item.name}}"

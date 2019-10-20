@@ -1,6 +1,6 @@
 ---
 - name: Create loopback payload from template
-  hosts: 172.16.1.25
+  hosts: sandbox
   connection: local
   tasks:
     - name: Get some configs

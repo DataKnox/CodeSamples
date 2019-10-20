@@ -1,5 +1,5 @@
 ---
-- hosts: gui
+- hosts: linuxhosts
   become: true
   tasks:
     - name: install nginx on ubuntu

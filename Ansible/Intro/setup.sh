@@ -54,7 +54,7 @@ sudo nano /etc/ansible/hosts
 ansible -m ping all
 
 #raw module with the uptime action (-a)
-ansible -m raw -a '/usr/bin/uptime' all
+ansible -m raw -a '/usr/bin/uptime' linuxhosts
 
 ansible -m shell -a 'python3 -V' linuxhosts
 

@@ -1,5 +1,6 @@
 ---
-- hosts: ubuntu1
+- name: Demo Ansible loops
+  hosts: ubuntu
   become: yes
   tasks:
     - name: Create a file
