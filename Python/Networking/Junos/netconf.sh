@@ -1,0 +1,1 @@
+ssh root@10.10.10.150 -p 830 -s netconf

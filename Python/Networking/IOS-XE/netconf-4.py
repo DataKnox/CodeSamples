@@ -1,7 +1,7 @@
 from ncclient import manager
 from pprint import pprint
 import xmltodict
-import xml.dom.minidom
+
 # import logging
 # logging.basicConfig(level=logging.DEBUG)
 

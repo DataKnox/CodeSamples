@@ -1,0 +1,18 @@
+<rpc>
+<close-session/>
+</rpc>
+
+<rpc>
+    <get-software-information>
+    </get-software-information>
+</rpc>
+
+<rpc>
+    <get-alarm-information>
+    </get-alarm-information>
+</rpc>
+
+<rpc>
+    <get-route-information>
+    </get-route-information>
+</rpc>
