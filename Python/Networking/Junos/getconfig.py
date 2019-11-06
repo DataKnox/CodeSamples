@@ -5,9 +5,9 @@ from ncclient.xml_ import *
 # set device configs
 switches = [
     {"host": "10.10.10.150", "port": "830",
-             "username": "root", "password": "S0lut1ons"},
+             "username": "root", "password": ""},
     {"host": "10.10.10.151", "port": "830",
-             "username": "root", "password": "S0lut1ons"}
+             "username": "root", "password": ""}
 ]
 for switch in switches:
     # make initial connection and save session as variable m
