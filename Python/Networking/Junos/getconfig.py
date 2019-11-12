@@ -1,5 +1,4 @@
 from ncclient import manager
-from pprint import pprint
 from ncclient.xml_ import *
 
 # set device configs
