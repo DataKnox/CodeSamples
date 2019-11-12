@@ -3,7 +3,7 @@ from pprint import pprint
 import xmltodict
 import xml.dom.minidom
 switch = {"host": "10.10.10.150", "port": "830",
-          "username": "root", "password": "S0lut1ons"}
+          "username": "root", "password": ""}
 
 #rpc_filter = "<get-interface-information><interface-name>ge-0/0/1</interface-name><detail/></get-interface-information>"
 rpc_filter = "<get-interface-information><terse/></get-interface-information>"
