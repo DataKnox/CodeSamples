@@ -1,0 +1,11 @@
+---
+- name: Create VLAN 101
+  hosts: junos-switches
+  connection: local
+  tasks:
+    - name: Create vlan101
+      junos_vlans:
+        config:
+          - name: vlan101
+            vlan_id: 101
+        state: merged
