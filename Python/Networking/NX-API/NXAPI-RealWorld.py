@@ -1,6 +1,8 @@
 import requests
 import json
 import re
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 switchuser = 'cisco'
 switchpassword = 'cisco'

@@ -1,12 +1,11 @@
 ---
-- name: Create VLANs
+- name: Create vlan
   hosts: junos-switches
-  connection: local
   tasks:
-    - name: Create vlans
-      with_items: {{vlan}}
+    - name: Create vlans on devices
+      with_items: "{{vlan}}"
       junos_vlans:
         config:
-          - name: {{item.name}}
-            vlan_id: {{item.vlanid}}
-      state: merged
+          - name: "{{item.name}}"
+            vlan_id: "{{item.vlanid}}"
+        state: merged

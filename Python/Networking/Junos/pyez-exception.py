@@ -3,14 +3,14 @@ from jnpr.junos.utils.config import Config
 from jnpr.junos.exception import *
 
 
-switch = {'host': '10.10.10.150', 'user': 'root', 'pw': ''}
+switch = {'host': '10.10.10.150', 'user': 'root', 'pw': 'S0lut1ons'}
 
 conn = Device(host=switch['host'],
               user=switch['user'], password=switch['pw'])
 try:
     conn.open()
     config = Config(conn)
-    payload = """vlans{
+    payload = """vlans
         vlan101{
             vlan-id 101;
             }
