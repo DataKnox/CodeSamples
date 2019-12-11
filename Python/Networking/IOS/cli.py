@@ -1,7 +1,14 @@
 import os
 from dotenv import load_dotenv
-import logging
 from netmiko import ConnectHandler
+from datetime import datetime
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import logging
+
+# Enable logging for debugging but then disable if not needed
+# comment out line 12 to turn logging on
 logging.basicConfig(level=logging.DEBUG,
                     format=' %(asctime)s - %(levelname)s - %(message)s')
 logging.disable(logging.CRITICAL)
@@ -11,6 +18,8 @@ load_dotenv()
 user = os.environ.get('username')
 pw = os.environ.get('password')
 sec = os.environ.get('secret')
+euser = os.environ.get('eusername')
+epw = os.environ.get('epassword')
 
 # Connect
 switch = {
@@ -21,13 +30,40 @@ switch = {
     'secret': sec,
     'port': 23
 }
-c = ConnectHandler(**switch)
-c.enable()
-results = c.send_command('show run')
-c.disconnect()
+try:
+    c = ConnectHandler(**switch)
 
-filename = f"{switch['ip']}.txt"
-file = open(
-    f"/home/knox/Documents/CodeSamples/Python/Networking/IOS/{filename}", 'w')
-file.write(results)
-file.close()
+    # Enter enable mode, issue command, and disconnect
+    c.enable()
+    results = c.send_command('show run')
+    c.disconnect()
+
+    # Write output to a file
+    filename = f"{switch['ip']}.txt"
+    file = open(
+        f"/home/knox/Documents/CodeSamples/Python/Networking/IOS/{filename}", 'w')
+    file.write(results)
+    file.close()
+
+    # send success email
+    s = smtplib.SMTP(host='smtp.office365.com', port=587)
+    s.starttls()
+    s.login(euser, epw)
+    body = f"Backup script succeeded at {datetime.now()}"
+    msg = MIMEMultipart()
+    msg['From'] = euser
+    msg['To'] = euser
+    msg['Subject'] = 'Backup script succeeded'
+    msg.attach(MIMEText(body, 'plain'))
+    s.send_message(msg)
+except Exception as e:
+    s = smtplib.SMTP(host='smtp.office365.com', port=587)
+    s.starttls()
+    s.login(euser, epw)
+    body = f"{datetime.now()} - Script failed with error: {e}"
+    msg = MIMEMultipart()
+    msg['From'] = euser
+    msg['To'] = euser
+    msg['Subject'] = 'Backup script failed'
+    msg.attach(MIMEText(body, 'plain'))
+    s.send_message(msg)
