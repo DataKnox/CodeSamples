@@ -31,6 +31,7 @@ switch = {
     'port': 23
 }
 try:
+    # using **variable unpacks a python dictionary
     c = ConnectHandler(**switch)
 
     # Enter enable mode, issue command, and disconnect
