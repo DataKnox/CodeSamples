@@ -5,6 +5,8 @@ from datetime import datetime
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import requests
+import json
 import logging
 
 # Enable logging for debugging but then disable if not needed
@@ -24,7 +26,7 @@ epw = os.environ.get('epassword')
 # Connect
 switch = {
     'device_type': 'cisco_ios_telnet',
-    'ip': '10.10.10.2',
+    'ip': 'IP HERE',
     'username': user,
     'password': pw,
     'secret': sec,
@@ -68,3 +70,11 @@ except Exception as e:
     msg['Subject'] = 'Backup script failed'
     msg.attach(MIMEText(body, 'plain'))
     s.send_message(msg)
+
+    # handle Teams message
+    url = 'URL HERE'
+    message = {
+        'title': 'BACKUP FAILED',
+        'text': 'The backup script did not succeed. Please research'
+    }
+    response_body = requests.post(url=url, data=json.dumps(message))
