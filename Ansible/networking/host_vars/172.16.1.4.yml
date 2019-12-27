@@ -2,9 +2,8 @@
 local_loopback:
   - name: Loopback1
     desc: Sample Ansible config
-    ip_address: 172.20.1.2
-    prefix: 24
+    ip_address: 172.20.1.2/24
   - name: Loopback2
     desc: Sample Ansible config
-    ip_address: 172.22.1.2
-    prefix: 24
+    ip_address: 172.22.1.2/24
+    
