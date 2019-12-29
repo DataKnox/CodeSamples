@@ -3,3 +3,4 @@ Docker2/requirements.txt
 Docker2/Dockerfile
 .env
 Python/os.py
+test.py

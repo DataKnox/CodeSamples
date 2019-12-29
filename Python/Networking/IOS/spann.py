@@ -29,6 +29,6 @@ try:
         print(' ')
         print(
             f"{stp['interface']}.{stp['vlan_id']} is currently in role {stp['role']}")
-    c.close()
+    c.disconnect()
 except Exception as e:
     print(e)

@@ -1,0 +1,11 @@
+/home/knox/Documents/CodeSamples/Csharp/app2/bin/Debug/netcoreapp3.1/app2
+/home/knox/Documents/CodeSamples/Csharp/app2/bin/Debug/netcoreapp3.1/app2.deps.json
+/home/knox/Documents/CodeSamples/Csharp/app2/bin/Debug/netcoreapp3.1/app2.runtimeconfig.json
+/home/knox/Documents/CodeSamples/Csharp/app2/bin/Debug/netcoreapp3.1/app2.runtimeconfig.dev.json
+/home/knox/Documents/CodeSamples/Csharp/app2/bin/Debug/netcoreapp3.1/app2.dll
+/home/knox/Documents/CodeSamples/Csharp/app2/bin/Debug/netcoreapp3.1/app2.pdb
+/home/knox/Documents/CodeSamples/Csharp/app2/obj/Debug/netcoreapp3.1/app2.csprojAssemblyReference.cache
+/home/knox/Documents/CodeSamples/Csharp/app2/obj/Debug/netcoreapp3.1/app2.AssemblyInfoInputs.cache
+/home/knox/Documents/CodeSamples/Csharp/app2/obj/Debug/netcoreapp3.1/app2.AssemblyInfo.cs
+/home/knox/Documents/CodeSamples/Csharp/app2/obj/Debug/netcoreapp3.1/app2.dll
+/home/knox/Documents/CodeSamples/Csharp/app2/obj/Debug/netcoreapp3.1/app2.pdb
