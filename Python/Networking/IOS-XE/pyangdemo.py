@@ -1,6 +1,4 @@
 from ncclient import manager
-from pprint import pprint
-import xmltodict
 import xml.etree.ElementTree as ET
 
 # import logging
