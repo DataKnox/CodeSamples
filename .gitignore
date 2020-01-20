@@ -4,3 +4,9 @@ Docker2/Dockerfile
 .env
 Python/os.py
 test.py
+
+.python_packages
+__pycache__
+.venv
+gpw.py
+Python/Azure/init.py
