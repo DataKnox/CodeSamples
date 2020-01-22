@@ -14,7 +14,7 @@ namespace GetMerakiNetsCmdlet
 
     [Cmdlet(VerbsCommon.Get, "merakinets")]
     [OutputType(typeof(MerakiNet))]
-    public class GteMerakiNetsCommand : PSCmdlet
+    public class GetMerakiNetsCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -34,17 +34,14 @@ namespace GetMerakiNetsCmdlet
 
         private static async Task<IList<MerakiNet>> GetNets(string Token, string orgid)
         {
-            
-            //Cmdlet.WriteVerbose("Setting HTTP headers");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
-            //Cmdlet.WriteVerbose("Making HTTP GET");
-            var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/organizations/{orgid}/networks");
-            //Cmdlet.WriteVerbose("Awaiting JSON deserialization");
-            return await JsonSerializer.DeserializeAsync<IList<MerakiNet>>(await streamTask);
             
+            var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/organizations/{orgid}/networks");
+            
+            return await JsonSerializer.DeserializeAsync<IList<MerakiNet>>(await streamTask);            
         }
 
         private static  IList<MerakiNet> ProcessRecordAsync(string Token, string orgid)
