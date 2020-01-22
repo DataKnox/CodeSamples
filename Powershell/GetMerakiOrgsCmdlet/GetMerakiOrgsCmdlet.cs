@@ -11,7 +11,7 @@ namespace GetMerakiOrgsCmdlet
 {
     [Cmdlet(VerbsCommon.Get, "merakiorgs")]
     //[OutputType(typeof(MerakiOrg))]
-    public class GteMerakiOrgsCommand : PSCmdlet
+    public class GetMerakiOrgsCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
