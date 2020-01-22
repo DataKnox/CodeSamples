@@ -27,7 +27,7 @@ namespace GetMerakiOrgsCmdlet
 
         private static readonly HttpClient client = new HttpClient();
 
-        private static async Task<List<MerakiOrg>> GetOrgs(string Token)
+        private static async Task<IList<MerakiOrg>> GetOrgs(string Token)
         {
             //Cmdlet.WriteVerbose("Setting HTTP headers");
             client.DefaultRequestHeaders.Accept.Clear();
@@ -37,7 +37,15 @@ namespace GetMerakiOrgsCmdlet
             //Cmdlet.WriteVerbose("Making HTTP GET");
             var streamTask = client.GetStreamAsync("https://dashboard.meraki.com/api/v0/organizations");
             //Cmdlet.WriteVerbose("Awaiting JSON deserialization");
-            return await JsonSerializer.DeserializeAsync<List<MerakiOrg>>(await streamTask);
+            return await JsonSerializer.DeserializeAsync<IList<MerakiOrg>>(await streamTask);
+        }
+
+        private static  IList<MerakiOrg> ProcessRecordAsync(string Token)
+        {
+            var task = GetOrgs(Token);
+            task.Wait();
+            var result = task.Result;
+            return result;
         }
 
         // This method gets called once for each cmdlet in the pipeline when the pipeline starts executing
@@ -48,18 +56,12 @@ namespace GetMerakiOrgsCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override async void ProcessRecord()
+        protected override void ProcessRecord()
         {
             WriteVerbose("Entering Get Orgs call");
-            List<MerakiOrg> orgs = await GetOrgs(Token);
-
-            WriteVerbose("Entering foreach");
-            foreach (MerakiOrg org in orgs)
-            {
-                WriteVerbose(org.name);
-
-                WriteObject(org);
-            }
+            var list = ProcessRecordAsync(Token);
+            
+            WriteObject(list,true);
 
 
             WriteVerbose("Exiting foreach");
