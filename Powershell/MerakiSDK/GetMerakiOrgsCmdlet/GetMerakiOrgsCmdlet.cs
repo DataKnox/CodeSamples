@@ -10,8 +10,8 @@ using System.Collections.Generic;
 namespace GetMerakiOrgsCmdlet
 {
     [Cmdlet(VerbsCommon.Get, "merakiorgs")]
-    [OutputType(typeof(MerakiOrg))]
-    public class GteMerakiOrgsCommand : PSCmdlet
+    //[OutputType(typeof(MerakiOrg))]
+    public class GetMerakiOrgsCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
