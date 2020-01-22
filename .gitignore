@@ -10,3 +10,4 @@ __pycache__
 .venv
 gpw.py
 Python/Azure/init.py
+Powershell/MerakiSDK/sdktest.ps1
