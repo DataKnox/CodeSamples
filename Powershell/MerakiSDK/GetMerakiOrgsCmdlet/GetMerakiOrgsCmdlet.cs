@@ -10,7 +10,7 @@ using System.Collections.Generic;
 namespace GetMerakiOrgsCmdlet
 {
     [Cmdlet(VerbsCommon.Get, "merakiorgs")]
-    //[OutputType(typeof(MerakiOrg))]
+    [OutputType(typeof(MerakiOrg))]
     public class GteMerakiOrgsCommand : PSCmdlet
     {
         [Parameter(
@@ -20,15 +20,9 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string Token { get; set; }
 
-        [Parameter(
-            Position = 1,
-            ValueFromPipelineByPropertyName = true)]
-        public string name { get; set; }
-
-        private static readonly HttpClient client = new HttpClient();
-
         private static async Task<IList<MerakiOrg>> GetOrgs(string Token)
         {
+            using HttpClient client = new HttpClient();
             //Cmdlet.WriteVerbose("Setting HTTP headers");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
@@ -38,6 +32,7 @@ namespace GetMerakiOrgsCmdlet
             var streamTask = client.GetStreamAsync("https://dashboard.meraki.com/api/v0/organizations");
             //Cmdlet.WriteVerbose("Awaiting JSON deserialization");
             return await JsonSerializer.DeserializeAsync<IList<MerakiOrg>>(await streamTask);
+            client.Dispose();
         }
 
         private static  IList<MerakiOrg> ProcessRecordAsync(string Token)
@@ -74,10 +69,13 @@ namespace GetMerakiOrgsCmdlet
         }
     }
 
+
     public class MerakiOrg
     {
         public string id { get; set; }
         public string name { get; set; }
         public string url { get; set; }
     }
+
+
 }
