@@ -50,7 +50,7 @@ namespace GetMerakiOrgsCmdlet
 
         [Parameter(
             Mandatory = true,
-            Position = 4,
+            Position = 5,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true)]
         public string applianceIp { get; set; }
