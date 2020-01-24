@@ -36,7 +36,7 @@ namespace GetMerakiOrgsCmdlet
                 new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
 
-            var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/clients");
+            var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/vlans");
             
             return await JsonSerializer.DeserializeAsync<IList<MerakiVlan>>(await streamTask);
         }
