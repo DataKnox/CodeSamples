@@ -3,3 +3,7 @@ Docker2/requirements.txt
 Docker2/Dockerfile
 .env
 Python/os.py
+
+.python_packages
+__pycache__
+.venv
