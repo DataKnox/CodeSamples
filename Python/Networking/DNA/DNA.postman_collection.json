@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "3ff2bb19-061f-43c6-a0fb-0f5baecb850f",
+		"name": "DNA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "dna login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9a532dcd-f582-44a8-beed-8cef77d7b7fd",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\",jsonData.Token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pw}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{user}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGV2bmV0dXNlcjpDaXNjbzEyMyE=",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://{{dna}}/dna/system/api/v1/auth/token",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"system",
+						"api",
+						"v1",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "dna login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZGV2bmV0dXNlcjpDaXNjbzEyMyE=",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{dna}}/dna/system/api/v1/auth/token",
+							"protocol": "https",
+							"host": [
+								"{{dna}}"
+							],
+							"path": [
+								"dna",
+								"system",
+								"api",
+								"v1",
+								"auth",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.13.12"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jan 2020 02:05:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "352"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Via",
+							"value": "api-gateway"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Y2U3MTJiMDhlZTY2MjAyZmEyZWI4ZjgiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViNmNmZGZmNDMwOTkwMDA4OWYwZmYzNyJdLCJ0ZW5hbnRJZCI6IjViNmNmZGZjNDMwOTkwMDA4OWYwZmYzMCIsImV4cCI6MTU3ODc5ODMwNSwidXNlcm5hbWUiOiJkZXZuZXR1c2VyIn0.ZsL-Evcd5RqDghQ3F8zbauKbpGqcTTN-YuO7iO7MST0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Flow analysis",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9a532dcd-f582-44a8-beed-8cef77d7b7fd",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"destIP\":\"10.10.20.83\",\n\t\"sourceIP\":\"10.10.20.84\"\n}"
+				},
+				"url": {
+					"raw": "https://{{dna}}/dna/intent/api/v1/flow-analysis",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"flow-analysis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "network devices",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "666b9f2b-0962-4de8-b88e-d1fdc01b1954",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"net_dev_id\",jsonData.response[0].id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dna}}/dna/intent/api/v1/network-device",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"network-device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "666b9f2b-0962-4de8-b88e-d1fdc01b1954",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dna}}/dna/intent/api/v1/site",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"site"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "net device interface details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dna}}/dna/intent/api/v1/interface/network-device/{{net_dev_id}}",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"interface",
+						"network-device",
+						"{{net_dev_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get client health",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "https://{{dna}}/dna/intent/api/v1/client-health?timestamp=",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"client-health"
+					],
+					"query": [
+						{
+							"key": "timestamp",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get client detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "https://{{dna}}/dna/intent/api/v1/client-detail?timestamp=&macAddress=00:00:2A:01:00:2E",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"client-detail"
+					],
+					"query": [
+						{
+							"key": "timestamp",
+							"value": ""
+						},
+						{
+							"key": "macAddress",
+							"value": "00:00:2A:01:00:2E"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "network device serial no",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dna}}/dna/intent/api/v1/network-device?serial=FXS1932Q1SE",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"network-device"
+					],
+					"query": [
+						{
+							"key": "serial",
+							"value": "FXS1932Q1SE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "network device id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dna}}/dna/intent/api/v1/network-device?id=d101ef07-b508-4cc9-bfe3-2acf7e8a1015",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"network-device"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "d101ef07-b508-4cc9-bfe3-2acf7e8a1015"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all interfaces",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dna}}/dna/intent/api/v1/interface",
+					"protocol": "https",
+					"host": [
+						"{{dna}}"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"interface"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
