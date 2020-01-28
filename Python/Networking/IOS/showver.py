@@ -23,12 +23,10 @@ switch = {
 try:
     c = ConnectHandler(**switch)
     c.enable()
-    stps = c.send_command('show spanning-tree', use_textfsm=True)
-    print(json.dumps(stps, indent=2))
-    for stp in stps:
-        print(' ')
-        print(
-            f"{stp['interface']}.{stp['vlan_id']} is currently in role {stp['role']}")
+    versions = c.send_command('show version', use_textfsm=True)
+    #print(json.dumps(versions, indent=2))
+    uptime = versions[0]['uptime']
+    print(uptime)
     c.disconnect()
 except Exception as e:
     print(e)

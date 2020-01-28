@@ -3,7 +3,18 @@ Docker2/requirements.txt
 Docker2/Dockerfile
 .env
 Python/os.py
+<<<<<<< HEAD
 
 .python_packages
 __pycache__
 .venv
+=======
+test.py
+
+.python_packages
+__pycache__
+.venv
+gpw.py
+Python/Azure/init.py
+Powershell/MerakiSDK/sdktest.ps1
+>>>>>>> 451939ce8ca1ec50f331cc01125616b2cedea98d
