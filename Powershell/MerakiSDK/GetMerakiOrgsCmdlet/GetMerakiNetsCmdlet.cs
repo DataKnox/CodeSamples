@@ -30,15 +30,17 @@ namespace GetMerakiOrgsCmdlet
         // This method creates the API call and returns a Task object that can be waited on
         private static async Task<IList<MerakiNet>> GetNets(string Token, string orgid)
         {
-            using HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
-            
-            var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/organizations/{orgid}/networks");
-            
-            return await JsonSerializer.DeserializeAsync<IList<MerakiNet>>(await streamTask);
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
+                
+                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/organizations/{orgid}/networks");
+                
+                return await JsonSerializer.DeserializeAsync<IList<MerakiNet>>(await streamTask);
+            }
             
         }
         //This method calls GetNets and waits on the result. It then returns the List of MerakiNet objects
