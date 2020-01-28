@@ -27,10 +27,9 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string netid { get; set; }
 
-        private static readonly HttpClient client = new HttpClient();
-
-                private static async Task<IList<MerakiSSID>> GetSsids(string Token, string netid)
+        private static async Task<IList<MerakiSSID>> GetSsids(string Token, string netid)
         {
+            using HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));

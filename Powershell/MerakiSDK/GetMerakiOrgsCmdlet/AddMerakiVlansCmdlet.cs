@@ -55,10 +55,9 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string applianceIp { get; set; }
 
-        private static readonly HttpClient client = new HttpClient();
-
         private static async Task<string> AddVlans(string Token, string netid, CreateMerakiVlan vlan)
         {
+            using HttpClient client = new HttpClient();
             string jsonString;
             string uri;
             uri = $"https://dashboard.meraki.com/api/v0/networks/{netid}/vlans";
@@ -97,11 +96,12 @@ namespace GetMerakiOrgsCmdlet
             vlan.id = vlanid;
             vlan.applianceIp = applianceIp;
             vlan.subnet = subnet;
+
             WriteVerbose("Entering Get Orgs call");
             var list = ProcessRecordAsync(Token, netid, vlan);
+
             CreateMerakiVlan result = JsonSerializer.Deserialize<CreateMerakiVlan>(list);
             WriteObject(result,true);
-
 
             WriteVerbose("Exiting foreach");
         }

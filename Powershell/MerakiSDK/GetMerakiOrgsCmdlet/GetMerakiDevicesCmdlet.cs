@@ -27,11 +27,10 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string netid { get; set; }
 
-        private static readonly HttpClient client = new HttpClient();
-
         // This method creates the API call and returns a Task object that can be waited on
         private static async Task<IList<MerakiDevice>> GetDevs(string Token, string netid)
         {
+            using HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));

@@ -25,18 +25,18 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string name { get; set; }
 
-        private static readonly HttpClient client = new HttpClient();
-
         private static async Task<IList<MerakiOrg>> GetOrgs(string Token)
         {
+            using HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
-
+            
             var streamTask = client.GetStreamAsync("https://dashboard.meraki.com/api/v0/organizations");
             
             return await JsonSerializer.DeserializeAsync<IList<MerakiOrg>>(await streamTask);
+            
         }
 
         private static  IList<MerakiOrg> ProcessRecordAsync(string Token)
@@ -44,6 +44,7 @@ namespace GetMerakiOrgsCmdlet
             var task = GetOrgs(Token);
             task.Wait();
             var result = task.Result;
+            
             return result;
         }
 
