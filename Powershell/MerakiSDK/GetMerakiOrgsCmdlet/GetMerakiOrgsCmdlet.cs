@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Collections.Generic;
 
 namespace GetMerakiOrgsCmdlet
@@ -78,8 +79,11 @@ namespace GetMerakiOrgsCmdlet
 
     public class MerakiOrg
     {
-        public string id { get; set; }
+        [JsonPropertyName("id")]
+        public string orgid { get; set; }
+
         public string name { get; set; }
+        
         public string url { get; set; }
     }
 }//end Namespace
