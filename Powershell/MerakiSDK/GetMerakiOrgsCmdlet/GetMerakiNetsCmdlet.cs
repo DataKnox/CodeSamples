@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Collections.Generic;
 
 namespace GetMerakiOrgsCmdlet
 {
-    [Cmdlet(VerbsCommon.Get, "merakivlans")]
-    [OutputType(typeof(MerakiVlan))]
-    public class GetMerakiVlansCommand : PSCmdlet
+     [Cmdlet(VerbsCommon.Get, "merakinets")]
+    [OutputType(typeof(MerakiNet))]
+    public class GetMerakiNetsCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -20,14 +21,15 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string Token { get; set; }
 
-       [Parameter(
+        [Parameter(
             Mandatory = true,
             Position = 1,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true)]
-        public string netid { get; set; }
+        public string orgid { get; set; }
 
-        private static async Task<IList<MerakiVlan>> GetVlans(string Token, string netid)
+        // This method creates the API call and returns a Task object that can be waited on
+        private static async Task<IList<MerakiNet>> GetNets(string Token, string orgid)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -35,16 +37,17 @@ namespace GetMerakiOrgsCmdlet
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
-
-                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/vlans");
                 
-                return await JsonSerializer.DeserializeAsync<IList<MerakiVlan>>(await streamTask);
+                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/organizations/{orgid}/networks");
+                
+                return await JsonSerializer.DeserializeAsync<IList<MerakiNet>>(await streamTask);
             }
+            
         }
-
-        private static  IList<MerakiVlan> ProcessRecordAsync(string Token, string netid)
+        //This method calls GetNets and waits on the result. It then returns the List of MerakiNet objects
+        private static  IList<MerakiNet> ProcessRecordAsync(string Token, string orgid)
         {
-            var task = GetVlans(Token, netid);
+            var task = GetNets(Token, orgid);
             task.Wait();
             var result = task.Result;
             return result;
@@ -61,7 +64,7 @@ namespace GetMerakiOrgsCmdlet
         protected override void ProcessRecord()
         {
             WriteVerbose("Entering Get Orgs call");
-            var list = ProcessRecordAsync(Token, netid);
+            var list = ProcessRecordAsync(Token, orgid);
             
             WriteObject(list,true);
 
@@ -74,15 +77,18 @@ namespace GetMerakiOrgsCmdlet
         {
             WriteVerbose("End!");
         }
-    }
-
-    public class MerakiVlan
+    } //end Get-MerakiNets
+    
+    public class MerakiNet
     {
-        public string name {get; set;}
-        public string applianceIp {get; set;}
-        public string subnet {get; set;}
-        public string id {get; set;}
-        public string dnsNameservers {get; set;}
-        public string dhcpHandling {get; set;}
+        public bool disableMyMerakiCom { get; set; }
+        public bool disableRemoteStatusPage { get; set; }
+        [JsonPropertyName("id")]
+        public string netid { get; set; }
+        public string name { get; set; }
+        public string organizationId { get; set; }
+        public string[] tags { get; set; }
+        public string timeZone { get; set; }
+        public string type { get; set; }
     }
 }

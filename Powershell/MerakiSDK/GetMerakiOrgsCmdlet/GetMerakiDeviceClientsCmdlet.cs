@@ -9,9 +9,9 @@ using System.Collections.Generic;
 
 namespace GetMerakiOrgsCmdlet
 {
-    [Cmdlet(VerbsCommon.Get, "merakivlans")]
-    [OutputType(typeof(MerakiVlan))]
-    public class GetMerakiVlansCommand : PSCmdlet
+    [Cmdlet(VerbsCommon.Get, "merakideviceclients")]
+    [OutputType(typeof(DeviceClient))]
+    public class GetMerakiDeviceClientCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -20,14 +20,15 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string Token { get; set; }
 
-       [Parameter(
+        [Parameter(
             Mandatory = true,
             Position = 1,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true)]
-        public string netid { get; set; }
+        public string serial { get; set; }
 
-        private static async Task<IList<MerakiVlan>> GetVlans(string Token, string netid)
+        // This method creates the API call and returns a Task object that can be waited on
+        private static async Task<IList<DeviceClient>> GetDevClients(string Token, string serial)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -35,16 +36,17 @@ namespace GetMerakiOrgsCmdlet
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
-
-                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/vlans");
                 
-                return await JsonSerializer.DeserializeAsync<IList<MerakiVlan>>(await streamTask);
+                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/devices/{serial}/clients");
+                
+                return await JsonSerializer.DeserializeAsync<IList<DeviceClient>>(await streamTask);
             }
+            
         }
-
-        private static  IList<MerakiVlan> ProcessRecordAsync(string Token, string netid)
+        //This method calls GetNets and waits on the result. It then returns the List of MerakiDevice objects
+        private static  IList<DeviceClient> ProcessRecordAsync(string Token, string serial)
         {
-            var task = GetVlans(Token, netid);
+            var task = GetDevClients(Token, serial);
             task.Wait();
             var result = task.Result;
             return result;
@@ -54,14 +56,16 @@ namespace GetMerakiOrgsCmdlet
         protected override void BeginProcessing()
         {
             WriteVerbose("Begin!");
-            WriteVerbose(Token);
+            WriteVerbose($"Token is {Token}");
+            WriteVerbose($"serial is {serial}");
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
         protected override void ProcessRecord()
         {
             WriteVerbose("Entering Get Orgs call");
-            var list = ProcessRecordAsync(Token, netid);
+            
+            var list = ProcessRecordAsync(Token, serial);
             
             WriteObject(list,true);
 
@@ -75,14 +79,23 @@ namespace GetMerakiOrgsCmdlet
             WriteVerbose("End!");
         }
     }
-
-    public class MerakiVlan
+    public class Usage
     {
-        public string name {get; set;}
-        public string applianceIp {get; set;}
-        public string subnet {get; set;}
-        public string id {get; set;}
-        public string dnsNameservers {get; set;}
-        public string dhcpHandling {get; set;}
+        public double sent { get; set; }
+        public double recv { get; set; }
+    }
+
+    public class DeviceClient
+    {
+        public Usage usage { get; set; }
+        public string id { get; set; }
+        public string description { get; set; }
+        public string mac { get; set; }
+        public string ip { get; set; }
+        public string user { get; set; }
+        public int vlan { get; set; }
+        public object switchport { get; set; }
+        public string mdnsName { get; set; }
+        public string dhcpHostname { get; set; }
     }
 }

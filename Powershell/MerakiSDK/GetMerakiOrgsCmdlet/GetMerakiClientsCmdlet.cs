@@ -27,18 +27,19 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string netid { get; set; }
 
-        private static readonly HttpClient client = new HttpClient();
-
         private static async Task<IList<MerakiClient>> GetClients(string Token, string netid)
         {
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
 
-            var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/clients");
-            
-            return await JsonSerializer.DeserializeAsync<IList<MerakiClient>>(await streamTask);
+                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/clients");
+                
+                return await JsonSerializer.DeserializeAsync<IList<MerakiClient>>(await streamTask);
+            }
         }
 
         private static  IList<MerakiClient> ProcessRecordAsync(string Token, string netid)

@@ -9,9 +9,9 @@ using System.Collections.Generic;
 
 namespace GetMerakiOrgsCmdlet
 {
-    [Cmdlet(VerbsCommon.Get, "merakivlans")]
-    [OutputType(typeof(MerakiVlan))]
-    public class GetMerakiVlansCommand : PSCmdlet
+    [Cmdlet(VerbsCommon.Get, "MerakiInFWRules")]
+    [OutputType(typeof(MerakiRules))]
+    public class GetMerakiInFWRulesCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -27,24 +27,22 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string netid { get; set; }
 
-        private static async Task<IList<MerakiVlan>> GetVlans(string Token, string netid)
+         private static async Task<MerakiRules> GetInFWRules(string Token, string netid)
         {
-            using (HttpClient client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(
-                    new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
+            using HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
 
-                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/vlans");
-                
-                return await JsonSerializer.DeserializeAsync<IList<MerakiVlan>>(await streamTask);
-            }
+            var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/appliance/firewall/inboundFirewallRules");
+            
+            return await JsonSerializer.DeserializeAsync<MerakiRules>(await streamTask);
         }
 
-        private static  IList<MerakiVlan> ProcessRecordAsync(string Token, string netid)
+        private static  MerakiRules ProcessRecordAsync(string Token, string netid)
         {
-            var task = GetVlans(Token, netid);
+            var task = GetInFWRules(Token, netid);
             task.Wait();
             var result = task.Result;
             return result;
@@ -60,12 +58,11 @@ namespace GetMerakiOrgsCmdlet
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
         protected override void ProcessRecord()
         {
-            WriteVerbose("Entering Get Orgs call");
+            WriteVerbose("Entering Get Rules call");
             var list = ProcessRecordAsync(Token, netid);
+
+            WriteObject(list.rules,true);
             
-            WriteObject(list,true);
-
-
             WriteVerbose("Exiting foreach");
         }
 
@@ -75,14 +72,20 @@ namespace GetMerakiOrgsCmdlet
             WriteVerbose("End!");
         }
     }
-
-    public class MerakiVlan
+    public class Rule
     {
-        public string name {get; set;}
-        public string applianceIp {get; set;}
-        public string subnet {get; set;}
-        public string id {get; set;}
-        public string dnsNameservers {get; set;}
-        public string dhcpHandling {get; set;}
+        public string comment {get; set;}
+        public string policy {get; set;}
+        public string protocol {get; set;}
+        public string destPort {get; set;}
+        public string destCidr {get; set;}
+        public string srcPort {get; set;}
+        public string srcCidr {get; set;}
+        public bool syslogEnabled {get; set;}
+    }
+    public class MerakiRules
+    {
+        public Rule[] rules {get; set;}
+        public string syslogDefaultRule {get; set;}
     }
 }

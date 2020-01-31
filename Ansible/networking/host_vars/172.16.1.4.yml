@@ -6,4 +6,7 @@ local_loopback:
   - name: Loopback2
     desc: Sample Ansible config
     ip_address: 172.22.1.2/24
+  - name: Loopback3
+    desc: Sample Ansible config
+    ip_address: 172.24.1.2/24
     

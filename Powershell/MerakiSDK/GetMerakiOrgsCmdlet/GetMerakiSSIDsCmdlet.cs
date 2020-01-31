@@ -9,9 +9,9 @@ using System.Collections.Generic;
 
 namespace GetMerakiOrgsCmdlet
 {
-    [Cmdlet(VerbsCommon.Get, "merakivlans")]
-    [OutputType(typeof(MerakiVlan))]
-    public class GetMerakiVlansCommand : PSCmdlet
+    [Cmdlet(VerbsCommon.Get, "merakissids")]
+    [OutputType(typeof(MerakiSSID))]
+    public class GetMerakiSsidsCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -27,7 +27,7 @@ namespace GetMerakiOrgsCmdlet
             ValueFromPipelineByPropertyName = true)]
         public string netid { get; set; }
 
-        private static async Task<IList<MerakiVlan>> GetVlans(string Token, string netid)
+        private static async Task<IList<MerakiSSID>> GetSsids(string Token, string netid)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -36,15 +36,15 @@ namespace GetMerakiOrgsCmdlet
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
 
-                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/vlans");
+                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/ssids");
                 
-                return await JsonSerializer.DeserializeAsync<IList<MerakiVlan>>(await streamTask);
+                return await JsonSerializer.DeserializeAsync<IList<MerakiSSID>>(await streamTask);
             }
         }
 
-        private static  IList<MerakiVlan> ProcessRecordAsync(string Token, string netid)
+        private static  IList<MerakiSSID> ProcessRecordAsync(string Token, string netid)
         {
-            var task = GetVlans(Token, netid);
+            var task = GetSsids(Token, netid);
             task.Wait();
             var result = task.Result;
             return result;
@@ -76,13 +76,29 @@ namespace GetMerakiOrgsCmdlet
         }
     }
 
-    public class MerakiVlan
+    public class MerakiSSID
     {
+        public int number {get; set;}
         public string name {get; set;}
-        public string applianceIp {get; set;}
-        public string subnet {get; set;}
-        public string id {get; set;}
-        public string dnsNameservers {get; set;}
-        public string dhcpHandling {get; set;}
+        public bool enabled {get; set;}
+        public string splashPage {get; set;}
+        public bool ssidAdminAccessible {get; set;}
+        public string authMode {get; set;}
+        public string encryptionMode {get; set;}
+        public string wpaEncryptionMode {get; set;}
+        public string radiusAccountingEnabled {get; set;}
+        public bool radiusEnabled {get; set;}
+        public string radiusAttributeForGroupPolicies {get; set;}
+        public string radiusFailoverPolicy {get; set;}
+        public string radiusLoadBalancingPolicy {get; set;}
+        public string ipAssignmentMode {get; set;}
+        public string adminSplashUrl {get; set;}
+        public string splashTimeout {get; set;}
+        public bool walledGardenEnabled {get; set;}
+        public string walledGardenRanges {get; set;}
+        public int minBitrate {get; set;}
+        public string bandSelection {get; set;}
+        public int perClientBandwidthLimitUp {get; set;}
+        public int perClientBandwidthLimitDown {get; set;}
     }
 }
