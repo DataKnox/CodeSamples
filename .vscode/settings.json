@@ -12,6 +12,10 @@
     "azureFunctions.projectLanguage": "Python",
     "azureFunctions.projectRuntime": "~2",
     "debug.internalConsoleOptions": "neverOpen",
+<<<<<<< HEAD
+    "python.pythonPath": "C:\\Users\\khutc\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe"
+=======
     "python.pythonPath": "/usr/bin/python3"
 >>>>>>> 451939ce8ca1ec50f331cc01125616b2cedea98d
+>>>>>>> eda1c88ab4395301f0e2a66718cadfc1d282682e
 }
