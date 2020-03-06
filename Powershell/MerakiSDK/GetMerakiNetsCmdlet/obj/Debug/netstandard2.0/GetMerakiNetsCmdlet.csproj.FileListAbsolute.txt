@@ -1,8 +1,0 @@
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiNetsCmdlet/GetMerakiNetsCmdlet/obj/Debug/netstandard2.0/GetMerakiNetsCmdlet.csprojAssemblyReference.cache
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiNetsCmdlet/GetMerakiNetsCmdlet/obj/Debug/netstandard2.0/GetMerakiNetsCmdlet.AssemblyInfoInputs.cache
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiNetsCmdlet/GetMerakiNetsCmdlet/obj/Debug/netstandard2.0/GetMerakiNetsCmdlet.AssemblyInfo.cs
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiNetsCmdlet/GetMerakiNetsCmdlet/bin/Debug/netstandard2.0/GetMerakiNetsCmdlet.deps.json
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiNetsCmdlet/GetMerakiNetsCmdlet/bin/Debug/netstandard2.0/GetMerakiNetsCmdlet.dll
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiNetsCmdlet/GetMerakiNetsCmdlet/bin/Debug/netstandard2.0/GetMerakiNetsCmdlet.pdb
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiNetsCmdlet/GetMerakiNetsCmdlet/obj/Debug/netstandard2.0/GetMerakiNetsCmdlet.dll
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiNetsCmdlet/GetMerakiNetsCmdlet/obj/Debug/netstandard2.0/GetMerakiNetsCmdlet.pdb
