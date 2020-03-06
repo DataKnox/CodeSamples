@@ -29,15 +29,17 @@ namespace GetMerakiOrgsCmdlet
 
         private static async Task<IList<MerakiVlan>> GetVlans(string Token, string netid)
         {
-            using HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("X-Cisco-Meraki-API-Key", Token);
 
-            var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/vlans");
-            
-            return await JsonSerializer.DeserializeAsync<IList<MerakiVlan>>(await streamTask);
+                var streamTask = client.GetStreamAsync($"https://dashboard.meraki.com/api/v0/networks/{netid}/vlans");
+                
+                return await JsonSerializer.DeserializeAsync<IList<MerakiVlan>>(await streamTask);
+            }
         }
 
         private static  IList<MerakiVlan> ProcessRecordAsync(string Token, string netid)

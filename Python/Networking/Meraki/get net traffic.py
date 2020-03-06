@@ -1,5 +1,6 @@
 import requests
 import json
+from datetime import datetime
 
 url = "https://dashboard.meraki.com/api/v0/organizations"
 
@@ -28,9 +29,9 @@ net_url = f'{url}/{orgId}/networks'
 networks = requests.get(net_url, headers=headers).json()
 print(networks)
 for network in networks:
-    if network['name'] == 'DNSMB3':
+    if network['name'] == 'DNSMB5':
         netId = network['id']
 
-client_url = f'https://dashboard.meraki.com/api/v0/networks/{netId}/l3FirewallRules'
+client_url = f'https://dashboard.meraki.com/api/v0/networks/{netId}/traffic?timespan=604800'
 clients = requests.get(client_url, headers=headers).json()
 print(json.dumps(clients, indent=2, sort_keys=True))

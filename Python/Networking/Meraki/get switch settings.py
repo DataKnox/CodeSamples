@@ -1,10 +1,11 @@
 import requests
 import json
+from datetime import datetime
 
 url = "https://dashboard.meraki.com/api/v0/organizations"
 
 headers = {
-    'X-Cisco-Meraki-API-Key': "6bec40cf957de430a6f1f2baa056b99a4fac9ea0",
+    'X-Cisco-Meraki-API-Key': "17d06f8fd988574af1d3280be9bdc9216134524a",
     'User-Agent': "PostmanRuntime/7.16.3",
     'Accept': "*/*",
     'Cache-Control': "no-cache",
@@ -20,17 +21,18 @@ response = requests.get(url, headers=headers).json()
 #print(json.dumps(response, indent=2, sort_keys=True))
 
 for response_org in response:
-    if response_org['name'] == 'DevNet Sandbox':
+    if response_org['name'] == 'Knoxs Data':
         orgId = response_org['id']
 
 net_url = f'{url}/{orgId}/networks'
 
 networks = requests.get(net_url, headers=headers).json()
-print(networks)
+# print(networks)
 for network in networks:
-    if network['name'] == 'DNSMB3':
+    if network['name'] == 'SoHo':
         netId = network['id']
 
-client_url = f'https://dashboard.meraki.com/api/v0/networks/{netId}/l3FirewallRules'
+
+client_url = f'https://dashboard.meraki.com/api/v0/networks/{netId}/switch/settings'
 clients = requests.get(client_url, headers=headers).json()
-print(json.dumps(clients, indent=2, sort_keys=True))
+print(json.dumps(clients, indent=2))

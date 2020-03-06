@@ -26,11 +26,17 @@ for response_org in response:
 net_url = f'{url}/{orgId}/networks'
 
 networks = requests.get(net_url, headers=headers).json()
-print(networks)
+# print(networks)
 for network in networks:
-    if network['name'] == 'DNSMB3':
+    if network['name'] == 'DNSMB4-s.jayaraj007007@gmail.com':
         netId = network['id']
 
-client_url = f'https://dashboard.meraki.com/api/v0/networks/{netId}/l3FirewallRules'
+client_url = f'https://dashboard.meraki.com/api/v0/networks/{netId}/clients'
 clients = requests.get(client_url, headers=headers).json()
-print(json.dumps(clients, indent=2, sort_keys=True))
+#print(json.dumps(clients, indent=2, sort_keys=True))
+for client in clients:
+    if client['id'] == 'k0191cb':
+        clientid = client['id']
+traffic_url = f"https://dashboard.meraki.com/api/v0/networks/{netId}/clients/{clientid}/events"
+historys = requests.get(traffic_url, headers=headers).json()
+print(json.dumps(historys, indent=2, sort_keys=True))

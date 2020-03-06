@@ -23,14 +23,7 @@ for response_org in response:
     if response_org['name'] == 'DevNet Sandbox':
         orgId = response_org['id']
 
-net_url = f'{url}/{orgId}/networks'
+net_url = f'{url}/{orgId}/licenses'
 
 networks = requests.get(net_url, headers=headers).json()
-print(networks)
-for network in networks:
-    if network['name'] == 'DNSMB3':
-        netId = network['id']
-
-client_url = f'https://dashboard.meraki.com/api/v0/networks/{netId}/l3FirewallRules'
-clients = requests.get(client_url, headers=headers).json()
-print(json.dumps(clients, indent=2, sort_keys=True))
+print(json.dumps(networks, indent=2, sort_keys=True))
