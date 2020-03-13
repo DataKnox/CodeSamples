@@ -1,8 +1,0 @@
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiOrgsCmdlet/obj/Debug/netstandard2.0/GetMerakiOrgsCmdlet.csprojAssemblyReference.cache
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiOrgsCmdlet/obj/Debug/netstandard2.0/GetMerakiOrgsCmdlet.AssemblyInfoInputs.cache
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiOrgsCmdlet/obj/Debug/netstandard2.0/GetMerakiOrgsCmdlet.AssemblyInfo.cs
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiOrgsCmdlet/bin/Debug/netstandard2.0/GetMerakiOrgsCmdlet.deps.json
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiOrgsCmdlet/bin/Debug/netstandard2.0/GetMerakiOrgsCmdlet.dll
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiOrgsCmdlet/bin/Debug/netstandard2.0/GetMerakiOrgsCmdlet.pdb
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiOrgsCmdlet/obj/Debug/netstandard2.0/GetMerakiOrgsCmdlet.dll
-/home/knox/Documents/GetMerakiOrgsProj/GetMerakiOrgsCmdlet/obj/Debug/netstandard2.0/GetMerakiOrgsCmdlet.pdb
