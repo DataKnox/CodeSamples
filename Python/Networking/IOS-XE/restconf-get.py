@@ -1,6 +1,5 @@
 import requests
 import json
-from pprint import pprint
 
 # set up connection parameters in a dictionary
 router = {"ip": "ios-xe-mgmt.cisco.com", "port": "9443",
@@ -19,7 +18,7 @@ response = requests.get(url, headers=headers, auth=(
 
 api_data = response.json()
 print("/" * 50)
-pprint(api_data["Cisco-IOS-XE-interfaces-oper:interface"]["description"])
+print(api_data["Cisco-IOS-XE-interfaces-oper:interface"]["description"])
 print("/" * 50)
 if api_data["Cisco-IOS-XE-interfaces-oper:interface"]["admin-status"] == 'if-state-up':
     print('Interface is up')

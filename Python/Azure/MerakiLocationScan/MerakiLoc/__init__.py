@@ -23,5 +23,5 @@ def main(req: func.HttpRequest, queueclient: func.Out[func.QueueMessage]) -> str
         else:
             return func.HttpResponse(
                 body="<h1>Please pass a sharedSecret on the query string or in the request body</h1>",
-                status_code=400
+                status_code=401
             )
