@@ -1,7 +1,8 @@
 from ncclient import manager
 from router_info import router
 
-config_template = open("C:/dev/Python/Demos/IOS-XE/ios_config.xml").read()
+config_template = open(
+    "E:/dev/CodeSamples/Python/Networking/IOS-XE/ios_config.xml").read()
 
 netconf_config = config_template.format(
     interface_name="GigabitEthernet2", interface_desc="daniyal")
