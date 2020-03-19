@@ -1,6 +1,6 @@
 ---
 - name: Issue show commands
-  hosts: 172.16.1.25
+  hosts: sandbox
   connection: local
   tasks:
     - name: Show ip int brief
@@ -8,12 +8,11 @@
         commands:
           - show ip int brief
         provider:
-          host: 172.16.1.25
-          port: 22
-          authorize: yes
-          auth_pass: cisco
-          username: cisco
-          password: cisco
+          host: ios-xe-mgmt-latest.cisco.com
+          port: 8181    
+          authorize: yes      
+          username: root
+          password: D_Vay!_10&
       register: if_data
 
     - name: Interfaces output

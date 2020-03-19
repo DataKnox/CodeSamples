@@ -1,17 +1,15 @@
 ---
 - name: Gather IOS-XE Facts
-  hosts: 172.16.1.25
+  hosts: sandbox
   connection: local
   tasks:
     - name: Gather IOS Facts
       ios_facts:
         provider:
-          host: 172.16.1.25
-          port: 22
-          authorize: yes
-          auth_pass: cisco
-          username: cisco
-          password: cisco
+          host: ios-xe-mgmt-latest.cisco.com
+          port: 8181
+          username: root
+          password: D_Vay!_10&
 
     - name: What is the IOS OS ver?
       debug:
