@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "7346871c-944d-4c34-9b12-39182ab2ef25",
+		"name": "Meraki",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Organizations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7900672-eb0f-4f88-a53e-dd38953b6f74",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var orgName = pm.environment.get(\"Organization Name\");",
+							"for (var org in jsonData) {",
+							"    if (jsonData[org].name == orgName){",
+							"        postman.setEnvironmentVariable(\"organizationId\",jsonData[org].id);",
+							"    }",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/organizations",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"organizations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Org Networks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7900672-eb0f-4f88-a53e-dd38953b6f74",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var netName = pm.environment.get(\"Network Name\");",
+							"for (var net in jsonData) {",
+							"    if (jsonData[net].name == netName){",
+							"        postman.setEnvironmentVariable(\"networkId\",jsonData[net].id);",
+							"    }",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"type": "text",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/organizations/{{organizationId}}/networks",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"organizations",
+						"{{organizationId}}",
+						"networks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Org Inventory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7900672-eb0f-4f88-a53e-dd38953b6f74",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var netName = pm.environment.get(\"Network Name\");",
+							"for (var net in jsonData) {",
+							"    if (jsonData[net].name == netName){",
+							"        postman.setEnvironmentVariable(\"networkId\",jsonData[net].id);",
+							"    }",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"type": "text",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/organizations/{{organizationId}}/inventory",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"organizations",
+						"{{organizationId}}",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Network SSIDs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-Api-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/networks/{{networkId}}/ssids",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"networks",
+						"{{networkId}}",
+						"ssids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Network Clients",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/networks/{{networkId}}/clients/",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"networks",
+						"{{networkId}}",
+						"clients",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Network Devices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/networks/{{networkId}}/devices",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"networks",
+						"{{networkId}}",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Network Devices Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/networks/{{networkId}}/devices",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"networks",
+						"{{networkId}}",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MV Sense Overview",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "17d06f8fd988574af1d3280be9bdc9216134524a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/devices/Q2HV-RH7C-NGJ5/camera/analytics/overview",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"devices",
+						"Q2HV-RH7C-NGJ5",
+						"camera",
+						"analytics",
+						"overview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MV Sense Live",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"type": "text",
+						"value": "17d06f8fd988574af1d3280be9bdc9216134524a"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/devices/Q2HV-RH7C-NGJ5/camera/analytics/live",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"devices",
+						"Q2HV-RH7C-NGJ5",
+						"camera",
+						"analytics",
+						"live"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MV Sense Recent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"type": "text",
+						"value": "17d06f8fd988574af1d3280be9bdc9216134524a"
+					}
+				],
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/devices/Q2HV-RH7C-NGJ5/camera/analytics/recent",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"devices",
+						"Q2HV-RH7C-NGJ5",
+						"camera",
+						"analytics",
+						"recent"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
