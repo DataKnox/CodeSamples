@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "35e6cefe-6a06-455a-b6f8-3b420cd3de13",
+		"name": "IOS-XE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Modules-state",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/ietf-yang-library:modules-state",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"ietf-yang-library:modules-state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get interfaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/ietf-routing:routing",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"ietf-routing:routing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get interfaces Gig1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface=GigabitEthernet1",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-interfaces-oper:interfaces",
+						"interface=GigabitEthernet1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get interfaces Gig1 Name",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=1/name",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"interface",
+						"GigabitEthernet=1",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get interfaces Lo1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface=Loopback100",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-interfaces-oper:interfaces",
+						"interface=Loopback100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Gig2 Desc",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Cisco-IOS-XE-interfaces-oper:interface\":{\n\t\t\"name\":\"GigabitEthernet1\",\n\t\t\"description\":\"knox wuz here\",\n\t\t\"interface-type\": \"iana-iftype-ethernet-csmacd\",\n\t\t\"enabled\":true\n}"
+				},
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface=GigabitEthernet2",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-interfaces-oper:interfaces",
+						"interface=GigabitEthernet2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get capabilities",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/netconf-state/capabilities",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"netconf-state",
+						"capabilities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add loopback",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n      \"ietf-interfaces:interface\": {\r\n          \"name\": \"Loopback100\",\r\n          \"description\": \"Added by CBT Nuggets\",\r\n          \"type\": \"iana-if-type:softwareLoopback\",\r\n          \"enabled\": true,\r\n          \"ietf-ip:ipv4\": {\r\n              \"address\": [\r\n                  {\r\n                      \"ip\": \"172.16.100.1\",\r\n                      \"netmask\": \"255.255.255.0\"\r\n                  }\r\n              ]\r\n          }\r\n      }\r\n  }"
+				},
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Del loopback",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "D_Vay!_10&",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{h}}:{{p}}/restconf/data/ietf-interfaces:interfaces/interface=Loopback100",
+					"protocol": "https",
+					"host": [
+						"{{h}}"
+					],
+					"port": "{{p}}",
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces",
+						"interface=Loopback100"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
