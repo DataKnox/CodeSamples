@@ -2,7 +2,7 @@ import requests
 import json
 from requests.exceptions import HTTPError
 
-merakikey = "17d06f8fd988574af1d3280be9bdc9216134524a"
+merakikey = "meraki key"
 base_url = 'https://api.meraki.com/api/v0'
 endpoint = '/organizations'
 

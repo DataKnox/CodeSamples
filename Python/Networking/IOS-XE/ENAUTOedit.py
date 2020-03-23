@@ -8,6 +8,6 @@ netconf_config = config_template.format(
     interface_name="GigabitEthernet2", interface_desc="CBT Nuggets wuz here")
 
 with manager.connect(**router, hostkey_verify=False) as m:
-    response = m.edit_config(netconf_config, target="running")
+    response = m.edit_config(netconf_config, target="candidate")
 
 print(response)
