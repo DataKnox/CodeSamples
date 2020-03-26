@@ -17,7 +17,7 @@ headers = {
     'Accept': 'application/json'
 }
 
-device_endpoint = "intent/api/v1/network-device?role=ACCESS"
+device_endpoint = "intent/api/v1/network-device"
 
 dev_response = requests.get(
     url=f"{base_url}{device_endpoint}", headers=headers).json()
