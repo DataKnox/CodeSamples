@@ -29,3 +29,11 @@ New-Item -ItemType "file" -Path '/home/knox/Desktop/power-demo/demo.txt', '/home
 
 # delete only ps1 files
 Get-ChildItem -Path '/home/knox/Desktop/power-demo' -Filter '*.ps1' | Remove-Item
+
+#Think about automation. What if we want to copy files every day?
+If (!(Test-Path -Path "/home/knox/Desktop/power-demo-$((Get-Date).toString('yyyy-MM-dd'))")) {
+    New-Item -ItemType "directory" -Path "/home/knox/Desktop/power-demo-$((Get-Date).toString('yyyy-MM-dd'))"
+}
+ForEach ($file in $files) {
+    Copy-Item -path $file.FullName -Destination "/home/knox/Desktop/power-demo-$((Get-Date).toString('yyyy-MM-dd'))"
+}
