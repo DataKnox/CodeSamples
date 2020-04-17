@@ -1,0 +1,3 @@
+Get-Service
+
+Get-Process
