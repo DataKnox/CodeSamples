@@ -15,9 +15,13 @@ $Credential = New-Object -TypeName System.Management.Automation.PSCredential -Ar
 Set-FtpConnection -Server "ftp://speedtest.tele2.net/" -Session MySesh -Credentials $Credential
 $sesh = Get-FtpConnection -Session MySesh
 
-# get all items
-Get-FtpChildItem -Session $sesh -Path / 
 # Download an item
 Get-FtpItem -Path "/512KB.zip" -Session $sesh
-# Send an item
-Add-FtpItem -Path "/upload" -LocalPath '/home/knox/Documents/starwars.xlsx'
+
+#Check that todays folder exists
+If (!(Test-Path -Path "/home/knox/Desktop/power-demo-$((Get-Date).toString('yyyy-MM-dd'))")) {
+    New-Item -ItemType "directory" -Path "/home/knox/Desktop/power-demo-$((Get-Date).toString('yyyy-MM-dd'))"
+}
+
+#Move file
+Move-Item -Path "./512KB.zip" -Destination "/home/knox/Desktop/power-demo-$((Get-Date).toString('yyyy-MM-dd'))"
