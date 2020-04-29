@@ -19,9 +19,9 @@ $sesh = Get-FtpConnection -Session MySesh
 Get-FtpItem -Path "/512KB.zip" -Session $sesh
 
 #Check that todays folder exists
-If (!(Test-Path -Path "/home/knox/Desktop/power-demo-$((Get-Date).toString('yyyy-MM-dd'))")) {
-    New-Item -ItemType "directory" -Path "/home/knox/Desktop/power-demo-$((Get-Date).toString('yyyy-MM-dd'))"
+If (!(Test-Path -Path "C:\FtpDownloads\512KB-$((Get-Date).toString('yyyy-MM-dd'))")) {
+    New-Item -ItemType "directory" -Path "C:\FtpDownloads\512KB-$((Get-Date).toString('yyyy-MM-dd'))"
 }
 
 #Move file
-Move-Item -Path "./512KB.zip" -Destination "/home/knox/Desktop/power-demo-$((Get-Date).toString('yyyy-MM-dd'))"
+Move-Item -Path ".\512KB.zip" -Destination "C:\FtpDownloads\512KB-$((Get-Date).toString('yyyy-MM-dd'))"
