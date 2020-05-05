@@ -11,7 +11,7 @@ if ($s -eq 200) {
         
         $queryPoke = @"
 INSERT INTO dbo.Pokemon (Id,Name,Height,Weight)
-VALUES ($($pokemon.Id),$($pokemon.Name),$($pokemon.Height),$($pokemon.Weight),$(If($pokemon.is_default -eq $True){1}else{0}))
+VALUES ($($pokemon.Id),'$($pokemon.Name)',$($pokemon.Height),$($pokemon.Weight),$(If($pokemon.is_default -eq $True){1}else{0}))
 "@
         $queryPoke
 
