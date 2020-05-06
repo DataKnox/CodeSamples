@@ -5,4 +5,4 @@ Get-ChildItem AD:
 Get-ChildItem "DC=nuggetlab,DC=com"
 
 #Explore OUs
-Get-ChildItem "OU=sers,OU=Accounts,DC=nuggetlab,DC=com"
+Get-ChildItem "OU=Users,OU=Accounts,DC=nuggetlab,DC=com"
