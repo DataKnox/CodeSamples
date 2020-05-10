@@ -1,0 +1,21 @@
+---
+ansible_connection: network_cli
+ansible_network_os: ios
+ansible_user: knox
+ansible_password: cisco
+ansible_become: yes
+ansible_become_method: enable
+ansible_become_password: cisco
+
+local_loopback:
+  - name: Loopback1
+    desc: Sample Ansible config
+    ip_address: 1.1.1.1/32
+
+interfaces:
+  - name: GigabitEthernet0/1
+    ip_address: 10.99.99.1/30
+  - name: GigabitEthernet0/2
+    ip_address: 10.99.99.5/30
+  - name: GigabitEthernet0/3
+    ip_address: 10.99.99.9/30

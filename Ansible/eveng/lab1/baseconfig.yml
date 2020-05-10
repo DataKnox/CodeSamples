@@ -1,0 +1,39 @@
+---
+- name: Issue show commands
+  hosts: lab1
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Create Loopback
+      with_items: "{{local_loopback}}"
+      ios_interfaces:
+        config:
+          - name: "{{item.name}}"
+            enabled: True
+        state: merged
+
+    - name: Set Loopback IP
+      with_items: "{{local_loopback}}"
+      ios_l3_interface:
+        name: "{{item.name}}"
+        ipv4: "{{item.ip_address}}"
+
+    - name: Set Interface IPs
+      with_items: "{{interfaces}}"
+      ios_l3_interface:
+        name: "{{item.name}}"
+        ipv4: "{{item.ip_address}}"
+
+    - name: Create Loopback
+      with_items: "{{interfaces}}"
+      ios_interfaces:
+        config:
+          - name: "{{item.name}}"
+            enabled: True
+        state: merged
+
+    - name: Enable OSPF
+      ios_config:
+        lines:          
+          - network 10.99.99.0 0.0.0.255 area 0
+        parents: router ospf 1
