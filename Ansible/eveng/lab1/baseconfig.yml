@@ -24,7 +24,7 @@
         name: "{{item.name}}"
         ipv4: "{{item.ip_address}}"
 
-    - name: Create Loopback
+    - name: No shut
       with_items: "{{interfaces}}"
       ios_interfaces:
         config:
@@ -36,4 +36,5 @@
       ios_config:
         lines:          
           - network 10.99.99.0 0.0.0.255 area 0
+          - auto-cost reference-bandwidth 1000
         parents: router ospf 1

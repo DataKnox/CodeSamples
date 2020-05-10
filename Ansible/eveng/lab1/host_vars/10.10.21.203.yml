@@ -16,6 +16,6 @@ interfaces:
   - name: GigabitEthernet0/1
     ip_address: 10.99.99.25/30
   - name: GigabitEthernet0/2
-    ip_address: 10.99.99.29/30
+    ip_address: 10.99.99.2/30
   - name: GigabitEthernet0/3
-    ip_address: 10.99.99.33/30
+    ip_address: 10.99.99.14/30
