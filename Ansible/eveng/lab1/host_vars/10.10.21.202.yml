@@ -1,12 +1,4 @@
 ---
-ansible_connection: network_cli
-ansible_network_os: ios
-ansible_user: knox
-ansible_password: cisco
-ansible_become: yes
-ansible_become_method: enable
-ansible_become_password: cisco
-
 local_loopback:
   - name: Loopback1
     desc: Sample Ansible config
