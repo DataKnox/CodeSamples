@@ -2,10 +2,10 @@
 local_loopback:
   - name: Loopback1
     desc: Sample Ansible config
-    ip_address: 7.7.7.7/32
+    ip_address: 8.8.8.8/32
 
 interfaces:
   - name: GigabitEthernet0/0
-    ip_address: 10.99.99.6/30
+    ip_address: 10.99.99.62/30
   - name: GigabitEthernet0/1
-    ip_address: 101.101.101.61/30
+    ip_address: 101.101.101.65/30
