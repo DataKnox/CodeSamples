@@ -5,9 +5,9 @@ local_loopback:
     ip_address: 6.6.6.6/32
 
 interfaces:
+  - name: GigabitEthernet0/0
+    ip_address: 10.99.99.6/30
   - name: GigabitEthernet0/1
-    ip_address: 10.99.99.57/30
-  - name: GigabitEthernet0/2
-    ip_address: 10.99.99.61/30
+    ip_address: 101.101.101.61/30
   - name: GigabitEthernet0/3
     ip_address: 100.100.100.50/30
