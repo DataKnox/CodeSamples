@@ -38,3 +38,9 @@
           - network 10.99.99.0 0.0.0.255 area 0
           - auto-cost reference-bandwidth 1000
         parents: router ospf 1
+
+    - name: Enable OSPF
+      ios_config:
+        lines:          
+          - int lo1
+          - ip ospf 1 area 0
