@@ -1,5 +1,5 @@
 ---
-    - name: Issue show commands
+    - name: Address Setup
       hosts: lab2
       connection: local
       gather_facts: no
@@ -31,3 +31,15 @@
               - name: "{{item.name}}"
                 enabled: True
             state: merged
+
+    - name: OSPF setup
+      hosts: 10.10.21.211,10.10.21.212,10.10.21.213,10.10.21.221
+      connection: local
+      gather_facts: no
+      tasks:
+      - name: Enable OSPF
+        ios_config:
+            lines:          
+              - network 100.100.100.0 0.0.0.255 area 0
+              - auto-cost reference-bandwidth 1000
+            parents: router ospf 1
