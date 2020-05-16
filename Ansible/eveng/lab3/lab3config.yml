@@ -1,0 +1,33 @@
+---
+    - name: Address Setup
+      hosts: lab3
+      connection: local
+      gather_facts: no
+      tasks:
+        - name: Create Loopback
+          with_items: "{{local_loopback}}"
+          ios_interfaces:
+            config:
+              - name: "{{item.name}}"
+                enabled: True
+            state: merged
+    
+        - name: Set Loopback IP
+          with_items: "{{local_loopback}}"
+          ios_l3_interface:
+            name: "{{item.name}}"
+            ipv4: "{{item.ip_address}}"
+    
+        - name: Set Interface IPs
+          with_items: "{{interfaces}}"
+          ios_l3_interface:
+            name: "{{item.name}}"
+            ipv4: "{{item.ip_address}}"
+    
+        - name: No shut
+          with_items: "{{interfaces}}"
+          ios_interfaces:
+            config:
+              - name: "{{item.name}}"
+                enabled: True
+            state: merged
