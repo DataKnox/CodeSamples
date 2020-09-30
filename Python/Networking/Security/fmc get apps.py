@@ -29,7 +29,7 @@ try:
 except Exception as err:
     print(f"error raised! {err}")
 
-# Get monitored apps
+# Get monitored appsn
 apps_url = '/api/fmc_config/v1/domain/e276abec-e0f2-11e3-8169-6d9ed49b625f/object/applications'
 
 try:
