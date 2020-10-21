@@ -1,0 +1,37 @@
+2020-10-21 12:12:16,107 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-21 12:12:59,634 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-21 12:14:59,960 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-21 12:15:38,537 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-21 12:16:00,886 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:17:24,487 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:17:38,589 ERROR myApi Thread-7 : Error during ADD [Errno 2] No such file or directory: '{script_dir}\\db.txt'
+2020-10-21 12:17:38,589 ERROR myApi Thread-7 : Exception on /routers [POST]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-10-21 12:17:38,592 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 12:17:38] "[35m[1mPOST /routers HTTP/1.1[0m" 500 -
+2020-10-21 12:18:22,980 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-21 12:21:03,726 INFO werkzeug MainThread :  * Restarting with stat
+2020-10-21 12:21:13,503 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:23:53,748 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:29:33,360 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:29:41,981 ERROR myApi Thread-7 : Error during ADD [Errno 2] No such file or directory: '{script_dir}\\db.txt'
+2020-10-21 12:29:41,981 ERROR myApi Thread-7 : Exception on /routers [POST]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-10-21 12:29:41,984 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 12:29:41] "[35m[1mPOST /routers HTTP/1.1[0m" 500 -

@@ -1,0 +1,117 @@
+2020-10-21 12:47:22,775 INFO myApi MainThread : script directory: C:\Code\CodeSamples\Python\AppDev
+2020-10-21 12:47:22,776 INFO myApi MainThread : DB file: C:\Code\CodeSamples\Python\AppDev\db.txt
+2020-10-21 12:47:22,785 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:47:25,870 INFO myApi Thread-7 : Routers returned
+2020-10-21 12:47:25,871 ERROR myApi Thread-7 : Exception on /routers [GET]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-10-21 12:47:25,874 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 12:47:25] "[35m[1mGET /routers?hostname=R1 HTTP/1.1[0m" 500 -
+2020-10-21 12:48:26,070 INFO myApi MainThread : script directory: C:\Code\CodeSamples\Python\AppDev
+2020-10-21 12:48:26,070 INFO myApi MainThread : DB file: C:\Code\CodeSamples\Python\AppDev\db.txt
+2020-10-21 12:48:26,081 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:48:30,831 INFO myApi Thread-7 : {'hostname': 'R1', 'ipadd': '10.0.0.1'}
+2020-10-21 12:48:30,831 WARNING myApi Thread-7 : router added SW1
+2020-10-21 12:48:30,842 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 12:48:30] "[35m[1mPOST /routers HTTP/1.1[0m" 500 -
+2020-10-21 12:48:30,849 ERROR werkzeug Thread-7 : Error on request:
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 314, in execute
+    for data in application_iter:
+  File "C:\Python\Lib\site-packages\werkzeug\wsgi.py", line 506, in __next__
+    return self._next()
+  File "C:\Python\Lib\site-packages\werkzeug\wrappers\base_response.py", line 45, in _iter_encoded
+    for item in iterable:
+TypeError: 'Response' object is not iterable
+2020-10-21 12:51:20,551 INFO myApi MainThread : script directory: C:\Code\CodeSamples\Python\AppDev
+2020-10-21 12:51:20,551 INFO myApi MainThread : DB file: C:\Code\CodeSamples\Python\AppDev\db.txt
+2020-10-21 12:51:20,561 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:51:23,547 INFO myApi Thread-7 : inbound record {'hostname': 'R1', 'ipadd': '10.0.0.1'}
+2020-10-21 12:51:23,548 WARNING myApi Thread-7 : router added SW1
+2020-10-21 12:51:23,558 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 12:51:23] "[35m[1mPOST /routers HTTP/1.1[0m" 500 -
+2020-10-21 12:51:23,560 ERROR werkzeug Thread-7 : Error on request:
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 314, in execute
+    for data in application_iter:
+  File "C:\Python\Lib\site-packages\werkzeug\wsgi.py", line 506, in __next__
+    return self._next()
+  File "C:\Python\Lib\site-packages\werkzeug\wrappers\base_response.py", line 45, in _iter_encoded
+    for item in iterable:
+TypeError: 'Response' object is not iterable
+2020-10-21 12:58:39,496 INFO myApi MainThread : script directory: C:\Code\CodeSamples\Python\AppDev
+2020-10-21 12:58:39,497 INFO myApi MainThread : DB file: C:\Code\CodeSamples\Python\AppDev\db.txt
+2020-10-21 12:58:39,507 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:58:42,706 INFO myApi Thread-7 : inbound record {'hostname': 'R1', 'ipadd': '10.0.0.1'}
+2020-10-21 12:58:42,706 WARNING myApi Thread-7 : router added R1
+2020-10-21 12:58:42,716 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 12:58:42] "[35m[1mPOST /routers HTTP/1.1[0m" 500 -
+2020-10-21 12:58:42,718 ERROR werkzeug Thread-7 : Error on request:
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 314, in execute
+    for data in application_iter:
+  File "C:\Python\Lib\site-packages\werkzeug\wsgi.py", line 506, in __next__
+    return self._next()
+  File "C:\Python\Lib\site-packages\werkzeug\wrappers\base_response.py", line 45, in _iter_encoded
+    for item in iterable:
+TypeError: 'Response' object is not iterable
+2020-10-21 12:59:37,237 INFO myApi MainThread : script directory: C:\Code\CodeSamples\Python\AppDev
+2020-10-21 12:59:37,238 INFO myApi MainThread : DB file: C:\Code\CodeSamples\Python\AppDev\db.txt
+2020-10-21 12:59:37,248 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 12:59:42,503 INFO myApi Thread-7 : inbound record {'hostname': 'R1', 'ipadd': '10.0.0.1'}
+2020-10-21 12:59:42,503 INFO myApi Thread-7 : records output [{'hostname': 'R1', 'ipadd': '10.0.0.1'}]
+2020-10-21 12:59:42,503 WARNING myApi Thread-7 : router added R1
+2020-10-21 12:59:42,513 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 12:59:42] "[35m[1mPOST /routers HTTP/1.1[0m" 500 -
+2020-10-21 12:59:42,516 ERROR werkzeug Thread-7 : Error on request:
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 314, in execute
+    for data in application_iter:
+  File "C:\Python\Lib\site-packages\werkzeug\wsgi.py", line 506, in __next__
+    return self._next()
+  File "C:\Python\Lib\site-packages\werkzeug\wrappers\base_response.py", line 45, in _iter_encoded
+    for item in iterable:
+TypeError: 'Response' object is not iterable
+2020-10-21 13:05:06,076 INFO myApi MainThread : script directory: C:\Code\CodeSamples\Python\AppDev
+2020-10-21 13:05:06,076 INFO myApi MainThread : DB file: C:\Code\CodeSamples\Python\AppDev\db.txt
+2020-10-21 13:05:06,086 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 13:05:10,444 INFO myApi Thread-7 : inbound record {'hostname': 'R1', 'ipadd': '10.0.0.1'}
+2020-10-21 13:05:10,445 INFO myApi Thread-7 : records output [{'hostname': 'SW1', 'ipaddr': '10.12.12.1'}, {'hostname': 'R1', 'ipadd': '10.0.0.1'}]
+2020-10-21 13:05:10,445 WARNING myApi Thread-7 : router added R1
+2020-10-21 13:05:10,447 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 13:05:10] "[37mPOST /routers HTTP/1.1[0m" 201 -
+2020-10-21 13:05:16,744 INFO myApi Thread-8 : inbound record {'hostname': 'R1', 'ipadd': '10.0.0.1'}
+2020-10-21 13:05:16,750 INFO werkzeug Thread-8 : 127.0.0.1 - - [21/Oct/2020 13:05:16] "[37mPOST /routers HTTP/1.1[0m" 201 -
+2020-10-21 13:07:09,649 INFO myApi MainThread : script directory: C:\Code\CodeSamples\Python\AppDev
+2020-10-21 13:07:09,649 INFO myApi MainThread : DB file: C:\Code\CodeSamples\Python\AppDev\db.txt
+2020-10-21 13:07:09,660 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 13:07:13,420 INFO myApi Thread-7 : inbound record {'hostname': 'R1', 'ipadd': '10.0.0.1'}
+2020-10-21 13:07:13,421 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 13:07:13] "[37mPOST /routers HTTP/1.1[0m" 200 -
+2020-10-21 13:07:17,591 INFO myApi Thread-8 : Routers returned
+2020-10-21 13:07:17,591 INFO werkzeug Thread-8 : 127.0.0.1 - - [21/Oct/2020 13:07:17] "[37mGET /routers?hostname=R1 HTTP/1.1[0m" 200 -
+2020-10-21 13:07:22,865 INFO myApi Thread-9 : Routers returned
+2020-10-21 13:07:22,865 INFO werkzeug Thread-9 : 127.0.0.1 - - [21/Oct/2020 13:07:22] "[37mGET /routers?hostname=SW1 HTTP/1.1[0m" 200 -
+2020-10-21 13:07:26,979 ERROR myApi Thread-10 : Exception on /routers [GET]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Python\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-10-21 13:07:26,982 INFO werkzeug Thread-10 : 127.0.0.1 - - [21/Oct/2020 13:07:26] "[35m[1mGET /routers?hostname= HTTP/1.1[0m" 500 -
+2020-10-21 13:08:56,656 WARNING myApi Thread-11 : Deleted R1
+2020-10-21 13:08:56,657 INFO werkzeug Thread-11 : 127.0.0.1 - - [21/Oct/2020 13:08:56] "[37mDELETE /routers HTTP/1.1[0m" 204 -
