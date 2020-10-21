@@ -1,20 +1,22 @@
-#!/usr/bin/env python
-# encoding: utf-8
 import json
 import os
 from routerclass import Router
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
 import logging
+
 logging.basicConfig(filename='c:\\Code\\CodeSamples\\Python\\AppDev\\filename.log', level=logging.DEBUG,
                     format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 app = Flask(__name__)
 LOG = create_logger(app)
-# app.debug = True
 
+# Set up application and dynamically determine the path that this script is running in
 script_dir = os.path.dirname(os.path.realpath(__file__))
 LOG.info(f"script directory: {script_dir}")
 LOG.info(f"DB file: {script_dir}\db.txt")
+
+# Create endpoints
+# http://127.0.0.1:5000/
 
 
 @app.route('/')
@@ -22,6 +24,8 @@ def index():
     return jsonify({'name': 'knox',
                     'email': 'knox@knoxsdata.com',
                     'locale': 'https://youtube.com/c/dataknox'})
+
+# GET http://127.0.0.1:5000/routers?hostname=SW1
 
 
 @app.route('/routers', methods=['GET'])
@@ -39,6 +43,8 @@ def getRouter():
     except Exception as err:
         LOG.error(f'Error during GET {err}')
         return jsonify({"error": err}), 401
+
+# POST http://127.0.0.1:5000/routers
 
 
 @app.route('/routers', methods=['POST'])
@@ -62,6 +68,8 @@ def addRouter():
         LOG.error(f'Error during ADD {err}')
         return jsonify({"error": err})
 
+# DELETE http://127.0.0.1:5000/routers?hostname=SW1
+
 
 @app.route('/routers', methods=['DELETE'])
 def deleteRouter():
@@ -84,5 +92,6 @@ def deleteRouter():
         return jsonify({"error": err})
 
 
+# Run the app
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
