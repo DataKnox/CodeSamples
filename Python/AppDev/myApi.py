@@ -1,17 +1,16 @@
 import json
 import os
-from routerclass import Router
+import logging
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
-import logging
 
-logging.basicConfig(filename='c:\\Code\\CodeSamples\\Python\\AppDev\\filename.log', level=logging.DEBUG,
-                    format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 app = Flask(__name__)
 LOG = create_logger(app)
 
 # Set up application and dynamically determine the path that this script is running in
 script_dir = os.path.dirname(os.path.realpath(__file__))
+logging.basicConfig(filename=f'{script_dir}\\filename.log', level=logging.DEBUG,
+                    format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 LOG.info(f"script directory: {script_dir}")
 LOG.info(f"DB file: {script_dir}\db.txt")
 
@@ -33,6 +32,9 @@ def getRouter():
     try:
         hostname = request.args.get('hostname')
         print(hostname)
+        if (hostname is None) or (hostname == ""):
+            LOG.warning('No hostname specified')
+            raise ValueError
         with open(f'{script_dir}\\db.txt', 'r') as f:
             data = f.read()
             records = json.loads(data)
@@ -40,9 +42,15 @@ def getRouter():
                 if record['hostname'] == hostname:
                     LOG.info('Routers returned')
                     return jsonify(record), 200
+                if record['hostname'] != hostname:
+                    LOG.warning('No matching router')
+                    return jsonify({"response": "No match"}), 200
+    except ValueError:
+        LOG.error("NO HOSTNAME SPECIFIED")
+        return jsonify({"error": "NO_HOSTNAME_SPECIFIED"}), 400
     except Exception as err:
         LOG.error(f'Error during GET {err}')
-        return jsonify({"error": err}), 401
+        return jsonify({"error": err}), 500
 
 # POST http://127.0.0.1:5000/routers
 
