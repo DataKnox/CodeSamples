@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "2ab59e8b-d13f-42fc-bc54-c6333a14576f",
+		"name": "Restconf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1 - Get Models",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.21.15/restconf/data/netconf-state/capabilities",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"21",
+						"15"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"netconf-state",
+						"capabilities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1 - Get Models Switch",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "knox",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.10.2/restconf/data/netconf-state/capabilities",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"2"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"netconf-state",
+						"capabilities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2 - Get Interfaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.21.15/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"21",
+						"15"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-interfaces-oper:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3 - Get OSPF Oper",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.21.15/restconf/data/Cisco-IOS-XE-ospf-oper:ospf-oper-data/",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"21",
+						"15"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-ospf-oper:ospf-oper-data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4 - Get OSPF Oper Query",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+xml"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.21.15/restconf/data/Cisco-IOS-XE-ospf-oper:ospf-oper-data/ospf-state/ospf-instance=address-family-ipv4,168432911",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"21",
+						"15"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-ospf-oper:ospf-oper-data",
+						"ospf-state",
+						"ospf-instance=address-family-ipv4,168432911"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5 - Get CDP Nei Detail",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.21.15/restconf/data/Cisco-IOS-XE-cdp-oper:cdp-neighbor-details",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"21",
+						"15"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-cdp-oper:cdp-neighbor-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6 - Get BGP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.21.15/restconf/data/Cisco-IOS-XE-bgp-oper:bgp-state-data/",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"21",
+						"15"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-bgp-oper:bgp-state-data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7 - Get EIGRP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+xml"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.21.15/restconf/data/Cisco-IOS-XE-eigrp-oper:eigrp-oper-data",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"21",
+						"15"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-eigrp-oper:eigrp-oper-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8 - Get BFD state",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.21.15/restconf/data/Cisco-IOS-XE-bfd-oper:bfd-state/",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"21",
+						"15"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-bfd-oper:bfd-state",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
