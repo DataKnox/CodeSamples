@@ -6,10 +6,12 @@ ospf_filter = """
     <ospf-state>        
         <ospf-instance>
           <af>address-family-ipv4</af>
-          <router-id>168432911</router-id>
+          <router-id>16843009</router-id>
           <ospf-area>
             <area-id>0</area-id>
               <ospf-interface>
+               <name>Loopback0</name>
+               <passive></passive>
               </ospf-interface>
             </ospf-area>
         </ospf-instance>

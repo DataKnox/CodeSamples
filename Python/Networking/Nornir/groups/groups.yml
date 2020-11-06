@@ -1,0 +1,4 @@
+---
+cisco_group:
+    password: 'cisco'
+    platform: 'ios'

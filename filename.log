@@ -35,3 +35,86 @@ Traceback (most recent call last):
     raise TypeError(
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
 2020-10-21 12:29:41,984 INFO werkzeug Thread-7 : 127.0.0.1 - - [21/Oct/2020 12:29:41] "[35m[1mPOST /routers HTTP/1.1[0m" 500 -
+2020-11-03 12:46:08,229 INFO myApi MainThread : script directory: C:\Code\CodeSamples
+2020-11-03 12:46:08,229 INFO myApi MainThread : DB file: C:\Code\CodeSamples\db.txt
+2020-11-03 12:46:09,084 INFO werkzeug MainThread :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-11-03 12:46:22,280 ERROR myApi Thread-7 : Error during GET [Errno 2] No such file or directory: 'C:\\Code\\CodeSamples\\db.txt'
+2020-11-03 12:46:22,281 ERROR myApi Thread-7 : Exception on /routers [GET]
+Traceback (most recent call last):
+  File "c:\Code\CodeSamples\Python\AppDev\app\myApi.py", line 38, in getRouter
+    with open(f'{script_dir}\\db.txt', 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Code\\CodeSamples\\db.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Code\CodeSamples\Python\AppDev\app\myApi.py", line 53, in getRouter
+    return jsonify({"error": err}), 500
+  File "C:\Python\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "C:\Python\lib\site-packages\flask\json\__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Python\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python\lib\site-packages\flask\json\__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type FileNotFoundError is not JSON serializable
+2020-11-03 12:46:22,300 INFO werkzeug Thread-7 : 127.0.0.1 - - [03/Nov/2020 12:46:22] "[35m[1mGET //routers?hostname=RE HTTP/1.1[0m" 500 -
+2020-11-03 12:46:36,301 ERROR myApi Thread-8 : Error during GET [Errno 2] No such file or directory: 'C:\\Code\\CodeSamples\\db.txt'
+2020-11-03 12:46:36,302 ERROR myApi Thread-8 : Exception on /routers [GET]
+Traceback (most recent call last):
+  File "c:\Code\CodeSamples\Python\AppDev\app\myApi.py", line 38, in getRouter
+    with open(f'{script_dir}\\db.txt', 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Code\\CodeSamples\\db.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Code\CodeSamples\Python\AppDev\app\myApi.py", line 53, in getRouter
+    return jsonify({"error": err}), 500
+  File "C:\Python\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "C:\Python\lib\site-packages\flask\json\__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Python\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python\lib\site-packages\flask\json\__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "C:\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type FileNotFoundError is not JSON serializable
+2020-11-03 12:46:36,315 INFO werkzeug Thread-8 : 127.0.0.1 - - [03/Nov/2020 12:46:36] "[35m[1mGET //routers?hostname=SW1 HTTP/1.1[0m" 500 -

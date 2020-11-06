@@ -1,0 +1,8 @@
+---
+
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: '.\hosts\hosts.yml'
+        group_file: '.\groups\groups.yml'
+        defaults_file: '.\defaultsdefaults.yml'
