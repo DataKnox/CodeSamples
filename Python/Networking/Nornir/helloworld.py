@@ -2,7 +2,6 @@ from nornir import InitNornir
 from nornir_scrapli.tasks import netconf_get
 from nornir_utils.plugins.functions import print_result
 import xmltodict
-import json
 import os
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
@@ -17,7 +16,6 @@ results = nr.run(task=netconf_get, filter_type='xpath', filter_=ospf_xpath)
 # Get address family and router-id
 for result in results.keys():
     data = xmltodict.parse(results[result].result)
-    # print(data)
     node_data[result] = {}
     node_data[result]['af'] = data['rpc-reply']['data']['ospf-oper-data']['ospf-state']['ospf-instance']['af']
     node_data[result]['router-id'] = data['rpc-reply']['data']['ospf-oper-data']['ospf-state']['ospf-instance']['router-id']
