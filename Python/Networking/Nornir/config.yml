@@ -1,8 +1,12 @@
 ---
-
 inventory:
-    plugin: SimpleInventory
+    plugin: YAMLInventory
     options:
-        host_file: '.\hosts\hosts.yml'
-        group_file: '.\groups\groups.yml'
-        defaults_file: '.\defaultsdefaults.yml'
+        host_file: '/home/knox/Documents/CodeSamples/Python/Networking/Nornir/hosts/hosts.yml'
+        group_file: '/home/knox/Documents/CodeSamples/Python/Networking/Nornir/groups/groups.yml'
+        defaults_file: '/home/knox/Documents/CodeSamples/Python/Networking/Nornir/defaults/defaults.yml'
+
+runner:
+    plugin: threaded
+    options:
+        num_workers: 10

@@ -1,0 +1,437 @@
+2020-11-06 20:04:24,761 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="16843009"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="2.2.2.2"]/state'} on 2 hosts
+2020-11-06 20:04:25,180 - nornir.core.task -    ERROR -      start() - Host 'CSR2': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:04:26,223 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:05:23,847 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="16843009"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="2.2.2.2"]/state'} on 2 hosts
+2020-11-06 20:05:24,147 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:05:24,149 - nornir.core.task -    ERROR -      start() - Host 'CSR2': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:09:11,260 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="16843009"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="2.2.2.2"]/state'} on 2 hosts
+2020-11-06 20:09:11,670 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:09:11,672 - nornir.core.task -    ERROR -      start() - Host 'CSR2': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:13:43,848 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="16843009"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="2.2.2.2"]/state'} on 2 hosts
+2020-11-06 20:13:44,234 - nornir.core.task -    ERROR -      start() - Host 'CSR2': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:13:44,235 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:14:56,099 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="16843009"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="2.2.2.2"]/state'} on 2 hosts
+2020-11-06 20:14:56,465 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:14:56,467 - nornir.core.task -    ERROR -      start() - Host 'CSR2': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:18:03,417 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="16843009"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="2.2.2.2"]/state'} on 2 hosts
+2020-11-06 20:18:03,826 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:18:03,827 - nornir.core.task -    ERROR -      start() - Host 'CSR2': task 'netconf_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get.py", line 27, in netconf_get
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/knox/.local/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 35, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 55, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/knox/.local/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 106, in _authenticate
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: `password` seen multiple times during session establishment, likely failed authentication
+
+2020-11-06 20:19:19,855 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="16843009"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="2.2.2.2"]/state'} on 2 hosts
+2020-11-06 20:20:45,871 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:22:57,949 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:25:51,382 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:28:14,281 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:29:50,269 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:30:51,523 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:31:42,347 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:32:06,775 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:34:19,634 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:34:54,667 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:35:34,844 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:40:21,518 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:40:48,467 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:53:39,413 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:56:35,237 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 20:58:31,843 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:02:48,545 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:04:17,775 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:05:27,694 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:05:29,504 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733826"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="2.2.2.2"]/state'} on 2 hosts
+2020-11-06 21:05:29,620 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733825"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="2.2.2.2"]/state'} on 2 hosts
+2020-11-06 21:05:56,548 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:05:57,760 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733826"]'} on 2 hosts
+2020-11-06 21:05:57,987 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733825"]'} on 2 hosts
+2020-11-06 21:23:00,870 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:24:29,451 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:25:23,463 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:28:08,061 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:28:58,218 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:30:10,375 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:31:24,145 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:33:24,578 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:34:10,434 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:34:29,461 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:35:01,990 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:35:58,020 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:36:49,874 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:37:18,912 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:37:32,958 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:38:01,230 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:38:26,171 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:39:48,837 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:40:26,043 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:41:56,640 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:42:13,024 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:44:00,441 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:44:38,669 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:45:40,530 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:47:15,129 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:47:16,410 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733826"]/ospf-area[area-id=0/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.1]/state'} on 2 hosts
+2020-11-06 21:47:16,534 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733825"]/ospf-area[area-id=0/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.2]/state'} on 2 hosts
+2020-11-06 21:47:45,668 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:47:46,809 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733826"]/ospf-area[area-id=0/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.1]/state'} on 2 hosts
+2020-11-06 21:47:46,904 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733825"]/ospf-area[area-id=0/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.2]/state'} on 2 hosts
+2020-11-06 21:48:50,775 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:48:51,974 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733826"]/ospf-area[area-id=0]/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.1]/state'} on 2 hosts
+2020-11-06 21:48:52,044 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733825"]/ospf-area[area-id=0]/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.2]/state'} on 2 hosts
+2020-11-06 21:51:31,113 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:51:32,431 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733826"]/ospf-area[area-id=0]/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.1]/state'} on 2 hosts
+2020-11-06 21:51:32,535 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733825"]/ospf-area[area-id=0]/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.2]/state'} on 2 hosts
+2020-11-06 21:51:52,284 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:52:38,060 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:52:39,294 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733826"]/ospf-area[area-id=0]/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.1]/state'} on 2 hosts
+2020-11-06 21:52:39,387 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733825"]/ospf-area[area-id=0]/ospf-interface[name=GigabitEthernet2]/ospf-neighbor[neighbor-id=172.16.16.2]/state'} on 2 hosts
+2020-11-06 21:53:44,223 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:53:45,537 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733826"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="172.16.16.1""]/state'} on 2 hosts
+2020-11-06 21:53:45,606 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733825"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="172.16.16.2""]/state'} on 2 hosts
+2020-11-06 21:54:03,753 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance'} on 2 hosts
+2020-11-06 21:54:04,893 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733826"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="172.16.16.1"]/state'} on 2 hosts
+2020-11-06 21:54:05,000 -  nornir.core -     INFO -        run() - Running task 'netconf_get' with args {'filter_type': 'xpath', 'filter_': '/ospf-oper-data/ospf-state/ospf-instance[af="address-family-ipv4" and router-id="2886733825"]/ospf-area[area-id=0]/ospf-interface[name="GigabitEthernet2"]/ospf-neighbor[neighbor-id="172.16.16.2"]/state'} on 2 hosts
