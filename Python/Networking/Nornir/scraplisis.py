@@ -6,6 +6,7 @@ import os
 import logging
 from scrapli.driver.core import IOSXEDriver
 from ttp import ttp
+from nornir.core.task import Task, Result
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 ttp_template = """
@@ -23,7 +24,7 @@ def show_isis_nei(task):
     parser.parse()
     # print result in JSON format
     results = parser.result(format='json')[0]
-    return print(results)
+    return Result(host=task.host, result=results)
 
 
 def create_isis(task):
