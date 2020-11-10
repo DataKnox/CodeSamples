@@ -1,4 +1,11 @@
+from dotenv import load_dotenv
+import os
 
 
-username = 'cisco'
-password = 'C!sco123'
+load_dotenv()
+
+username = os.environ.get('USERNAME_NET')
+password = os.environ.get('PASSWORD')
+
+print(username)
+print(password)
