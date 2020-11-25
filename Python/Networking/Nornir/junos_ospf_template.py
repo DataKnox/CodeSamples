@@ -14,7 +14,9 @@ junos_devices = nr.filter(F(node_type="router"))
 def ospf_config(task):
     data = {}
     data['ospf_area'] = task.host['ospf_area']
-    data['ospf_int_1'] = task.host['ospf_int_1']
+    data['ospf_int'] = {}
+    for intf in task.host['ospf_int']:
+        data['ospf_int'][intf] = True
     data['interfaces'] = {}
     for inte in task.host['interfaces']:
         data['interfaces'][inte] = {}

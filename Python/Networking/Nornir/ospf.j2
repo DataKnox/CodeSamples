@@ -1,13 +1,15 @@
 <configuration>
+{% for intf in ospf_int -%}
             <protocols>
-                <ospf operation="replace">
+                <ospf>
                     <area>
                         <name>{{ ospf_area }}</name>
                         <interface>
-                            <name>{{ ospf_int_1 }}</name>
-                            <priority>200</priority>
+                            <name>{{ intf }}</name>
+                            <priority>100</priority>
                         </interface>
                     </area>
                 </ospf>
             </protocols>
-        </configuration>
+{% endfor %}
+</configuration>
