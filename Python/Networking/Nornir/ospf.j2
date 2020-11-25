@@ -3,7 +3,7 @@
             <protocols>
                 <ospf>
                     <area>
-                        <name>{{ ospf_area }}</name>
+                        <name>{{ ospf_int[intf].ospf_area }}</name>
                         <interface>
                             <name>{{ intf }}</name>
                             <priority>100</priority>
