@@ -1,0 +1,13 @@
+<configuration>
+            <protocols>
+                <ospf operation="replace">
+                    <area>
+                        <name>{{ ospf_area }}</name>
+                        <interface>
+                            <name>{{ ospf_int_1 }}</name>
+                            <priority>200</priority>
+                        </interface>
+                    </area>
+                </ospf>
+            </protocols>
+        </configuration>

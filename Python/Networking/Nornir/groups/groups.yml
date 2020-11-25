@@ -14,3 +14,8 @@ cisco_group:
           extras:
             ssh_config_file: True
             auth_strict_key: False
+
+junos_group:
+    username: 'knox'
+    password: 'juniper1'
+    platform: junos
