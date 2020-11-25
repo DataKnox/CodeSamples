@@ -1,9 +1,9 @@
-sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+sudo docker pull mcr.microsoft.com/mssql/server:2019-CU8-ubuntu-16.04
 
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=MyStrongPw!23' \
    --name 'sql1' -p 1401:1433 \
    -v sql1data:/var/opt/mssql \
-   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   -d mcr.microsoft.com/mssql/server:2019-CU8-ubuntu-16.04
 
 sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
 

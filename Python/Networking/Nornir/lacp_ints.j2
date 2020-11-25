@@ -1,0 +1,14 @@
+<configuration>
+        {% for intf in lacp_int_name -%}
+        <interfaces>
+            <interface operation="replace">
+                    <name>{{ intf }}</name>
+                    <gigether-options>
+                        <ieee-802.3ad>
+                            <bundle>ae0</bundle>
+                        </ieee-802.3ad>
+                    </gigether-options>
+            </interface>
+        </interfaces>
+        {% endfor %}
+</configuration>

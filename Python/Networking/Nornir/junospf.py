@@ -1,4 +1,4 @@
-from nornir_pyez.plugins.tasks import pyez_config
+from nornir_pyez.plugins.tasks import pyez_config, pyez_facts
 from nornir import InitNornir
 from nornir_utils.plugins.functions import print_result
 from nornir.core.filter import F

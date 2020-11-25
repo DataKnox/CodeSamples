@@ -2,9 +2,9 @@
 inventory:
     plugin: YAMLInventory
     options:
-        host_file: '/home/knox/Documents/CodeSamples/Python/Networking/Nornir/hosts/hosts.yml'
-        group_file: '/home/knox/Documents/CodeSamples/Python/Networking/Nornir/groups/groups.yml'
-        defaults_file: '/home/knox/Documents/CodeSamples/Python/Networking/Nornir/defaults/defaults.yml'
+        host_file: '/mnt/c/Code/CodeSamples/Python/Networking/Nornir/hosts/hosts.yml'
+        group_file: '/mnt/c/Code/CodeSamples/Python/Networking/Nornir/groups/groups.yml'
+        defaults_file: '/mnt/c/Code/CodeSamples/Python/Networking/Nornir/defaults/defaults.yml'
 
 runner:
     plugin: threaded
