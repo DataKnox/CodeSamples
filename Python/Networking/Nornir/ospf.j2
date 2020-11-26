@@ -6,7 +6,25 @@
                         <name>{{ ospf_int[intf].ospf_area }}</name>
                         <interface>
                             <name>{{ intf }}</name>
-                            <priority>100</priority>
+                            <priority>100</priority>                        
+                            {% if ospf_int[intf].net_type -%}
+                            <interface-type>p2p</interface-type>
+                            {% endif %}   
+                            {% if ospf_int[intf].auth_pw -%}
+                            <authentication>
+                                <md5>
+                                    <name>1</name>
+                                    <key>{{ ospf_int[intf].auth_pw }}</key>
+                                </md5>
+                            </authentication>
+                            {% endif %}   
+                            {% if ospf_int[intf].bfd -%}
+                            <bfd-liveness-detection>
+                                <minimum-interval>1000</minimum-interval>
+                                <multiplier>4</multiplier>
+                                <full-neighbors-only/>
+                            </bfd-liveness-detection>
+                            {% endif %}   
                         </interface>
                     </area>
                 </ospf>
