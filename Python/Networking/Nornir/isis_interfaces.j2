@@ -1,0 +1,22 @@
+
+<configuration>
+ {% for intf in isis_int -%}
+ <interfaces>
+                <interface>
+                    <name>{{ intf[:-2] }}</name>
+                    <unit>
+                        <name>0</name>
+                        <family>
+                             <iso>
+                                {% if intf == 'lo0.0' -%}
+                                <address>
+                                    <name>{{ isis_int[intf].net }}</name>
+                                </address>
+                                {% endif %}  
+                            </iso>                            
+                        </family>
+                    </unit>
+                </interface>
+            </interfaces> 
+{% endfor %}
+    </configuration>

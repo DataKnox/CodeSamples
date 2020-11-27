@@ -1,0 +1,22 @@
+<configuration>
+ {% for intf in isis_int -%}
+            <protocols>
+                <isis>
+                    <interface>
+                        <name>{{ intf }}</name>
+                        {% if isis_int[intf].level == 1 -%}
+                        <level>
+                            <name>2</name>
+                            <disable/>
+                        </level>
+                        {%- elif isis_int[intf].level == 2 -%}
+                        <level>
+                            <name>1</name>
+                            <disable/>
+                        </level>
+                        {% endif %} 
+                    </interface>
+                </isis>
+            </protocols>
+{% endfor %}
+</configuration>
