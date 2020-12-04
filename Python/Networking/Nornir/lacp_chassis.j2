@@ -18,10 +18,17 @@
                         <name>0</name>
                         <family>
                             <ethernet-switching>
+                                {% if node_type == 'vQFX-switch' -%}
                                 <interface-mode>trunk</interface-mode>
                                 <vlan>
                                     <members>all</members>
                                 </vlan>
+                                {%- elif node_type == 'EX-switch' -%}
+                                <port-mode>trunk</port-mode>
+                                <vlan>
+                                    <members>all</members>
+                                </vlan>
+                                {% endif %}
                             </ethernet-switching>
                         </family>       
                     </unit>
