@@ -1,14 +1,9 @@
 import requests
 import json
 
-base_url = "https://dcloud-dna-center-inst-rtp.cisco.com/dna/"
-auth_endpoint = "system/api/v1/auth/token"
+auth_response = requests.post('https://sandboxdnac.cisco.com/dna/system/api/v1/auth/token', headers={'Authorization': 'Basic ZGV2bmV0dXNlcjpDaXNjbzEyMyE='}).json()
 
-user = 'demo'
-password = 'demo1234!'
-
-auth_response = requests.post(
-    url=f"{base_url}{auth_endpoint}", auth=(user, password)).json()
+print (auth_response)
 
 token = auth_response['Token']
 
