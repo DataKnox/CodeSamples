@@ -1,8 +1,9 @@
 SELECT *
-FROM dm.sys_db_column_store_row_group_physical_stats;
+FROM sys.dm_db_column_store_row_group_physical_stats;
 
 SELECT *
-FROM dm.sys_db_column_store_row_group_operational_stats;
+FROM sys.dm_db_column_store_row_group_operational_stats;
+
 
 DECLARE @cnt INT;
 DECLARE @OrderId INT;
