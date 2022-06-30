@@ -32,7 +32,7 @@ GO
 SELECT 
 OBJECT_NAME(i.object_id) AS TableName,
 i.name as IndexName,
-ips.index_type as IndexType,
+ips.index_type_desc as IndexType,
 ips.avg_fragmentation_in_percent as FragPercent
 FROM sys.dm_db_index_physical_stats(DB_ID(),NULL,NULL,NULL,NULL) as ips
 JOIN sys.indexes i on i.object_id = ips.object_id AND i.index_id = ips.index_id
@@ -46,7 +46,7 @@ ALTER INDEX ALL ON Purchasing.PurchaseOrderHeader REORGANIZE
 SELECT 
 OBJECT_NAME(i.object_id) AS TableName,
 i.name as IndexName,
-ips.index_type as IndexType,
+ips.index_type_desc as IndexType,
 ips.avg_fragmentation_in_percent as FragPercent
 FROM sys.dm_db_index_physical_stats(DB_ID(),NULL,NULL,NULL,NULL) as ips
 JOIN sys.indexes i on i.object_id = ips.object_id AND i.index_id = ips.index_id
