@@ -8,7 +8,7 @@ script_dir = os.path.dirname(os.path.realpath(__file__))
 
 nr = InitNornir(config_file=f"{script_dir}/config.yml")
 
-junos_devices = nr.filter(F(node_type="switch"))
+junos_devices = nr.filter(F(node_type="EX-switch"))
 
 
 def lacp_config(task):
