@@ -4,7 +4,8 @@ Install-Module -Name MicrosoftPowerBIMgmt -Scope CurrentUser
 
 Login-PowerBI
 
-
+Get-Command -Module MicrosoftPowerBIMgmt*
+get-help Get-PowerBIGroup
 # Current user's workspaces
 Get-PowerBIWorkspace
 Get-PowerBIWorkspace -Name Dev
@@ -14,3 +15,6 @@ Get-PowerBIWorkspace -Scope Organization
 
 Get-PowerBIReport
 Get-PowerBIDataset
+
+# EXPLORE REST API AUTHENTICATION WITH POWERSHELL
+# https://github.com/Azure-Samples/powerbi-powershell/blob/master/manageRefresh.ps1
