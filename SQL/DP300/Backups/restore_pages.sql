@@ -1,11 +1,3 @@
-USE master
-GO
-
---tail log backup
-BACKUP LOG SWDB
-    TO DISK = '\\file-nug\backups\swdb_tlog.bak'
-    WITH NORECOVERY
-GO
 
 USE master
 GO
@@ -27,6 +19,16 @@ GO
 
 SELECT * FROM dbo.People
 SELECT * FROM msdb.dbo.suspect_pages
+
+USE master
+GO
+
+--tail log backup
+BACKUP LOG SWDB
+    TO DISK = '\\file-nug\backups\swdb_tlog.bak'
+    WITH NORECOVERY
+GO
+
 
 RESTORE DATABASE SWDB
   PAGE = '3:8'
