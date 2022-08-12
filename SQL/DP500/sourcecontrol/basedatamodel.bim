@@ -86,6 +86,7 @@
             "name": "Product",
             "dataType": "string",
             "sourceColumn": "Product",
+            "isHidden": true,
             "lineageTag": "a88d5485-68e2-4179-9f3e-7a6ff0023470",
             "summarizeBy": "none",
             "annotations": [
