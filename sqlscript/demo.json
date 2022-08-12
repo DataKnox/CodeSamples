@@ -1,0 +1,17 @@
+{
+	"name": "demo",
+	"properties": {
+		"content": {
+			"query": "SELECT *\nFROM dbo.myTable\nWHERE column = 1 AND column <> 4",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
