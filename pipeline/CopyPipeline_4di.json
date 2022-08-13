@@ -1,0 +1,199 @@
+{
+	"name": "CopyPipeline_4di",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach_4di",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.cw_items",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy_4di",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [
+								{
+									"name": "Source",
+									"value": "@{item().source.schema}.@{item().source.table}"
+								},
+								{
+									"name": "Destination",
+									"value": "samplesqldb//@{item().destination.fileName}"
+								}
+							],
+							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"partitionOption": "None"
+								},
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"validateDataConsistency": false
+							},
+							"inputs": [
+								{
+									"referenceName": "SourceDataset_4di",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_schema": "@item().source.schema",
+										"cw_table": "@item().source.table"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DestinationDataset_4di",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_fileName": "@item().destination.fileName"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"cw_items": {
+				"type": "Array",
+				"defaultValue": [
+					{
+						"source": {
+							"schema": "dbo",
+							"table": "BuildVersion"
+						},
+						"destination": {
+							"fileName": "dboBuildVersion.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "dbo",
+							"table": "ErrorLog"
+						},
+						"destination": {
+							"fileName": "dboErrorLog.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "Address"
+						},
+						"destination": {
+							"fileName": "SalesLTAddress.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "Customer"
+						},
+						"destination": {
+							"fileName": "SalesLTCustomer.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "CustomerAddress"
+						},
+						"destination": {
+							"fileName": "SalesLTCustomerAddress.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "Product"
+						},
+						"destination": {
+							"fileName": "SalesLTProduct.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "ProductCategory"
+						},
+						"destination": {
+							"fileName": "SalesLTProductCategory.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "ProductDescription"
+						},
+						"destination": {
+							"fileName": "SalesLTProductDescription.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "ProductModel"
+						},
+						"destination": {
+							"fileName": "SalesLTProductModel.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "ProductModelProductDescription"
+						},
+						"destination": {
+							"fileName": "SalesLTProductModelProductDescription.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "SalesOrderDetail"
+						},
+						"destination": {
+							"fileName": "SalesLTSalesOrderDetail.txt"
+						}
+					},
+					{
+						"source": {
+							"schema": "SalesLT",
+							"table": "SalesOrderHeader"
+						},
+						"destination": {
+							"fileName": "SalesLTSalesOrderHeader.txt"
+						}
+					}
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-07-27T15:27:21Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}
