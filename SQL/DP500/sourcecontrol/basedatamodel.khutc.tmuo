@@ -1,1 +1,15 @@
-{}
+{
+  "Deployment": {
+    "TargetConnectionString": "powerbi://api.powerbi.com/v1.0/myorg/DevOpsProd",
+    "TargetDatabase": "demo1",
+    "TargetCredentials": {
+      "EncryptedPassword": "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArxF7fQT/QkiIuhPDpxN3/gAAAAACAAAAAAAQZgAAAAEAACAAAAAZkIh+T9MMwUqx+yrNg9fHebJ31KGfOuzH4R9j1Tp9sQAAAAAOgAAAAAIAACAAAADiduHobs8iytGzPwa7cd3j4481fuY0r6USgNBi0+x9dCAAAADVmLVCbrTvnv7oyYt27tDUiSra/levVcNFrAlPQJ/ZpEAAAADeTig2OOdGtrF4Zj0xxOzqyqycxarzIqDi7/Xgz/PQDz9ZEwVGHSsXMqvLEg0AmPwmZCyNTEP1FXJSmIPIUKaa",
+      "UserName": "knox@knoxsdata.com"
+    },
+    "DeployDataSources": true,
+    "DeployPartitions": true,
+    "DeployRefreshPolicyPartitions": true,
+    "DeployModelRoles": false,
+    "DeployModelRoleMembers": false
+  }
+}
