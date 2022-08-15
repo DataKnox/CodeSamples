@@ -1,0 +1,17 @@
+{
+	"name": "Query_JSON",
+	"properties": {
+		"content": {
+			"query": "SELECT  doc\nFROM\n    OPENROWSET(\n        BULK 'https://knoxlakegen2.blob.core.windows.net/etlload/*.json',\n        FORMAT = 'csv',\n        FIELDTERMINATOR ='0x0b',\n        FIELDQUOTE = '0x0b',\n        ROWTERMINATOR = '0x0b'\n    ) WITH (doc NVARCHAR(MAX)) as rows",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "SQLPool01",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
