@@ -2,12 +2,12 @@
 	"name": "ExternalSrcs",
 	"properties": {
 		"content": {
-			"query": "--First create the DB\nCREATE DATABASE CurrencyDB\n    COLLATE Latin1_General_100_BIN2_UTF8\n\n--Then link the data source\nCREATE EXTERNAL DATA SOURCE etlload\nWITH (\n    LOCATION = 'https://dataknox.blob.core.windows.net/etlload'\n)\n\n-- SELECT *\n-- FROM\n--     OPENROWSET(\n--         BULK 'currency.csv',\n--         DATA_SOURCE = 'etlload',\n--         FORMAT = 'csv',\n--         PARSER_VERSION = '2.0',\n--         HEADER_ROW = TRUE\n--     ) AS currency\n\n-- Now define the formatting\nCREATE EXTERNAL FILE FORMAT CsvFormat\n    WITH (\n        FORMAT_TYPE = DELIMITEDTEXT,\n        FORMAT_OPTIONS(\n            FIELD_TERMINATOR = ',',\n            STRING_DELIMITER = '\"'\n        )\n    );\nGO\n\n--Now create the table\nDROP EXTERNAL TABLE dbo.currency\nCREATE EXTERNAL TABLE dbo.currency\n(\n    Code VARCHAR(6),\n    Symbol VARCHAR(20),\n    [Name] VARCHAR(38)\n)\nWITH\n(\n    DATA_SOURCE = etlload,\n    LOCATION = 'currency.csv',\n    FILE_FORMAT = CsvFormat\n);\nGO\n\n-- query the table\nSELECT * FROM dbo.currency;",
+			"query": "--First create the DB\nCREATE DATABASE CurrencyDB\n    COLLATE Latin1_General_100_BIN2_UTF8\n\n--Then link the data source\nCREATE EXTERNAL DATA SOURCE etlload\nWITH (\n    LOCATION = 'https://dataknox.blob.core.windows.net/etlload'\n)\n\n-- SELECT *\n-- FROM\n--     OPENROWSET(\n--         BULK 'currency.csv',\n--         DATA_SOURCE = 'etlload',\n--         FORMAT = 'csv',\n--         PARSER_VERSION = '2.0',\n--         HEADER_ROW = TRUE\n--     ) AS currency\n\n-- Now define the formatting\nCREATE EXTERNAL FILE FORMAT CsvFormat\n    WITH (\n        FORMAT_TYPE = DELIMITEDTEXT,\n        FORMAT_OPTIONS(\n            FIELD_TERMINATOR = ',',\n            STRING_DELIMITER = '\"'\n        )\n    );\nGO\n\n--Now create the table\nCREATE EXTERNAL TABLE dbo.currency\n(\n    Code VARCHAR(6),\n    Symbol VARCHAR(20),\n    [Name] VARCHAR(38)\n)\nWITH\n(\n    DATA_SOURCE = etlload,\n    LOCATION = 'currency.csv',\n    FILE_FORMAT = CsvFormat\n);\nGO\n\n-- query the table\nSELECT * FROM dbo.currency;",
 			"metadata": {
 				"language": "sql"
 			},
 			"currentConnection": {
-				"databaseName": "master",
+				"databaseName": "CurrencyDB",
 				"poolName": "Built-in"
 			},
 			"resultLimit": 5000
