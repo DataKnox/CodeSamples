@@ -2,7 +2,7 @@
 	"name": "Filepath",
 	"properties": {
 		"content": {
-			"query": "SELECT ORDERDATE, STATUS, PRODUCTLINE, PRODUCTCODE, CUSTOMERNAME, DEALSIZE\nFROM OPENROWSET(\n    BULK 'https://knoxlakegen2.blob.core.windows.net/etlload/archive/*/*/*.csv',\n    FORMAT = 'csv',\n    PARSER_VERSION = '2.0',\n    HEADER_ROW = TRUE) AS orders\nWHERE orders.filepath(1) = '2005'\n    AND orders.filepath(2) IN ('1','2')\n    AND ORDERDATE IS NOT NULL;",
+			"query": "SELECT ORDERDATE, STATUS, PRODUCTLINE, PRODUCTCODE, CUSTOMERNAME, DEALSIZE\nFROM OPENROWSET(\n    BULK 'https://knoxlakegen2.blob.core.windows.net/etlload/archive/*/*/*.csv',\n    FORMAT = 'csv',\n    PARSER_VERSION = '2.0',\n    HEADER_ROW = TRUE) AS orders\nWHERE orders.filepath(1) = '2005'\n    AND orders.filepath(2) IN ('1')\n    AND ORDERDATE IS NOT NULL;",
 			"metadata": {
 				"language": "sql"
 			},
