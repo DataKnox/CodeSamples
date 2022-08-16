@@ -1,1 +1,15 @@
-{}
+{
+  "Deployment": {
+    "TargetConnectionString": "powerbi://api.powerbi.com/v1.0/myorg/DevOpsProd",
+    "TargetDatabase": "basedata-bak",
+    "TargetCredentials": {
+      "EncryptedPassword": "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArxF7fQT/QkiIuhPDpxN3/gAAAAACAAAAAAAQZgAAAAEAACAAAACuhi3WS2fKzOSkSI0vPJiCNk/8ZE4QpHVDsj2X09JhPAAAAAAOgAAAAAIAACAAAACn+Y/GzlBh+9kr/vPswWkucEChazamZT5gbMzxgWsc7iAAAAAawLznTN0ZOWQYoDyOy4hwALkcU4xmQDwfIjQ8rPgS60AAAAAKnX0MGqHeboRjbxW+/u3R0aOepmJLNPN6goRWOlOwUlQa/5Szrn65C34nkNrnwyGJlNU8OVLIKEFheuARbxKd",
+      "UserName": "knox@knoxsdata.com"
+    },
+    "DeployDataSources": true,
+    "DeployPartitions": true,
+    "DeployRefreshPolicyPartitions": true,
+    "DeployModelRoles": false,
+    "DeployModelRoleMembers": false
+  }
+}

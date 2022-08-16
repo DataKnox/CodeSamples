@@ -17,7 +17,7 @@
         "columns": [
           {
             "name": "CityID",
-            "dataType": "int64",
+            "dataType": "string",
             "sourceColumn": "CityID",
             "formatString": "0",
             "lineageTag": "69c9af02-847f-4043-9bcf-62f68b8d64cd",
