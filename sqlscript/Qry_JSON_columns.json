@@ -1,0 +1,17 @@
+{
+	"name": "Qry_JSON_columns",
+	"properties": {
+		"content": {
+			"query": "SELECT JSON_VALUE(doc, '$.product_name') AS product,\n           JSON_VALUE(doc, '$.list_price') AS price,\n           JSON_VALUE(doc, '$.product_id') as ID\nFROM\n    OPENROWSET(\n        BULK 'https://knoxlakegen2.blob.core.windows.net/etlload/*.json',\n        FORMAT = 'csv',\n        FIELDTERMINATOR ='0x0b',\n        FIELDQUOTE = '0x0b',\n        ROWTERMINATOR = '0x0b'\n    ) WITH (doc NVARCHAR(MAX)) as rows",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

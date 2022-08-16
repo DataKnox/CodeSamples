@@ -1,0 +1,17 @@
+{
+	"name": "Serverless-Currency-Infer",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP 100 *\nFROM OPENROWSET(\n    BULK 'https://knoxlakegen2.blob.core.windows.net/etlload/currency.csv',\n    FORMAT = 'csv',\n    PARSER_VERSION = '2.0',\n    HEADER_ROW = TRUE) AS rows",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Serverless-Curr-Defined",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP 100 *\nFROM OPENROWSET(\n    BULK 'https://knoxlakegen2.blob.core.windows.net/etlload/curr*.*',\n    FORMAT = 'csv')\nWITH (\n    Code VARCHAR(10),\n    Symbol VARCHAR(50),\n    Name VARCHAR(100)\n) AS rows\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
