@@ -1,0 +1,105 @@
+{
+	"name": "define_schema",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "sparksynapse",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "d16d7171-9ff4-4a75-8ed7-895dae631513"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/444d5dc8-f2d8-4aa0-8b7c-20457469c20c/resourceGroups/knox_analytics/providers/Microsoft.Synapse/workspaces/knoxsynapse/bigDataPools/sparksynapse",
+				"name": "sparksynapse",
+				"type": "Spark",
+				"endpoint": "https://knoxsynapse.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparksynapse",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "3.2",
+				"nodeCount": 3,
+				"cores": 4,
+				"memory": 28,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"collapsed": false
+				},
+				"source": [
+					"from pyspark.sql.types import *\r\n",
+					"from pyspark.sql.functions import *\r\n",
+					"\r\n",
+					"salesSchema = StructType(\r\n",
+					"    [\r\n",
+					"        StructField(\"SalesOrderID\", IntegerType()),\r\n",
+					"        StructField(\"SalesOrderDetailID\",IntegerType()),\r\n",
+					"        StructField(\"CarrierTrackingNumber\",StringType()),\r\n",
+					"        StructField(\"OrderQty\",IntegerType()),\r\n",
+					"        StructField(\"ProductID\",IntegerType()),\r\n",
+					"        StructField(\"SpecialOfferID\",IntegerType()),\r\n",
+					"        StructField(\"UnitPrice\",FloatType()),\r\n",
+					"        StructField(\"UnitPriceDiscount\",FloatType()),\r\n",
+					"        StructField(\"LineTotal\",FloatType()),\r\n",
+					"        StructField(\"rowguid\",StringType()),\r\n",
+					"        StructField(\"ModifiedDate\",TimestampType())\r\n",
+					"    ]\r\n",
+					")\r\n",
+					"\r\n",
+					"df = spark.read.load('abfss://etlload@knoxlakegen2.dfs.core.windows.net/sales/SalesOrderDetail.csv',\r\n",
+					"format='csv',\r\n",
+					"header=True,\r\n",
+					"schema=salesSchema\r\n",
+					")\r\n",
+					"display(df)"
+				],
+				"execution_count": 11
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				],
+				"execution_count": null
+			}
+		]
+	}
+}
