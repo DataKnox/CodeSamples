@@ -1,0 +1,398 @@
+09-21 10:30:50.361 27359 CallModelImpl-CallModel_TC@54 : answer with Audio Only
+09-21 10:30:51.002 27359 CallModelImpl-CallModel_TC@54 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-21 10:31:25.222 27359 CallModelImpl-CallModel_TC@54 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-21 10:31:25.393 27359 CallModelImpl-CallModel_TC@54 : CallFlowHistory line:1 10:30:51.001 : answering(638ms)
+09-21 10:31:25.395 27359 InCallServiceImpl@59372940 : onCallRemoved, TC@54(117025706), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-21 10:31:27.353 27359 InCallServiceImpl@59372940 : -----> onUnbind, duration: 6ms - {FULL}
+09-21 10:31:28.896 27359 FullScreenModelImpl : requestFinishActivity
+09-21 10:31:29.001 27359 ViewModelsManager : onViewModelIdle
+09-21 10:31:40.312 27359 InCallServiceImpl@75223014 : <----- onBind, duration: 15ms - {NO_SCREEN}
+09-21 10:31:40.442 27359 InCallServiceImpl@75223014 : onCallAdded, TC@55(5687729), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-21 10:31:40.447 27359 CallModelImpl-CallModel_TC@55 : onCallCreated, CallModel_TC@55(5687729) - RINGING, Audio Only
+09-21 10:31:40.458 27359 ScreenLauncher : launchFullScreen
+09-21 10:31:40.627 27359 InCallActivity : onCreate - done, duration: 67ms
+09-21 10:31:41.227 27359 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-21 10:31:45.774 27359 CallModelImpl-CallModel_TC@55 : answer with Audio Only
+09-21 10:31:46.214 27359 CallModelImpl-CallModel_TC@55 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-21 10:32:10.072 27359 CallModelImpl-CallModel_TC@55 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-21 10:32:10.333 27359 CallModelImpl-CallModel_TC@55 : CallFlowHistory line:1 10:31:46.214 : answering(440ms)
+09-21 10:32:10.338 27359 InCallServiceImpl@75223014 : onCallRemoved, TC@55(5687729), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-21 10:32:12.215 27359 InCallServiceImpl@75223014 : -----> onUnbind, duration: 9ms - {FULL}
+09-21 10:32:13.832 27359 FullScreenModelImpl : requestFinishActivity
+09-21 10:32:13.907 27359 ViewModelsManager : onViewModelIdle
+09-22 11:05:28.571 3664 InCallApp@62391136 : onCreate, duration: 224ms
+09-22 11:05:28.680 3664 InCallServiceImpl@253573342 : <----- onBind, duration: 103ms - {NO_SCREEN}
+09-22 11:05:29.001 3664 InCallServiceImpl@253573342 : onCallAdded, TC@56(119259960), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-22 11:05:29.030 3664 CallModelImpl-CallModel_TC@56 : onCallCreated, CallModel_TC@56(119259960) - RINGING, Audio Only
+09-22 11:05:29.353 3664 ScreenLauncher : launchPopupScreen
+09-22 11:05:29.637 3664 InCallPopupLifeComponent(179272571) : onCreate - done, Popup, duration: 281ms
+09-22 11:05:30.460 3664 InCallPopupLifeComponent : CallUIPerf: @CallPopup: onViewAttachedToWindow
+09-22 11:05:37.211 3664 CallModelImpl-CallModel_TC@56 : answer with Audio Only
+09-22 11:05:37.213 3664 ScreenLauncher : launchFullScreen
+09-22 11:05:38.000 3664 InCallActivity : onCreate - done, duration: 184ms
+09-22 11:05:38.429 3664 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-22 11:05:39.418 3664 CallModelImpl-CallModel_TC@56 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-22 11:06:24.415 3664 CallModelImpl-CallModel_TC@56 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-22 11:06:24.627 3664 CallModelImpl-CallModel_TC@56 : CallFlowHistory line:1 11:05:39.416 : answering(2202ms)
+09-22 11:06:24.630 3664 InCallServiceImpl@253573342 : onCallRemoved, TC@56(119259960), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-22 11:06:26.605 3664 InCallServiceImpl@253573342 : -----> onUnbind, duration: 6ms - {FULL}
+09-22 11:06:27.400 3664 FullScreenModelImpl : requestFinishActivity
+09-22 11:06:27.521 3664 ViewModelsManager : onViewModelIdle
+09-22 12:18:07.169 24595 InCallApp@44097561 : onCreate, duration: 142ms
+09-22 12:18:07.219 24595 InCallServiceImpl@59372940 : <----- onBind, duration: 44ms - {NO_SCREEN}
+09-22 12:18:07.310 24595 InCallServiceImpl@59372940 : onCallAdded, TC@57(124219029), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-22 12:18:07.337 24595 CallModelImpl-CallModel_TC@57 : onCallCreated, CallModel_TC@57(124219029) - RINGING, Audio Only
+09-22 12:18:07.472 24595 ScreenLauncher : launchPopupScreen
+09-22 12:18:07.602 24595 InCallPopupLifeComponent(141468332) : onCreate - done, Popup, duration: 128ms
+09-22 12:18:08.100 24595 InCallPopupLifeComponent : CallUIPerf: @CallPopup: onViewAttachedToWindow
+09-22 12:18:52.795 24595 CallModelImpl-CallModel_TC@57 : CallModelState(RINGING -> DISCONNECTED), DisconnectCause{GSM, INCOMING_MISSED(1), SipErrorCode:0, (code: 5, reason:INCOMING_MISSED, label:[EMPTY], description:[EMPTY])}
+09-22 12:18:52.868 24595 InCallServiceImpl@59372940 : onCallRemoved, TC@57(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-22 12:18:52.990 24595 ViewModelsManager : onViewModelIdle
+09-22 12:18:54.834 24595 InCallServiceImpl@59372940 : -----> onUnbind, duration: 18ms - {NO_SCREEN}
+09-22 13:45:49.507 18098 InCallApp@44097561 : onCreate, duration: 116ms
+09-22 13:45:49.569 18098 InCallServiceImpl@7932607 : <----- onBind, duration: 57ms - {NO_SCREEN}
+09-22 13:45:49.633 18098 InCallServiceImpl@7932607 : onCallAdded, TC@59(124219029), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-22 13:45:49.648 18098 CallModelImpl-CallModel_TC@59 : onCallCreated, CallModel_TC@59(124219029) - RINGING, Audio Only
+09-22 13:45:49.703 18098 ScreenLauncher : launchFullScreen
+09-22 13:45:50.266 18098 InCallActivity : onCreate - done, duration: 178ms
+09-22 13:45:50.394 18098 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-22 13:46:06.848 18098 CallModelImpl-CallModel_TC@59 : answer with Audio Only
+09-22 13:46:07.463 18098 CallModelImpl-CallModel_TC@59 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-22 13:58:08.026 18098 CallModelImpl-CallModel_TC@59 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, ERROR_UNSPECIFIED(36), SipErrorCode:0, (code: 1, reason:ERROR_UNSPECIFIED, label:[EMPTY], description:[EMPTY])}
+09-22 13:58:08.226 18098 CallModelImpl-CallModel_TC@59 : CallFlowHistory line:1 13:46:07.462 : answering(612ms)
+09-22 13:58:08.229 18098 InCallServiceImpl@7932607 : onCallRemoved, TC@59(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-22 13:58:10.195 18098 InCallServiceImpl@7932607 : -----> onUnbind, duration: 10ms - {FULL}
+09-22 13:58:11.730 18098 FullScreenModelImpl : requestFinishActivity
+09-22 13:58:12.182 18098 ViewModelsManager : onViewModelIdle
+09-22 13:58:41.304 18098 InCallServiceImpl@104131390 : <----- onBind, duration: 35ms - {NO_SCREEN}
+09-22 13:58:41.677 18098 InCallServiceImpl@104131390 : onCallAdded, TC@60(158204709), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-22 13:58:41.713 18098 CallModelImpl-CallModel_TC@60 : onCallCreated, CallModel_TC@60(158204709) - RINGING, Audio Only
+09-22 13:58:41.812 18098 ScreenLauncher : launchPopupScreen
+09-22 13:58:41.902 18098 InCallPopupLifeComponent(82689059) : onCreate - done, Popup, duration: 87ms
+09-22 13:58:42.445 18098 InCallPopupLifeComponent : CallUIPerf: @CallPopup: onViewAttachedToWindow
+09-22 13:58:43.559 18098 CallModelImpl-CallModel_TC@60 : answer with Audio Only
+09-22 13:58:44.119 18098 CallModelImpl-CallModel_TC@60 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-22 13:58:48.456 18098 ScreenLauncher : launchFullScreen
+09-22 13:58:48.583 18098 InCallActivity : onCreate - done, duration: 71ms
+09-22 13:58:48.953 18098 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-22 14:05:33.318 18098 CallModelImpl-CallModel_TC@60 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-22 14:05:33.484 18098 CallModelImpl-CallModel_TC@60 : CallFlowHistory line:1 13:58:44.119 : answering(560ms)
+09-22 14:05:33.487 18098 InCallServiceImpl@104131390 : onCallRemoved, TC@60(158204709), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-22 14:05:35.615 18098 FullScreenModelImpl : requestFinishActivity
+09-22 14:05:35.718 18098 InCallServiceImpl@104131390 : -----> onUnbind, duration: 61ms - {FULL}
+09-22 14:05:35.795 18098 ViewModelsManager : onViewModelIdle
+09-23 00:40:11.042 8172 InCallApp@59372940 : onCreate, duration: 163ms
+09-23 00:40:11.127 8172 InCallServiceImpl@264242410 : <----- onBind, duration: 80ms - {NO_SCREEN}
+09-23 00:40:11.226 8172 InCallServiceImpl@264242410 : onCallAdded, TC@63(169350043), CONNECTING, Audio Tx Rx, Size(CallRepository:0, Phone:1)
+09-23 00:40:11.244 8172 CallModelImpl-CallModel_TC@63 : onCallCreated, CallModel_TC@63(169350043) - CONNECTING, Audio Tx Rx
+09-23 00:40:11.290 8172 ScreenLauncher : launchFullScreen
+09-23 00:40:12.118 8172 InCallActivity : onCreate - done, duration: 233ms
+09-23 00:40:12.276 8172 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-23 00:40:14.529 8172 CallModelImpl-CallModel_TC@63 : disconnect
+09-23 00:40:15.095 8172 CallModelImpl-CallModel_TC@63 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-23 00:40:15.260 8172 CallModelImpl-CallModel_TC@63 : CallFlowHistory line:1 00:40:12.173 : BIDIRECTIONAL_CS, 00:40:15.093 : disconnect(563ms)
+09-23 00:40:15.264 8172 InCallServiceImpl@264242410 : onCallRemoved, TC@63(169350043), DISCONNECTED, Audio Tx Rx, (CallRepository: 0, Phone: 0)
+09-23 00:40:17.176 8172 InCallServiceImpl@264242410 : -----> onUnbind, duration: 19ms - {FULL}
+09-23 00:40:17.431 8172 FullScreenModelImpl : requestFinishActivity
+09-23 00:40:17.539 8172 ViewModelsManager : onViewModelIdle
+09-23 07:53:44.768 7750 InCallApp@253573342 : onCreate, duration: 152ms
+09-23 07:53:44.818 7750 InCallServiceImpl@14050517 : <----- onBind, duration: 44ms - {NO_SCREEN}
+09-23 07:53:44.903 7750 InCallServiceImpl@14050517 : onCallAdded, TC@64(169350043), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-23 07:53:44.943 7750 CallModelImpl-CallModel_TC@64 : onCallCreated, CallModel_TC@64(169350043) - RINGING, Audio Only
+09-23 07:53:45.022 7750 ScreenLauncher : launchFullScreen
+09-23 07:53:45.625 7750 InCallActivity : onCreate - done, duration: 187ms
+09-23 07:53:45.734 7750 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-23 07:53:49.543 7750 CallModelImpl-CallModel_TC@64 : answer with Audio Only
+09-23 07:53:50.098 7750 CallModelImpl-CallModel_TC@64 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-23 07:56:59.696 7750 CallModelImpl-CallModel_TC@64 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-23 07:56:59.941 7750 CallModelImpl-CallModel_TC@64 : CallFlowHistory line:1 07:53:50.097 : answering(553ms)
+09-23 07:56:59.949 7750 InCallServiceImpl@14050517 : onCallRemoved, TC@64(169350043), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-23 07:57:02.065 7750 InCallServiceImpl@14050517 : -----> onUnbind, duration: 8ms - {FULL}
+09-23 07:57:03.439 7750 FullScreenModelImpl : requestFinishActivity
+09-23 07:57:03.507 7750 ViewModelsManager : onViewModelIdle
+09-23 09:20:40.648 12893 InCallApp@44097561 : onCreate, duration: 124ms
+09-23 09:20:40.694 12893 InCallServiceImpl@7932607 : <----- onBind, duration: 41ms - {NO_SCREEN}
+09-23 09:20:40.777 12893 InCallServiceImpl@7932607 : onCallAdded, TC@65(124219029), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-23 09:20:40.810 12893 CallModelImpl-CallModel_TC@65 : onCallCreated, CallModel_TC@65(124219029) - RINGING, Audio Only
+09-23 09:20:40.866 12893 ScreenLauncher : launchFullScreen
+09-23 09:20:41.355 12893 InCallActivity : onCreate - done, duration: 184ms
+09-23 09:20:41.489 12893 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-23 09:20:44.903 12893 CallModelImpl-CallModel_TC@65 : answer with Audio Only
+09-23 09:20:45.425 12893 CallModelImpl-CallModel_TC@65 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-23 09:21:57.308 12893 CallModelImpl-CallModel_TC@65 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-23 09:21:57.473 12893 CallModelImpl-CallModel_TC@65 : CallFlowHistory line:1 09:20:45.424 : answering(520ms)
+09-23 09:21:57.476 12893 InCallServiceImpl@7932607 : onCallRemoved, TC@65(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-23 09:21:59.367 12893 InCallServiceImpl@7932607 : -----> onUnbind, duration: 12ms - {FULL}
+09-23 09:22:00.991 12893 FullScreenModelImpl : requestFinishActivity
+09-23 09:22:01.108 12893 ViewModelsManager : onViewModelIdle
+09-23 10:27:41.796 17174 InCallApp@62391136 : onCreate, duration: 245ms
+09-23 10:27:41.896 17174 InCallServiceImpl@253573342 : <----- onBind, duration: 89ms - {NO_SCREEN}
+09-23 10:27:41.991 17174 InCallServiceImpl@253573342 : onCallAdded, TC@66(124219029), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-23 10:27:42.022 17174 CallModelImpl-CallModel_TC@66 : onCallCreated, CallModel_TC@66(124219029) - CONNECTING, Audio Only
+09-23 10:27:42.080 17174 ScreenLauncher : launchFullScreen
+09-23 10:27:42.826 17174 InCallActivity : onCreate - done, duration: 255ms
+09-23 10:27:42.972 17174 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-23 10:27:49.822 17174 CallModelImpl-CallModel_TC@66 : disconnect
+09-23 10:27:50.078 17174 CallModelImpl-CallModel_TC@66 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-23 10:27:50.186 17174 CallModelImpl-CallModel_TC@66 : CallFlowHistory line:1 10:27:50.076 : disconnect(252ms)
+09-23 10:27:50.188 17174 InCallServiceImpl@253573342 : onCallRemoved, TC@66(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-23 10:27:52.154 17174 InCallServiceImpl@253573342 : -----> onUnbind, duration: 16ms - {FULL}
+09-23 10:27:53.686 17174 FullScreenModelImpl : requestFinishActivity
+09-23 10:27:54.323 17174 ViewModelsManager : onViewModelIdle
+09-23 10:45:25.593 22956 InCallApp@44097561 : onCreate, duration: 139ms
+09-23 10:45:25.667 22956 InCallServiceImpl@7932607 : <----- onBind, duration: 57ms - {NO_SCREEN}
+09-23 10:45:25.758 22956 InCallServiceImpl@7932607 : onCallAdded, TC@67(124219029), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-23 10:45:25.781 22956 CallModelImpl-CallModel_TC@67 : onCallCreated, CallModel_TC@67(124219029) - RINGING, Audio Only
+09-23 10:45:25.854 22956 ScreenLauncher : launchFullScreen
+09-23 10:45:26.099 22956 InCallActivity : onCreate - done, duration: 137ms
+09-23 10:45:26.629 22956 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-23 10:45:30.844 22956 CallModelImpl-CallModel_TC@67 : answer with Audio Only
+09-23 10:45:31.274 22956 CallModelImpl-CallModel_TC@67 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-23 10:46:43.103 22956 CallModelImpl-CallModel_TC@67 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-23 10:46:43.255 22956 CallModelImpl-CallModel_TC@67 : CallFlowHistory line:1 10:45:31.273 : answering(427ms)
+09-23 10:46:43.257 22956 InCallServiceImpl@7932607 : onCallRemoved, TC@67(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-23 10:46:45.194 22956 InCallServiceImpl@7932607 : -----> onUnbind, duration: 10ms - {FULL}
+09-23 10:46:46.753 22956 FullScreenModelImpl : requestFinishActivity
+09-23 10:46:46.833 22956 ViewModelsManager : onViewModelIdle
+09-23 14:58:02.505 23715 InCallApp@253573342 : onCreate, duration: 117ms
+09-23 14:58:02.566 23715 InCallServiceImpl@59372940 : <----- onBind, duration: 55ms - {NO_SCREEN}
+09-23 14:58:02.635 23715 InCallServiceImpl@59372940 : onCallAdded, TC@68(169350043), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-23 14:58:02.652 23715 CallModelImpl-CallModel_TC@68 : onCallCreated, CallModel_TC@68(169350043) - RINGING, Audio Only
+09-23 14:58:02.726 23715 ScreenLauncher : launchPopupScreen
+09-23 14:58:02.866 23715 InCallPopupLifeComponent(267405066) : onCreate - done, Popup, duration: 138ms
+09-23 14:58:03.289 23715 InCallPopupLifeComponent : CallUIPerf: @CallPopup: onViewAttachedToWindow
+09-23 14:58:10.677 23715 CallModelImpl-CallModel_TC@68 : answer with Audio Only
+09-23 14:58:11.113 23715 CallModelImpl-CallModel_TC@68 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-23 14:58:44.790 23715 CallModelImpl-CallModel_TC@68 : disconnect
+09-23 14:58:45.000 23715 CallModelImpl-CallModel_TC@68 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-23 14:58:45.046 23715 CallModelImpl-CallModel_TC@68 : CallFlowHistory line:1 14:58:11.106 : answering(425ms), 14:58:44.998 : disconnect(207ms)
+09-23 14:58:45.049 23715 InCallServiceImpl@59372940 : onCallRemoved, TC@68(169350043), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-23 14:58:47.093 23715 InCallServiceImpl@59372940 : -----> onUnbind, duration: 7ms - {POPUP}
+09-23 14:58:48.571 23715 ViewModelsManager : onViewModelIdle
+09-23 15:04:47.596 1078 InCallApp@44097561 : onCreate, duration: 225ms
+09-23 15:04:47.703 1078 InCallServiceImpl@7932607 : <----- onBind, duration: 99ms - {NO_SCREEN}
+09-23 15:04:47.853 1078 InCallServiceImpl@7932607 : onCallAdded, TC@69(124219029), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-23 15:04:47.884 1078 CallModelImpl-CallModel_TC@69 : onCallCreated, CallModel_TC@69(124219029) - CONNECTING, Audio Only
+09-23 15:04:47.987 1078 ScreenLauncher : launchFullScreen
+09-23 15:04:48.854 1078 InCallActivity : onCreate - done, duration: 253ms
+09-23 15:04:49.022 1078 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-23 15:05:07.389 1078 CallModelImpl-CallModel_TC@69 : CallModelState(DIALING -> ACTIVE)
+09-23 15:05:26.247 1078 CallModelImpl-CallModel_TC@69 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-23 15:05:26.555 1078 InCallServiceImpl@7932607 : onCallRemoved, TC@69(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-23 15:05:28.331 1078 InCallServiceImpl@7932607 : -----> onUnbind, duration: 21ms - {FULL}
+09-23 15:05:30.054 1078 FullScreenModelImpl : requestFinishActivity
+09-23 15:05:30.568 1078 ViewModelsManager : onViewModelIdle
+09-23 15:17:07.767 8686 InCallApp@253573342 : onCreate, duration: 259ms
+09-23 15:17:07.881 8686 InCallServiceImpl@59372940 : <----- onBind, duration: 102ms - {NO_SCREEN}
+09-23 15:17:07.988 8686 InCallServiceImpl@59372940 : onCallAdded, TC@70(124219029), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-23 15:17:08.014 8686 CallModelImpl-CallModel_TC@70 : onCallCreated, CallModel_TC@70(124219029) - RINGING, Audio Only
+09-23 15:17:08.101 8686 ScreenLauncher : launchFullScreen
+09-23 15:17:08.485 8686 InCallActivity : onCreate - done, duration: 158ms
+09-23 15:17:09.009 8686 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-23 15:17:32.729 8686 CallModelImpl-CallModel_TC@70 : answer with Audio Only
+09-23 15:17:33.154 8686 CallModelImpl-CallModel_TC@70 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-23 15:18:28.073 8686 CallModelImpl-CallModel_TC@70 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-23 15:18:28.260 8686 CallModelImpl-CallModel_TC@70 : CallFlowHistory line:1 15:17:33.152 : answering(421ms)
+09-23 15:18:28.263 8686 InCallServiceImpl@59372940 : onCallRemoved, TC@70(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-23 15:18:30.207 8686 InCallServiceImpl@59372940 : -----> onUnbind, duration: 9ms - {FULL}
+09-23 15:18:31.775 8686 FullScreenModelImpl : requestFinishActivity
+09-23 15:18:31.874 8686 ViewModelsManager : onViewModelIdle
+09-23 15:19:36.017 8686 InCallServiceImpl@117142627 : <----- onBind, duration: 32ms - {NO_SCREEN}
+09-23 15:19:36.205 8686 InCallServiceImpl@117142627 : onCallAdded, TC@71(147636878), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-23 15:19:36.209 8686 CallModelImpl-CallModel_TC@71 : onCallCreated, CallModel_TC@71(147636878) - RINGING, Audio Only
+09-23 15:19:36.264 8686 ScreenLauncher : launchPopupScreen
+09-23 15:19:36.325 8686 InCallPopupLifeComponent(258390356) : onCreate - done, Popup, duration: 58ms
+09-23 15:19:36.673 8686 InCallPopupLifeComponent : CallUIPerf: @CallPopup: onViewAttachedToWindow
+09-23 15:19:38.465 8686 CallModelImpl-CallModel_TC@71 : answer with Audio Only
+09-23 15:19:39.170 8686 CallModelImpl-CallModel_TC@71 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-23 15:20:35.291 8686 CallModelImpl-CallModel_TC@71 : disconnect
+09-23 15:20:35.569 8686 CallModelImpl-CallModel_TC@71 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-23 15:20:35.779 8686 CallModelImpl-CallModel_TC@71 : CallFlowHistory line:1 15:19:39.170 : answering(704ms), 15:20:35.568 : disconnect(275ms)
+09-23 15:20:35.781 8686 InCallServiceImpl@117142627 : onCallRemoved, TC@71(147636878), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-23 15:20:37.673 8686 InCallServiceImpl@117142627 : -----> onUnbind, duration: 14ms - {POPUP}
+09-23 15:20:39.303 8686 ViewModelsManager : onViewModelIdle
+09-24 09:55:44.923 16529 InCallApp@7932607 : onCreate, duration: 197ms
+09-24 09:55:44.991 16529 InCallServiceImpl@14050517 : <----- onBind, duration: 62ms - {NO_SCREEN}
+09-24 09:55:45.116 16529 InCallServiceImpl@14050517 : onCallAdded, TC@72(119259960), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 09:55:45.142 16529 CallModelImpl-CallModel_TC@72 : onCallCreated, CallModel_TC@72(119259960) - CONNECTING, Audio Only
+09-24 09:55:45.221 16529 ScreenLauncher : launchFullScreen
+09-24 09:55:46.041 16529 InCallActivity : onCreate - done, duration: 264ms
+09-24 09:55:46.186 16529 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-24 09:56:01.119 16529 CallModelImpl-CallModel_TC@72 : CallModelState(DIALING -> ACTIVE)
+09-24 09:57:41.496 16529 CallModelImpl-CallModel_TC@72 : disconnect
+09-24 09:57:41.858 16529 CallModelImpl-CallModel_TC@72 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-24 09:57:42.014 16529 CallModelImpl-CallModel_TC@72 : CallFlowHistory line:1 09:57:41.855 : disconnect(355ms)
+09-24 09:57:42.017 16529 InCallServiceImpl@14050517 : onCallRemoved, TC@72(119259960), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 09:57:44.032 16529 InCallServiceImpl@14050517 : -----> onUnbind, duration: 14ms - {FULL}
+09-24 09:57:45.514 16529 FullScreenModelImpl : requestFinishActivity
+09-24 09:57:46.464 16529 ViewModelsManager : onViewModelIdle
+09-24 10:11:59.938 26338 InCallApp@44097561 : onCreate, duration: 183ms
+09-24 10:12:00.006 26338 InCallServiceImpl@7932607 : <----- onBind, duration: 60ms - {NO_SCREEN}
+09-24 10:12:00.120 26338 InCallServiceImpl@7932607 : onCallAdded, TC@73(124219029), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 10:12:00.138 26338 CallModelImpl-CallModel_TC@73 : onCallCreated, CallModel_TC@73(124219029) - CONNECTING, Audio Only
+09-24 10:12:00.184 26338 ScreenLauncher : launchFullScreen
+09-24 10:12:00.906 26338 InCallActivity : onCreate - done, duration: 208ms
+09-24 10:12:01.057 26338 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-24 10:12:08.047 26338 CallModelImpl-CallModel_TC@73 : disconnect
+09-24 10:12:08.332 26338 CallModelImpl-CallModel_TC@73 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-24 10:12:08.462 26338 CallModelImpl-CallModel_TC@73 : CallFlowHistory line:1 10:12:08.330 : disconnect(280ms)
+09-24 10:12:08.466 26338 InCallServiceImpl@7932607 : onCallRemoved, TC@73(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 10:12:09.417 26338 InCallServiceImpl@7932607 : onCallAdded, TC@74(101171523), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 10:12:09.420 26338 CallModelImpl-CallModel_TC@74 : onCallCreated, CallModel_TC@74(101171523) - CONNECTING, Audio Only
+09-24 10:12:15.599 26338 CallModelImpl-CallModel_TC@74 : disconnect
+09-24 10:12:15.858 26338 CallModelImpl-CallModel_TC@74 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-24 10:12:15.978 26338 CallModelImpl-CallModel_TC@74 : CallFlowHistory line:1 10:12:15.857 : disconnect(257ms)
+09-24 10:12:15.980 26338 InCallServiceImpl@7932607 : onCallRemoved, TC@74(101171523), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 10:12:17.933 26338 InCallServiceImpl@7932607 : -----> onUnbind, duration: 18ms - {FULL}
+09-24 10:12:19.479 26338 FullScreenModelImpl : requestFinishActivity
+09-24 10:12:19.947 26338 ViewModelsManager : onViewModelIdle
+09-24 20:50:57.058 17390 InCallApp@59372940 : onCreate, duration: 239ms
+09-24 20:50:57.133 17390 InCallServiceImpl@264242410 : <----- onBind, duration: 69ms - {NO_SCREEN}
+09-24 20:50:57.215 17390 InCallServiceImpl@264242410 : onCallAdded, TC@76(117025706), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 20:50:57.233 17390 CallModelImpl-CallModel_TC@76 : onCallCreated, CallModel_TC@76(117025706) - CONNECTING, Audio Only
+09-24 20:50:57.280 17390 ScreenLauncher : launchFullScreen
+09-24 20:50:57.958 17390 InCallActivity : onCreate - done, duration: 214ms
+09-24 20:50:58.080 17390 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-24 20:51:34.196 17390 CallModelImpl-CallModel_TC@76 : CallModelState(DIALING -> ACTIVE)
+09-24 20:51:37.030 17390 CallModelImpl-CallModel_TC@76 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-24 20:51:37.343 17390 InCallServiceImpl@264242410 : onCallRemoved, TC@76(117025706), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 20:51:39.017 17390 InCallServiceImpl@264242410 : onCallAdded, TC@77(215209748), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 20:51:39.020 17390 CallModelImpl-CallModel_TC@77 : onCallCreated, CallModel_TC@77(215209748) - CONNECTING, Audio Only
+09-24 20:52:18.949 17390 CallModelImpl-CallModel_TC@77 : disconnect
+09-24 20:52:19.359 17390 CallModelImpl-CallModel_TC@77 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-24 20:52:19.461 17390 CallModelImpl-CallModel_TC@77 : CallFlowHistory line:1 20:52:19.358 : disconnect(404ms)
+09-24 20:52:19.463 17390 InCallServiceImpl@264242410 : onCallRemoved, TC@77(215209748), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 20:52:20.547 17390 InCallServiceImpl@264242410 : onCallAdded, TC@78(244753299), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 20:52:20.549 17390 CallModelImpl-CallModel_TC@78 : onCallCreated, CallModel_TC@78(244753299) - CONNECTING, Audio Only
+09-24 20:53:20.358 17390 CallModelImpl-CallModel_TC@78 : disconnect
+09-24 20:53:21.031 17390 CallModelImpl-CallModel_TC@78 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-24 20:53:21.385 17390 FullScreenModelImpl : requestFinishActivity
+09-24 20:53:21.397 17390 CallModelImpl-CallModel_TC@78 : CallFlowHistory line:1 20:53:21.022 : disconnect(664ms)
+09-24 20:53:21.400 17390 InCallServiceImpl@264242410 : onCallRemoved, TC@78(244753299), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 20:53:21.504 17390 ViewModelsManager : onViewModelIdle
+09-24 20:53:23.153 17390 InCallServiceImpl@264242410 : -----> onUnbind, duration: 29ms - {NO_SCREEN}
+09-24 20:53:27.697 17390 InCallServiceImpl@86840703 : <----- onBind, duration: 12ms - {NO_SCREEN}
+09-24 20:53:28.082 17390 InCallServiceImpl@86840703 : onCallAdded, TC@79(247238217), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 20:53:28.090 17390 CallModelImpl-CallModel_TC@79 : onCallCreated, CallModel_TC@79(247238217) - CONNECTING, Audio Only
+09-24 20:53:28.108 17390 ScreenLauncher : launchFullScreen
+09-24 20:53:28.708 17390 InCallActivity : onCreate - done, duration: 82ms
+09-24 20:53:28.794 17390 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-24 20:53:55.879 17390 CallModelImpl-CallModel_TC@79 : disconnect
+09-24 20:53:56.263 17390 CallModelImpl-CallModel_TC@79 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-24 20:53:56.376 17390 CallModelImpl-CallModel_TC@79 : CallFlowHistory line:1 20:53:56.263 : disconnect(382ms)
+09-24 20:53:56.379 17390 InCallServiceImpl@86840703 : onCallRemoved, TC@79(247238217), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 20:53:57.399 17390 InCallServiceImpl@86840703 : onCallAdded, TC@80(17315377), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 20:53:57.401 17390 CallModelImpl-CallModel_TC@80 : onCallCreated, CallModel_TC@80(17315377) - CONNECTING, Audio Only
+09-24 20:54:52.820 17390 CallModelImpl-CallModel_TC@80 : disconnect
+09-24 20:54:53.202 17390 CallModelImpl-CallModel_TC@80 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-24 20:54:53.298 17390 CallModelImpl-CallModel_TC@80 : CallFlowHistory line:1 20:54:53.202 : disconnect(382ms)
+09-24 20:54:53.300 17390 InCallServiceImpl@86840703 : onCallRemoved, TC@80(17315377), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 20:54:54.166 17390 InCallServiceImpl@86840703 : onCallAdded, TC@81(135782232), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 20:54:54.168 17390 CallModelImpl-CallModel_TC@81 : onCallCreated, CallModel_TC@81(135782232) - CONNECTING, Audio Only
+09-24 20:55:30.963 17390 CallModelImpl-CallModel_TC@81 : CallModelState(DIALING -> ACTIVE)
+09-24 20:55:50.227 17390 CallModelImpl-CallModel_TC@81 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-24 20:55:50.554 17390 FullScreenModelImpl : requestFinishActivity
+09-24 20:55:50.577 17390 InCallServiceImpl@86840703 : onCallRemoved, TC@81(135782232), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 20:55:50.670 17390 ViewModelsManager : onViewModelIdle
+09-24 20:55:52.434 17390 InCallServiceImpl@86840703 : -----> onUnbind, duration: 102ms - {NO_SCREEN}
+09-24 20:55:53.940 17390 InCallServiceImpl@24247813 : <----- onBind, duration: 11ms - {NO_SCREEN}
+09-24 20:55:54.113 17390 InCallServiceImpl@24247813 : onCallAdded, TC@82(112965471), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-24 20:55:54.115 17390 CallModelImpl-CallModel_TC@82 : onCallCreated, CallModel_TC@82(112965471) - CONNECTING, Audio Only
+09-24 20:55:54.118 17390 ScreenLauncher : launchFullScreen
+09-24 20:55:54.540 17390 InCallActivity : onCreate - done, duration: 83ms
+09-24 20:55:54.609 17390 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-24 20:56:13.457 17390 CallModelImpl-CallModel_TC@82 : disconnect
+09-24 20:56:13.998 17390 CallModelImpl-CallModel_TC@82 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-24 20:56:14.536 17390 FullScreenModelImpl : requestFinishActivity
+09-24 20:56:14.556 17390 CallModelImpl-CallModel_TC@82 : CallFlowHistory line:1 20:56:13.996 : disconnect(538ms)
+09-24 20:56:14.563 17390 InCallServiceImpl@24247813 : onCallRemoved, TC@82(112965471), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-24 20:56:14.676 17390 ViewModelsManager : onViewModelIdle
+09-24 20:56:16.087 17390 InCallServiceImpl@24247813 : -----> onUnbind, duration: 10ms - {NO_SCREEN}
+09-25 08:24:16.592 7968 InCallApp@253573342 : onCreate, duration: 202ms
+09-25 08:24:16.673 7968 InCallServiceImpl@59372940 : <----- onBind, duration: 74ms - {NO_SCREEN}
+09-25 08:24:16.781 7968 InCallServiceImpl@59372940 : onCallAdded, TC@85(169350043), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-25 08:24:16.807 7968 CallModelImpl-CallModel_TC@85 : onCallCreated, CallModel_TC@85(169350043) - RINGING, Audio Only
+09-25 08:24:16.899 7968 ScreenLauncher : launchFullScreen
+09-25 08:24:17.286 7968 InCallActivity : onCreate - done, duration: 182ms
+09-25 08:24:17.809 7968 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-25 08:24:26.241 7968 CallModelImpl-CallModel_TC@85 : answer with Audio Only
+09-25 08:24:26.656 7968 CallModelImpl-CallModel_TC@85 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-25 08:36:27.272 7968 CallModelImpl-CallModel_TC@85 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, ERROR_UNSPECIFIED(36), SipErrorCode:0, (code: 1, reason:ERROR_UNSPECIFIED, label:[EMPTY], description:[EMPTY])}
+09-25 08:36:27.437 7968 CallModelImpl-CallModel_TC@85 : CallFlowHistory line:1 08:24:26.656 : answering(413ms)
+09-25 08:36:27.440 7968 InCallServiceImpl@59372940 : onCallRemoved, TC@85(169350043), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-25 08:36:29.365 7968 InCallServiceImpl@59372940 : -----> onUnbind, duration: 7ms - {FULL}
+09-25 08:36:30.335 7968 FullScreenModelImpl : requestFinishActivity
+09-25 08:36:30.384 7968 ViewModelsManager : onViewModelIdle
+09-25 08:37:33.228 15447 InCallApp@44097561 : onCreate, duration: 57ms
+09-25 08:37:33.281 15447 InCallServiceImpl@7932607 : <----- onBind, duration: 27ms - {NO_SCREEN}
+09-25 08:37:33.364 15447 InCallServiceImpl@7932607 : onCallAdded, TC@86(124219029), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-25 08:37:33.376 15447 CallModelImpl-CallModel_TC@86 : onCallCreated, CallModel_TC@86(124219029) - RINGING, Audio Only
+09-25 08:37:33.414 15447 ScreenLauncher : launchFullScreen
+09-25 08:37:34.005 15447 InCallActivity : onCreate - done, duration: 256ms
+09-25 08:37:34.127 15447 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-25 08:37:35.474 15447 CallModelImpl-CallModel_TC@86 : answer with Audio Only
+09-25 08:37:36.018 15447 CallModelImpl-CallModel_TC@86 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-25 08:40:55.546 15447 CallModelImpl-CallModel_TC@86 : disconnect
+09-25 08:40:55.789 15447 CallModelImpl-CallModel_TC@86 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-25 08:40:55.897 15447 CallModelImpl-CallModel_TC@86 : CallFlowHistory line:1 08:37:36.017 : answering(542ms), 08:40:55.788 : disconnect(241ms)
+09-25 08:40:55.900 15447 InCallServiceImpl@7932607 : onCallRemoved, TC@86(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-25 08:40:56.637 15447 FullScreenModelImpl : requestFinishActivity
+09-25 08:40:56.669 15447 ViewModelsManager : onViewModelIdle
+09-25 08:40:57.841 15447 InCallServiceImpl@7932607 : -----> onUnbind, duration: 14ms - {NO_SCREEN}
+09-25 08:49:32.012 24437 InCallApp@44097561 : onCreate, duration: 170ms
+09-25 08:49:32.087 24437 InCallServiceImpl@7932607 : <----- onBind, duration: 66ms - {NO_SCREEN}
+09-25 08:49:32.179 24437 InCallServiceImpl@7932607 : onCallAdded, TC@87(124219029), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-25 08:49:32.205 24437 CallModelImpl-CallModel_TC@87 : onCallCreated, CallModel_TC@87(124219029) - RINGING, Audio Only
+09-25 08:49:32.300 24437 ScreenLauncher : launchFullScreen
+09-25 08:49:32.699 24437 InCallActivity : onCreate - done, duration: 198ms
+09-25 08:49:33.386 24437 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-25 08:49:35.832 24437 CallModelImpl-CallModel_TC@87 : answer with Audio Only
+09-25 08:49:36.217 24437 CallModelImpl-CallModel_TC@87 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-25 08:54:44.866 24437 CallModelImpl-CallModel_TC@87 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-25 08:54:45.047 24437 FullScreenModelImpl : requestFinishActivity
+09-25 08:54:45.068 24437 CallModelImpl-CallModel_TC@87 : CallFlowHistory line:1 08:49:36.216 : answering(382ms)
+09-25 08:54:45.072 24437 InCallServiceImpl@7932607 : onCallRemoved, TC@87(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-25 08:54:45.135 24437 ViewModelsManager : onViewModelIdle
+09-25 08:54:46.932 24437 InCallServiceImpl@7932607 : -----> onUnbind, duration: 34ms - {NO_SCREEN}
+09-25 08:58:28.026 913 InCallApp@44097561 : onCreate, duration: 119ms
+09-25 08:58:28.100 913 InCallServiceImpl@7932607 : <----- onBind, duration: 67ms - {NO_SCREEN}
+09-25 08:58:28.458 913 InCallServiceImpl@7932607 : onCallAdded, TC@88(124219029), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-25 08:58:28.504 913 CallModelImpl-CallModel_TC@88 : onCallCreated, CallModel_TC@88(124219029) - RINGING, Audio Only
+09-25 08:58:28.766 913 ScreenLauncher : launchPopupScreen
+09-25 08:58:29.045 913 InCallPopupLifeComponent(141468332) : onCreate - done, Popup, duration: 275ms
+09-25 08:58:29.692 913 InCallPopupLifeComponent : CallUIPerf: @CallPopup: onViewAttachedToWindow
+09-25 08:58:30.714 913 CallModelImpl-CallModel_TC@88 : answer with Audio Only
+09-25 08:58:31.172 913 CallModelImpl-CallModel_TC@88 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-25 08:59:18.075 913 CallModelImpl-CallModel_TC@88 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-25 08:59:18.173 913 CallModelImpl-CallModel_TC@88 : CallFlowHistory line:1 08:58:31.149 : answering(432ms)
+09-25 08:59:18.177 913 InCallServiceImpl@7932607 : onCallRemoved, TC@88(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-25 08:59:20.086 913 ViewModelsManager : onViewModelIdle
+09-25 08:59:20.167 913 InCallServiceImpl@7932607 : -----> onUnbind, duration: 8ms - {NO_SCREEN}
+09-25 11:57:19.795 18467 InCallApp@44097561 : onCreate, duration: 166ms
+09-25 11:57:19.848 18467 InCallServiceImpl@7932607 : <----- onBind, duration: 48ms - {NO_SCREEN}
+09-25 11:57:19.955 18467 InCallServiceImpl@7932607 : onCallAdded, TC@89(124219029), RINGING, Audio Only, Size(CallRepository:0, Phone:1)
+09-25 11:57:19.976 18467 CallModelImpl-CallModel_TC@89 : onCallCreated, CallModel_TC@89(124219029) - RINGING, Audio Only
+09-25 11:57:20.063 18467 ScreenLauncher : launchFullScreen
+09-25 11:57:20.643 18467 InCallActivity : onCreate - done, duration: 191ms
+09-25 11:57:20.747 18467 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-25 11:57:22.959 18467 CallModelImpl-CallModel_TC@89 : answer with Audio Only
+09-25 11:57:23.508 18467 CallModelImpl-CallModel_TC@89 : CallModelState(RINGING_ANSWERED -> ACTIVE)
+09-25 11:58:45.160 18467 CallModelImpl-CallModel_TC@89 : CallModelState(ACTIVE -> DISCONNECTED), DisconnectCause{GSM, NORMAL(2), SipErrorCode:0, (code: 3, reason:NORMAL, label:[EMPTY], description:[EMPTY])}
+09-25 11:58:45.347 18467 CallModelImpl-CallModel_TC@89 : CallFlowHistory line:1 11:57:23.507 : answering(547ms)
+09-25 11:58:45.350 18467 InCallServiceImpl@7932607 : onCallRemoved, TC@89(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-25 11:58:47.253 18467 InCallServiceImpl@7932607 : -----> onUnbind, duration: 13ms - {FULL}
+09-25 11:58:48.858 18467 FullScreenModelImpl : requestFinishActivity
+09-25 11:58:48.934 18467 ViewModelsManager : onViewModelIdle
+09-25 13:01:12.992 28809 InCallApp@44097561 : onCreate, duration: 225ms
+09-25 13:01:13.074 28809 InCallServiceImpl@7932607 : <----- onBind, duration: 75ms - {NO_SCREEN}
+09-25 13:01:13.225 28809 InCallServiceImpl@7932607 : onCallAdded, TC@90(124219029), CONNECTING, Audio Only, Size(CallRepository:0, Phone:1)
+09-25 13:01:13.247 28809 CallModelImpl-CallModel_TC@90 : onCallCreated, CallModel_TC@90(124219029) - CONNECTING, Audio Only
+09-25 13:01:13.290 28809 ScreenLauncher : launchFullScreen
+09-25 13:01:14.054 28809 InCallActivity : onCreate - done, duration: 249ms
+09-25 13:01:14.261 28809 InCallActivity : onWindowFocusChanged, hasFocus :true
+09-25 13:01:16.041 28809 CallModelImpl-CallModel_TC@90 : disconnect
+09-25 13:01:17.190 28809 CallModelImpl-CallModel_TC@90 : CallModelState(DISCONNECTING -> DISCONNECTED), DisconnectCause{GSM, LOCAL(3), SipErrorCode:0, (code: 2, reason:LOCAL, label:[EMPTY], description:[EMPTY])}
+09-25 13:01:17.312 28809 CallModelImpl-CallModel_TC@90 : CallFlowHistory line:1 13:01:17.188 : disconnect(1145ms)
+09-25 13:01:17.314 28809 InCallServiceImpl@7932607 : onCallRemoved, TC@90(124219029), DISCONNECTED, Audio Only, (CallRepository: 0, Phone: 0)
+09-25 13:01:18.681 28809 ViewModelsManager : onViewModelIdle
+09-25 13:01:19.259 28809 InCallServiceImpl@7932607 : -----> onUnbind, duration: 22ms - {NO_SCREEN}
