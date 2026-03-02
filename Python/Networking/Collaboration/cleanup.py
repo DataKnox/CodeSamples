@@ -30,3 +30,5 @@ for team in teams:
         teamId = team['id']
 del_team_url = f'{url}/{teamId}'
 del_team = requests.delete(del_team_url, headers=headers)
+
+print ('hello')
